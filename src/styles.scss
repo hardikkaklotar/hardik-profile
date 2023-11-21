@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+    --primary: #18d26e;
+    --secondary:#ffffffb3;
+    --black: #000000;
+    --dark-black: #040404;
+    --white: #ffffff;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Philosopher', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+p,span,div,nav,a{
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none !important;
+}
+.main-block{
+    background-color:var(--dark-black);
+    // background: url(assets/image/overview-image.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+}
