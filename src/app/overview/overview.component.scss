@@ -1,15 +1,6 @@
 .main-block{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--dark-black);
-    // background: url(https://images.pexels.com/photos/18495/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
-    // background: url(../../assets/image/overview-image.webp) no-repeat;
-    background-position: center;
-    background-size: cover;    
     color: var(--secondary);
-
+   
     h1{
         color: var(--primary);
         font-size: 55px;
@@ -31,7 +22,7 @@
             li{
                 list-style: none;
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: 400;
                 a{
                     position: relative;
                     transition: all 0.5s;

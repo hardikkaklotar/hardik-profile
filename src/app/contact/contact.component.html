@@ -1,33 +1,124 @@
 <section class="main-block">
     <div class="container">
-        <!-- <div class="contact-wreppar">
-            <div class="img-block">
-                <div>
-                    <div class="contact-links">
-                        <i class="fa mt-1 fa-location-dot"></i>
-                        <p class="mb-0">
-                            185, Dhanmora Chowk, Katargam, , Surat - 395 009, Gujarat, India.
-                        </p>
-                    </div>
-                    <div class="contact-links">
-                        <i class="fas fa-phone-volume"></i>
-                        <a href="tel:+91 9714514703">
-                            +91 9714514703
+        <div class="contact-wreppar">
+            <div class="section-title">
+                <p class="smoll-title">Contact </p>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6 d-flex">
+                    <div class="info-box gap-3">
+                        <a href="#!" class="links">
+                            <i class="fa fa-md fa-location-dot"></i>
                         </a>
+                        <div class="content-block">
+                            <h3>My Address</h3>
+                            <p>185, Dhanmora Chowk, Katargam, <br> Surat - 395 009, Gujarat, India.</p>
+                        </div>
                     </div>
-                    <div class="contact-links">
-                        <i class="fa-light fa fa-envelope"></i>
-                        <a href="mailto:hardikoffice61@gmail.com">
-                            hardikoffice61@gmail.com
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 d-flex">
+                    <div class="info-box gap-3">
+                        <a href="#!" class="links">
+                            <i class="fa fa-md fa-share-nodes"></i>
                         </a>
+                        <div class="content-block">
+                            <h3>Social Profiles</h3>
+                            <div class="social-links d-flex gap-2">
+                                <a *ngFor="let link of socialLinks" [href]="link.url">
+                                    <i class="fab {{ link.icon }}"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 d-flex">
+                    <div class="info-box gap-3">
+                        <a class="links" href="mailto:hardikoffice61@gmail.com">
+                            <i class="fa fa-md fa-envelope"></i>
+                        </a>
+                        <div class="content-block">
+                            <h3>Email Me</h3>
+                            <a href="mailto:hardikoffice61@gmail.com">
+                                hardikoffice61@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 d-flex">
+                    <div class="info-box gap-3">
+                        <a class="links" href="tel:+91 9714514703">
+                            <i class="fa fa-md fa-phone-volume"></i>
+                        </a>
+                        <div class="content-block">
+                            <h3>Call Me</h3>
+                            <a href="tel:+91 9714514703">
+                                +91 9714514703
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="from-block">
-                <form class="contact-form">
-                    
-                </form>
-            </div>
-        </div> -->
+            <form class="mt-4" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Your First Name</mat-label>
+                            <input matInput required placeholder="" formControlName="FirstName">
+                            <mat-icon matSuffix class="me-3">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Your Last Name</mat-label>
+                            <input matInput required placeholder="" formControlName="LastName">
+                            <mat-icon matSuffix class="me-3">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Your Email</mat-label>
+                            <input matInput required type="email" placeholder="" formControlName="Email">
+                            <mat-icon matSuffix class="me-3">
+                                <i class="fa-regular fa-envelope"></i>
+                            </mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mobile Number</mat-label>
+                            <input matInput required class="appearance-none" type="number" placeholder=""
+                                formControlName="Number">
+                            <mat-icon matSuffix class="me-3">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <mat-form-field>
+                            <mat-label>Write Your Message Here</mat-label>
+                            <textarea required matInput placeholder="" formControlName="Message"></textarea>
+                        </mat-form-field>
+                    </div>
+                   
+                    <div class="col-12 d-flex justify-content-end mt-4">
+                        <button class="btn-secondary px-4 btn" type="submit">
+                            Submit
+                        </button>
+                        <!-- <div class="col-12 d-flex justify-content-end mt-4">
+                            <div class="primary-button">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                                <a href="#">Submit</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </section>

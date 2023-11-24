@@ -1,30 +1,70 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$hardik-resume-primary: mat.define-palette(mat.$indigo-palette);
+$hardik-resume-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$hardik-resume-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$hardik-resume-theme: mat.define-light-theme((color: (primary: $hardik-resume-primary,
+                accent: $hardik-resume-accent,
+                warn: $hardik-resume-warn,
+            )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($hardik-resume-theme);
+
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css";
 
 :root {
     --primary: #18d26e;
-    --secondary:#ffffffb3;
+    --secondary: #ffffffb3;
     --black: #000000;
     --dark-black: #040404;
     --white: #ffffff;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Philosopher', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Philosopher', sans-serif !important;
     margin: 0px;
     padding: 0px;
 }
-p,span,div,nav,a{
-    font-family: 'Raleway', sans-serif;
-    margin: 0px;
-    padding: 0px;
+
+p,
+span,
+div,
+nav,
+a {
+    font-family: 'Raleway', sans-serif !important;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
-.main-block{
-    background-color:var(--dark-black);
-    // background: url(assets/image/overview-image.webp) no-repeat;
+
+.main-block {
+    background: url(assets/image/image.jpg) no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -32,4 +72,133 @@ a{
     align-items: center;
     justify-content: center;
     color: #ffff;
+    position: relative;
+
+    &::after {
+        width: 100%;
+        height: 100%;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        background-color: #000000ba;
+    }
+
+    .container {
+        z-index: 99;
+        position: relative;
+    }
 }
+
+.mat-mdc-form-field {
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white) !important;
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    mat-icon {
+        i {
+            cursor: pointer;
+            color: var(--secondary);
+        }
+    }
+
+    mat-label {
+        color: var(--secondary);
+    }
+
+    input,
+    textarea {
+        color: var(--secondary) !important;
+        font-size: 15px !important;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--secondary) !important;
+        font-size: 15px !important;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+}
+
+.appearance-none::-webkit-outer-spin-button,
+.appearance-none::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+// .primary-button {
+//     width: 150px;
+//     height: 62px;
+//     background: transparent;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     overflow: hidden;
+
+//     a {
+//         color: var(--white);
+//         font-family: sans-serif;
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         font-size: 16px;
+//         letter-spacing: 3px;
+//         text-align: center;
+//         border: 3px solid var(--white);
+//         padding: 15px;
+//         z-index: 1;
+//         transition: 0.5s ease;
+//         font-weight: bold;
+//         width: 100%;
+
+//     }
+
+//     .left {
+//         width: 100px;
+//         height: 200px;
+//         background: var(--white);
+//         position: absolute;
+//         top: -120%;
+//         left: -89%;
+//         transition: 0.5s ease;
+//         transform: rotate(35deg);
+//     }
+
+//     .right {
+//         width: 200px;
+//         height: 90px;
+//         background: var(--white);
+//         position: absolute;
+//         top: 5%;
+//         left: 77%;
+//         transition: 0.5s ease;
+//         transform: rotate(125deg);
+//     }
+
+//     &:hover {
+//         .left {
+//             left: -4%;
+//             transition: 0.5s ease;
+//         }
+
+//         .right {
+//             left: 20%;
+//             transition: 0.5s ease;
+//         }
+
+//         a {
+//             color: var(--black);
+//             transition: 0.5s ease;
+//         }
+//     }
+// }
+
