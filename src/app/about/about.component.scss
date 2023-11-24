@@ -1,0 +1,562 @@
+.contact-wreppar {
+    background-color: rgb(0 0 0 / 71%);
+    padding: 25px 20px;
+
+    .section-title {
+        .smoll-title {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            line-height: 30px;
+            color: #aaaaaa;
+            position: relative;
+            max-width: max-content;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100px;
+                background-color: var(--primary);
+                left: 105%;
+                top: 50%;
+                transform: translate(0%, -50%);
+            }
+
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .about-block {
+        img {
+            border-radius: 13px;
+            overflow: hidden;
+            max-height: 402px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+            color: var(--secondary);
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+    }
+
+    .about-text-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        i {
+            color: var(--primary);
+        }
+
+        strong {
+            margin-right: 8px;
+        }
+
+        a,
+        span {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 0px;
+            display: block;
+            line-height: 0px;
+            color: var(--white);
+        }
+    }
+
+    .client-section {
+        .contact-box {
+            background:#f0fdf4;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--black);
+            border-radius: 5px;
+            flex-direction: column;
+            min-height: 170px;
+            .ring {
+                border-radius: 100%;
+                background:#f0fdf4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: -25px;
+                width: 50px;
+                height: 50px;
+
+                i {
+                    font-size: 30px;
+                    color: var(--primary);
+                }
+            }
+
+            h2 {
+                font-size: 35px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+    }
+    .skills-section{
+        padding-top: 120px;
+        .skills-img{
+            img{
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+            }
+        }
+        .skills-block{
+            .progress-block{
+                margin-bottom: 15px;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .interests-section{
+        .interests-box{
+            display: flex;
+            align-items: center;
+            padding: 20px 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px 0px 20px 0px;
+            span{
+                font-size: 16px;
+                font-weight: 600;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.technology-section {
+    .our-technology {
+        .our-techno {
+            .techno-img {
+                position: absolute;
+                left: -30px;
+                top: -48px;
+                height: 100px;
+                width: 100px;
+                line-height: unset;
+                background-color:var(--black);
+                border-radius: 50%;
+                box-shadow: 0 0 10px var(--primary);
+                padding: 10px;
+                cursor: pointer;
+                img {
+                    transition: all 0.5s;
+                    transform: scale(1);
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }   
+        }
+
+        
+    }
+}
+.technology-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .our-technology {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 175px 0 150px 0;
+        @media screen and (max-width:575px) {
+            padding: 100px 0 130px 0;
+        }
+        .our-techno {
+            display: inline-table;
+            position: relative;
+            .center-title{
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                border-radius: 50%;
+                background-color:var(--black);
+                box-shadow: 0 0 10px var(--primary);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                z-index: 1;
+                position: relative;
+                align-items: center;
+                h4{
+                    margin-bottom: 0px;
+                    font-size: 20px;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    border-radius: 50%;
+                    border: 1px solid var(--white);
+                    animation: scale 2s linear infinite;
+                }
+            }
+            .line-1 {
+                position: absolute;
+                left: -125px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 350px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(30deg);
+                .circle-1 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-30deg);
+                }
+            }
+            .line-2 {
+                position: absolute;
+                left: -235px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 570px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(11deg);
+                .circle-2 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-10deg);
+                }
+            }
+            .line-3 {
+                position: absolute;
+                left: -175px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 450px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(-5deg);
+                .circle-3 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(5deg);
+                }
+            }
+            .line-4 {
+                position: absolute;
+                left: -75px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 250px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(-28deg);
+                .circle-4 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(28deg);
+                }
+            }
+            .line-5 {
+                position: absolute;
+                left: -30px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 160px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(90deg);
+                .circle-5 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-90deg);
+                }
+            }
+            .line-6 {
+                position: absolute;
+                right: -125px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 350px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(150deg);
+                .circle-6 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-150deg);
+                }
+            }
+            .line-7 {
+                position: absolute;
+                right: -235px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 570px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(165deg);
+                .circle-7 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-165deg);
+                }
+            }
+            .line-8 {
+                position: absolute;
+                right: -100px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 300px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(185deg);
+                .circle-8 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-185deg);
+                }
+            }
+            .line-9 {
+                position: absolute;
+                right: -45px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 190px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(215deg);
+                .circle-9 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(-215deg);
+                }
+            }
+            .line-10 {
+                position: absolute;
+                left: -50px;
+                top: 50%;
+                text-align: center;
+                display: inline-block;
+                height: 1px;
+                background-color:var(--white);
+                width: 200px;
+                transform-origin: right center;
+                transform: translate(-50%) rotate(270deg);
+                .circle-10 {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 50px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color:var(--primary);
+                        animation: circle-animation 30s linear infinite;
+                    }
+                }
+                .techno-img {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+// animation css
+@keyframes scale {
+    from {
+        opacity: 1;
+        transform: scale3d(0.75,0.75,1);
+    }
+    
+    to {
+        opacity: 0;
+        transform: scale3d(1.2,1.2,1);
+    }
+}
+@keyframes circle-animation {
+    0% {
+        left: 100%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+@media screen and (max-width: 435px) {
+    .technology-section {
+        .our-technology {
+            .our-techno {
+                .techno-img {
+                    left: -30px !important;
+                    height: 50px !important;
+                    width: 50px !important;
+                    padding: 5px !important;
+                }
+            }
+        }
+    }
+}

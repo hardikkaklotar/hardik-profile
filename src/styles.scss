@@ -38,6 +38,26 @@ $hardik-resume-theme: mat.define-light-theme((color: (primary: $hardik-resume-pr
     --dark-black: #040404;
     --white: #ffffff;
 }
+body{
+    // background: url(assets/image/image.jpg) no-repeat !important;
+    // background-attachment: fixed !important;
+    // background-position: center !important;
+    // background-size: cover !important;
+        background-color: var(--dark-black) !important;
+
+    // &::after {
+    //     width: 100%;
+    //     height: 100%;
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     display: block;
+    //     background-color: #000000ba;
+    // }
+}
 
 h1,
 h2,
@@ -55,7 +75,7 @@ span,
 div,
 nav,
 a {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 a {
@@ -63,32 +83,21 @@ a {
 }
 
 .main-block {
-    background: url(assets/image/image.jpg) no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #ffff;
     position: relative;
-
-    &::after {
-        width: 100%;
-        height: 100%;
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: block;
-        background-color: #000000ba;
-    }
-
+    padding-top: 100px;
+    position: relative;
     .container {
         z-index: 99;
         position: relative;
     }
+}
+.overview-section{
+   position: absolute;
+   top: 50%;
+   left: 35%;
+   transform: translate(-50%,-50%);
+   z-index:99;
 }
 
 .mat-mdc-form-field {
@@ -126,14 +135,25 @@ a {
     .mat-mdc-form-field-subscript-wrapper {
         display: none;
     }
+  
 }
-
 .appearance-none::-webkit-outer-spin-button,
 .appearance-none::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-height: 7px !important;
+    --mdc-linear-progress-track-height: 7px !important;
+    --mdc-linear-progress-track-shape: 0;
+}
+.mdc-linear-progress__bar-inner{
+    border-color: var(--primary) !important;
+}
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color:var(--primary) !important;
+    --mdc-linear-progress-track-color: rgba(255, 255, 255, 0.2) !important;
+}
 
 // .primary-button {
 //     width: 150px;

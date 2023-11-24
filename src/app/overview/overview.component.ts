@@ -11,7 +11,7 @@ export class OverviewComponent {
   navigationItems = [
       { label: 'Home', route: '#header' },
       { label: 'About', route: '#about' },
-      { label: 'Skills', route: '#skills' },
+      { label: 'Resume', route: '#resume' },
       { label: 'Services', route: '#services' },
       { label: 'Contact', route: '#contact' }
   ];
