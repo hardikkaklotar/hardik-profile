@@ -1,16 +1,1 @@
-<header>
-    <div class="container">
-        <div class="header-block">
-            <h2>HARDIK</h2>
-            <nav class="navbar">
-                <ul class="gap-4">
-                    <li *ngFor="let item of navigationItems">
-                        <a class="nav-link" [ngClass]="{'active':(item.label===navigationManageService.selectedMyTab)}" (click)="navigationManageService.selectedTabChanged(item.label)">{{ item.label }}</a>
-                    </li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-        </div>
-    </div>
-</header>
-
+<p>header works!</p>

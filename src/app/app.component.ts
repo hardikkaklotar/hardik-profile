@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavigationManageService } from './service/navigation-manage.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { NavigationManageService } from './service/navigation-manage.service';
 })
 export class AppComponent {
   title = 'hardik-resume';
-  constructor(public navigationManageService: NavigationManageService) { }
 }
