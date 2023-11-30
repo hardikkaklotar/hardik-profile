@@ -1,15 +1,3 @@
-
-@use '@angular/material' as mat;
-@include mat.core();
-$hardik-resume-primary: mat.define-palette(mat.$indigo-palette);
-$hardik-resume-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$hardik-resume-warn: mat.define-palette(mat.$red-palette);
-$hardik-resume-theme: mat.define-light-theme((color: (primary: $hardik-resume-primary,
-                accent: $hardik-resume-accent,
-                warn: $hardik-resume-warn,
-            )));
-@include mat.all-component-themes($hardik-resume-theme);
-
 :root {
     --primary: #4899f0;
     --secondary: #aaaaaa;
@@ -18,26 +6,9 @@ $hardik-resume-theme: mat.define-light-theme((color: (primary: $hardik-resume-pr
     --white: #ffffff;
 }
 body{
-    // background: url(assets/image/image.jpg) no-repeat !important;
-    // background-attachment: fixed !important;
-    // background-position: center !important;
-    // background-size: cover !important;
-        background-color: var(--white) !important;
-
-    // &::after {
-    //     width: 100%;
-    //     height: 100%;
-    //     content: '';
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     display: block;
-    //     background-color: #000000ba;
-    // }
+    background-color: var(--white) !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
-
 h1,
 h2,
 h3,
@@ -45,155 +16,18 @@ h4,
 h5,
 h6 {
     font-family: 'Philosopher', sans-serif !important;
-    margin: 0px;
-    padding: 0px;
 }
-
-p,
-span,
-div,
-nav,
-a {
-    font-family: 'Montserrat', sans-serif !important;
-}
-
 a {
     text-decoration: none !important;
 }
 
-.main-block {
-    color: #ffff;
-    position: relative;
-    padding-top: 100px;
-    position: relative;
-    .container {
-        z-index: 99;
-        position: relative;
-    }
+/* BUTTON --------------*/ 
+.primary-btn{
+    background-color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
 }
-.overview-section{
-   position: absolute;
-   top: 50%;
-   left: 35%;
-   transform: translate(-50%,-50%);
-   z-index:99;
-}
-
-.mat-mdc-form-field {
-    width: 100% !important;
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--black);
-    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-        background: rgba(255, 255, 255, 0.08) !important;
-    }
-
-    mat-icon {
-        i {
-            cursor: pointer;
-            color: var(--secondary);
-        }
-    }
-
-    
-
-    input,
-    textarea {
-        font-size: 15px !important;
-        color: var(--black);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-        font-size: 15px !important;
-    }
-
-    .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-    }
-  
-}
-.appearance-none::-webkit-outer-spin-button,
-.appearance-none::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-height: 7px !important;
-    --mdc-linear-progress-track-height: 7px !important;
-    --mdc-linear-progress-track-shape: 0;
-}
-.mdc-linear-progress__bar-inner{
-    border-color: var(--primary) !important;
-}
-.mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-color:var(--primary) !important;
-    --mdc-linear-progress-track-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-// .primary-button {
-//     width: 150px;
-//     height: 62px;
-//     background: transparent;
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     overflow: hidden;
-
-//     a {
-//         color: var(--white);
-//         font-family: sans-serif;
-//         text-transform: uppercase;
-//         text-decoration: none;
-//         font-size: 16px;
-//         letter-spacing: 3px;
-//         text-align: center;
-//         border: 3px solid var(--white);
-//         padding: 15px;
-//         z-index: 1;
-//         transition: 0.5s ease;
-//         font-weight: bold;
-//         width: 100%;
-
-//     }
-
-//     .left {
-//         width: 100px;
-//         height: 200px;
-//         background: var(--white);
-//         position: absolute;
-//         top: -120%;
-//         left: -89%;
-//         transition: 0.5s ease;
-//         transform: rotate(35deg);
-//     }
-
-//     .right {
-//         width: 200px;
-//         height: 90px;
-//         background: var(--white);
-//         position: absolute;
-//         top: 5%;
-//         left: 77%;
-//         transition: 0.5s ease;
-//         transform: rotate(125deg);
-//     }
-
-//     &:hover {
-//         .left {
-//             left: -4%;
-//             transition: 0.5s ease;
-//         }
-
-//         .right {
-//             left: 20%;
-//             transition: 0.5s ease;
-//         }
-
-//         a {
-//             color: var(--black);
-//             transition: 0.5s ease;
-//         }
-//     }
-// }
 

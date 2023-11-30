@@ -1,10 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #18d26e;
-  --secondary: #ffffffb3;
+  --primary: #4899f0;
+  --secondary: #aaaaaa;
   --black: #000000;
   --dark-black: #040404;
   --white: #ffffff;
+}
+
+body {
+  background-color: var(--white) !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 h1,
@@ -14,143 +18,18 @@ h4,
 h5,
 h6 {
   font-family: "Philosopher", sans-serif !important;
-  margin: 0px;
-  padding: 0px;
-}
-
-p,
-span,
-div,
-nav,
-a {
-  font-family: "Raleway", sans-serif !important;
 }
 
 a {
   text-decoration: none !important;
 }
 
-.main-block {
-  background: url(assets/image/image.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: relative;
-}
-.main-block::after {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.7294117647);
-}
-.main-block .container {
-  z-index: 99;
-  position: relative;
-}
-
-.mat-mdc-form-field {
-  width: 100% !important;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white) !important;
-}
-.mat-mdc-form-field .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background: rgba(255, 255, 255, 0.08) !important;
-}
-.mat-mdc-form-field mat-icon i {
-  cursor: pointer;
-  color: var(--secondary);
-}
-.mat-mdc-form-field mat-label {
-  color: var(--secondary);
-}
-.mat-mdc-form-field input,
-.mat-mdc-form-field textarea {
-  color: var(--secondary) !important;
-  font-size: 15px !important;
-}
-.mat-mdc-form-field input::-moz-placeholder, .mat-mdc-form-field textarea::-moz-placeholder {
-  color: var(--secondary) !important;
-  font-size: 15px !important;
-}
-.mat-mdc-form-field input::placeholder,
-.mat-mdc-form-field textarea::placeholder {
-  color: var(--secondary) !important;
-  font-size: 15px !important;
-}
-.mat-mdc-form-field .mat-mdc-form-field-subscript-wrapper {
-  display: none;
-}
-
-.btn-block {
-  position: relative;
-  height: 56px;
-  width: 185px;
-}
-.btn-block .primary-button {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.btn-block .primary-button a {
-  color: #fff;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-align: center;
-  border: 3px solid #fff;
-  padding: 15px;
-  z-index: 1;
-  transition: 0.5s ease;
-  font-weight: bold;
-  width: 100%;
-}
-.btn-block .primary-button .five {
-  width: 100px;
-  height: 200px;
-  background: #fff;
-  position: absolute;
-  top: -120%;
-  left: -80%;
-  transition: 0.5s ease;
-  transform: rotate(35deg);
-}
-.btn-block .primary-button .six {
-  width: 200px;
-  height: 90px;
-  background: #fff;
-  position: absolute;
-  top: 5%;
-  left: 90%;
-  transition: 0.5s ease;
-  transform: rotate(125deg);
-}
-.btn-block .primary-button:hover .five {
-  left: -4%;
-  transition: 0.5s ease;
-}
-.btn-block .primary-button:hover .six {
-  left: 20%;
-  transition: 0.5s ease;
-}
-.btn-block .primary-button:hover a {
-  color: #000;
-  transition: 0.5s ease;
-}
-
-/*third button start here*/
-/*third button style end here*//*# sourceMappingURL=styles.css.map */
+/* BUTTON --------------*/
+.primary-btn {
+  background-color: var(--primary);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}/*# sourceMappingURL=styles.css.map */
