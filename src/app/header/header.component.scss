@@ -26,9 +26,13 @@ header {
                 display: inline-block;
                 font-weight: 400;
                 color: var(--primary);
+                transition: all 0.5s;
                 &.active{
                     color: var(--green);
                     font-weight: 600;
+                }
+                &:hover{
+                    color: var(--green);
                 }
             }
         }

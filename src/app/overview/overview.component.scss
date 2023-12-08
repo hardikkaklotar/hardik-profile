@@ -1,7 +1,7 @@
 /*BENNAR SECTION CSS START HEAR*/
 .bennar-section {
     padding-top: 180px;
-    padding-bottom:50px;
+    padding-bottom:30px;
     align-items: center;
     display: grid;
     color: var(--primary);
@@ -152,7 +152,7 @@
 
 /*ABOUT SECTION CSS START HEAR*/
 .about_section {
-    padding: 50px 0px;
+    padding: 100px 0px 50px;
     .about_wrapper {
         .about_block {
             padding:70px 0px;
@@ -182,11 +182,142 @@
 }
 /*ABOUT SECTION CSS END HEAR*/
 
+/*COMPANY INFORMATION SECTION CSS START */
+.company-information{
+    margin-bottom: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/image/overview-image.webp);
+    // background-color:var(--primary);
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+        min-height: 210px;
+    }
+    @media screen and (max-width: 575px) {
+       padding: 40px 0px;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter:blur(7px);
+
+    }
+    .company-information-wrapper{
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        backdrop-filter:blur(12px);
+        .company-information-block{
+            padding: 30px;
+            border-radius: 0px 40px;
+            border: 1px solid var(--primary);
+            position: relative;
+            @media screen and (max-width: 767px) {
+                padding: 10px;
+            }
+            @media screen and (max-width: 575px) {
+                border-radius: 5px;
+                background-color: transparent;
+            }
+            &::after {
+                content: '';
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                background-color: var(--green);
+                position: absolute;
+                top: -4%;
+                left: 0%;
+                transform: translate(-50%);
+                z-index: 99;
+            }
+            &::before {
+                content: '';
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                background-color: var(--green);
+                position: absolute;
+                bottom: -4%;
+                right: -1%;
+                transform: translate(-50%);
+                z-index: 99;
+            }
+            .content-box{
+                border-right: 2px solid rgb(40 153 0 / 58%);
+                @media screen and (max-width: 575px) {
+                    border-right: 0px;
+                }
+                &:last-child{
+                    border-right: 0px;
+                }
+                h2{
+                    font-size: 40px;
+                    font-weight: 600;
+                    color: #289900c4;
+                    @media screen and (max-width: 991px) {
+                        font-size:30px ;
+                    }
+                }
+                h6{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: var(--white);
+                    @media screen and (max-width: 991px) {
+                        font-size:13px;
+                    }
+                    @media screen and (max-width: 575px) {
+                        color: #fff;
+                        font-size:11px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*COMPANY INFORMATION SECTION CSS END */
 
 /*SKILLS SECTION CSS START HEAR*/
 .skills_section{
-    padding: 50px 0px;
+    padding: 100px 0px 50px;
     .skills_wrapper{
+
+        .skills_block{
+            padding: 80px 0px;
+            .skills_content{
+                color: var(--white);
+                h6{
+                    font-size: 40px;
+                    font-family: 'Ephesis', cursive !important;
+                    margin-bottom: 10px;
+                }
+                h2{
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+            }
+            .progress-block {
+                margin-bottom: 15px;
+
+                span {
+                    color: var(--bs-success-border-subtle);
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+
         .our-technology {
             display: flex;
             justify-content: center;
@@ -225,7 +356,7 @@
                         right: 0;
                         top: 0;
                         border-radius: 50%;
-                        border: 1px solid var(--white);
+                        border: 1px solid var(--green);
                         animation: scale 2s linear infinite;
                     }
                 }
@@ -250,7 +381,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -278,7 +409,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -306,7 +437,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -334,7 +465,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -362,7 +493,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -390,7 +521,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -418,7 +549,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -446,7 +577,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -474,7 +605,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -502,7 +633,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--white);
+                            background-color: var(--green);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -593,12 +724,12 @@
 @keyframes scale {
     from {
         opacity: 1;
-        transform: scale3d(0.75,0.75,1);
+        transform: scale3d(1,1,1);
     }
     
     to {
         opacity: 0;
-        transform: scale3d(1.2,1.2,1);
+        transform: scale3d(1.5,1.5,1);
     }
 }
 @keyframes circle-animation {

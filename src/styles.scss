@@ -7,15 +7,13 @@
     --dark-black: #040404;
     --white: #ffffff;
 }
-
 body {
     background-color: #040404 !important;
-    background: url(assets/image/Dot-Background.png);
-    background-size: cover;
+    background: url(assets/image/Dot-Background.png) repeat;
     background-position: center;
     font-family: 'Montserrat', sans-serif !important;
+    animation: backgroundscroll 60s linear infinite;
 }
-
 h1,
 h2,
 h3,
@@ -23,68 +21,36 @@ h4,
 h5,
 h6 {
     font-family: 'Philosopher', sans-serif !important;
+    // font-family: 'Ephesis', cursive !important;
 }
-// font-family: 'Ephesis', cursive !important;
 a {
     text-decoration: none !important;
 }
 
-/* BUTTON --------------*/
+/* MAT CLASS CSS START HEAR */ 
+.appearance-none::-webkit-outer-spin-button,
+.appearance-none::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-height: 7px !important;
+    --mdc-linear-progress-track-height: 7px !important;
+    --mdc-linear-progress-track-shape: 0;
+}
+.mdc-linear-progress__bar-inner{
+    border-color:#57bbf6b8 !important;
+}
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color:var(--green) !important;
+    --mdc-linear-progress-track-color: var(--light-green) !important;
+}
+.mdc-linear-progress__buffer{
+    background-color: var(--light-green);
+}
 
-// .button-primary {
-//     text-align: center;
-//     width:max-content;
-//     transition: all 0.5s;
-//     position: relative;
-//     padding: 10px 40px;
-//     span {
-//         position: relative;
-//         z-index: 99;
-//         color:var(--white);
-//     }
+/* MAT CLASS CSS END HEAR */ 
 
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         z-index: 1;
-//         background-color: var(--primary);
-//         transition: all 0.3s;
-//     }
-
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         z-index: 1;
-//         opacity: 0;
-//         transition: all 0.3s;
-//         border: 1px solid var(--primary);
-//         transform: scale(1.2, 1.2);
-//     }
-
-//     &:hover {
-//         span {
-//             color: var(--primary);
-//         }
-
-//         &::before {
-//             opacity: 0;
-//             transform: scale(0.5, 0.5);
-//         }
-
-//         &::after {
-//             opacity: 1;
-//             transform: scale(1, 1);
-//         }
-//     }
-// }
 
 .title {
     text-align: center;
@@ -103,7 +69,6 @@ a {
         -webkit-text-fill-color: transparent;
     }
 }
-
 p{
     font-size: 15px;
     font-weight: 400;
@@ -120,4 +85,15 @@ p{
     font-size: 14px;
     display: block;
     max-width: max-content;
+}
+
+
+/*KEY FRAMES */ 
+
+@keyframes backgroundscroll {
+    0%{
+        background-position-x: 0;
+    }100%{
+        background-position-x: 1000px;
+    }
 }
