@@ -1,13 +1,18 @@
 :root {
-  --primary: #4899f0;
-  --secondary: #aaaaaa;
+  --primary: #F0F0DC;
+  --secondary:#22222240;
+  --green:#289900;
+  --light-green:#31742D40;
   --black: #000000;
   --dark-black: #040404;
   --white: #ffffff;
 }
 
 body {
-  background-color: var(--white) !important;
+  background-color: #040404 !important;
+  background: url(assets/image/Dot-Background.png);
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif !important;
 }
 
@@ -25,11 +30,40 @@ a {
 }
 
 /* BUTTON --------------*/
-.primary-btn {
-  background-color: var(--primary);
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 600;
+.title {
+  text-align: center;
+}
+.title h4 {
   color: var(--white);
+  font-weight: 500;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+.title h2 {
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 0px;
+  background: linear-gradient(to bottom right, #F0F0DC 47%, #289900 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--primary);
+  margin-bottom: 0px;
+}
+
+.button-primary {
+  padding: 10px 30px;
+  border-radius: 12px;
+  color: var(--white);
+  border: 1px solid var(--green);
+  background-color: var(--light-green);
+  font-size: 14px;
+  display: block;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }/*# sourceMappingURL=styles.css.map */

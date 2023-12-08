@@ -1,21 +1,21 @@
 header {
-    padding: 0 !important;
     width: 100%;
-    z-index: 99;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    transition: all 0.5s;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 15px 50px;
+    border-bottom:1px solid var(--secondary);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 999;
     .header-block{
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo {
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 0px;
-            color: var(--black);
+            color: var(--white);
+            font-family: 'Ephesis', cursive !important;
+
         }
         .navbar-block{
             display: flex;
@@ -24,9 +24,12 @@ header {
             .nav-link{
                 font-size: 16px;
                 display: inline-block;
-                font-weight: 600;
-                color: var(--black);
-                padding: 20px 10px;
+                font-weight: 400;
+                color: var(--primary);
+                &.active{
+                    color: var(--green);
+                    font-weight: 600;
+                }
             }
         }
 
