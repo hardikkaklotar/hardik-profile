@@ -1,18 +1,20 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 :root {
-    --primary: #F0F0DC;
+    --primary:#94a3b8;
     --secondary:#22222240;
-    --green:#289900;
-    --light-green:#31742D40;
+    --sky:#38bdf8;
+    --light-sky:#bae6fd;
     --black: #000000;
     --dark-black: #040404;
     --white: #ffffff;
 }
 body {
-    background-color: #040404 !important;
+    background-color: #020617 !important;
     background: url(assets/image/Dot-Background.png) repeat;
     background-position: center;
     font-family: 'Montserrat', sans-serif !important;
-    animation: backgroundscroll 60s linear infinite;
+    animation: background-scroll 60s linear infinite;
 }
 h1,
 h2,
@@ -42,12 +44,42 @@ a {
     border-color:#57bbf6b8 !important;
 }
 .mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-color:var(--green) !important;
-    --mdc-linear-progress-track-color: var(--light-green) !important;
+    --mdc-linear-progress-active-indicator-color:var(--sky) !important;
+    --mdc-linear-progress-track-color: var(--primary) !important;
 }
 .mdc-linear-progress__buffer{
-    background-color: var(--light-green);
+    background-color: var(--light-sky);
 }
+.mat-mdc-form-field {
+    width: 100% !important;
+    background:transparent !important;
+    color: var(--white);
+    border-bottom: 1px solid var(--black);
+    max-height: 200px;
+   
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background: transparent !important;
+    }
+    input,
+    textarea {
+        font-size: 15px !important;
+        color: var(--white) !important;
+    }
+    mat-label{
+        color: var(--white);
+        font-size: 15px !important
+    }
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 15px !important;
+    }
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+  
+}
+  
+
 
 /* MAT CLASS CSS END HEAR */ 
 
@@ -57,14 +89,14 @@ a {
     h4 {
         color: var(--white);
         font-weight: 500;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         font-size: 25px;
     }
     h2 {
         font-weight: 600;
         font-size: 35px;
         margin-bottom: 0px;
-        background: linear-gradient(to bottom right, #F0F0DC 47%, #289900 70%);
+        background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -80,8 +112,8 @@ p{
     padding: 10px 30px;
     border-radius: 12px;
     color: var(--white);
-    border: 1px solid var(--green);
-    background-color:var(--light-green);
+    border: 1px solid var(--sky);
+    background-color:transparent;
     font-size: 14px;
     display: block;
     max-width: max-content;
@@ -90,7 +122,7 @@ p{
 
 /*KEY FRAMES */ 
 
-@keyframes backgroundscroll {
+@keyframes background-scroll {
     0%{
         background-position-x: 0;
     }100%{

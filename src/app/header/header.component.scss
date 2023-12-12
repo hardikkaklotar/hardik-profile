@@ -28,11 +28,10 @@ header {
                 color: var(--primary);
                 transition: all 0.5s;
                 &.active{
-                    color: var(--green);
-                    font-weight: 600;
+                    color: var(--sky);
                 }
                 &:hover{
-                    color: var(--green);
+                    color: var(--sky);
                 }
             }
         }

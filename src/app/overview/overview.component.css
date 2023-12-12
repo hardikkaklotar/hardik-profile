@@ -1,7 +1,7 @@
 /*BENNAR SECTION CSS START HEAR*/
 .bennar-section {
   padding-top: 180px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   align-items: center;
   display: grid;
   color: var(--primary);
@@ -32,7 +32,7 @@
   width: 13px;
   height: 13px;
   border-radius: 100%;
-  background-color: var(--green);
+  background-color: var(--sky);
   content: "";
   position: absolute;
   top: -6%;
@@ -44,7 +44,7 @@
   width: 13px;
   height: 13px;
   border-radius: 100%;
-  background-color: var(--green);
+  background-color: var(--sky);
   content: "";
   position: absolute;
   top: -6%;
@@ -96,7 +96,7 @@
   width: 13px;
   height: 13px;
   border-radius: 100%;
-  background-color: var(--green);
+  background-color: var(--sky);
   content: "";
   position: absolute;
   top: -4%;
@@ -108,7 +108,7 @@
   width: 13px;
   height: 13px;
   border-radius: 100%;
-  background-color: var(--green);
+  background-color: var(--sky);
   content: "";
   position: absolute;
   top: -4%;
@@ -136,7 +136,7 @@
 /*BENNAR SECTION CSS END HEAR*/
 /*ABOUT SECTION CSS START HEAR*/
 .about_section {
-  padding: 50px 0px;
+  padding: 100px 0px 50px;
 }
 .about_section .about_wrapper .about_block {
   padding: 70px 0px;
@@ -147,7 +147,7 @@
 .about_section .about_wrapper .about_block .content_block h6 {
   font-size: 40px;
   font-family: "Ephesis", cursive !important;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .about_section .about_wrapper .about_block .content_block h2 {
   font-size: 30px;
@@ -163,9 +163,153 @@
 }
 
 /*ABOUT SECTION CSS END HEAR*/
+/*COMPANY INFORMATION SECTION CSS START */
+.company-information {
+  margin-bottom: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../assets/image/doted-img.png);
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .company-information {
+    min-height: 210px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .company-information {
+    padding: 40px 0px;
+  }
+}
+.company-information::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.company-information .company-information-wrapper {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+.company-information .company-information-wrapper .company-information-block {
+  padding: 30px;
+  border-radius: 0px 40px;
+  border: 1px solid var(--primary);
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .company-information .company-information-wrapper .company-information-block {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .company-information .company-information-wrapper .company-information-block {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+}
+.company-information .company-information-wrapper .company-information-block::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var(--sky);
+  position: absolute;
+  top: -4%;
+  left: 0%;
+  transform: translate(-50%);
+  z-index: 99;
+}
+.company-information .company-information-wrapper .company-information-block::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var(--sky);
+  position: absolute;
+  bottom: -4%;
+  right: -1%;
+  transform: translate(-50%);
+  z-index: 99;
+}
+.company-information .company-information-wrapper .company-information-block .content-box {
+  border-right: 2px solid var(--light-sky);
+}
+@media screen and (max-width: 575px) {
+  .company-information .company-information-wrapper .company-information-block .content-box {
+    border-right: 0px;
+  }
+}
+.company-information .company-information-wrapper .company-information-block .content-box:last-child {
+  border-right: 0px;
+}
+.company-information .company-information-wrapper .company-information-block .content-box h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--sky);
+}
+@media screen and (max-width: 991px) {
+  .company-information .company-information-wrapper .company-information-block .content-box h2 {
+    font-size: 30px;
+  }
+}
+.company-information .company-information-wrapper .company-information-block .content-box h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--white);
+}
+@media screen and (max-width: 991px) {
+  .company-information .company-information-wrapper .company-information-block .content-box h6 {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .company-information .company-information-wrapper .company-information-block .content-box h6 {
+    color: #fff;
+    font-size: 11px;
+  }
+}
+
+/*COMPANY INFORMATION SECTION CSS END */
 /*SKILLS SECTION CSS START HEAR*/
 .skills_section {
-  padding: 50px 0px;
+  padding: 100px 0px 50px;
+}
+.skills_section .skills_wrapper .skills_block {
+  padding: 80px 0px;
+}
+.skills_section .skills_wrapper .skills_block .skills_content {
+  color: var(--white);
+}
+.skills_section .skills_wrapper .skills_block .skills_content h6 {
+  font-size: 40px;
+  font-family: "Ephesis", cursive !important;
+  margin-bottom: 20px;
+}
+.skills_section .skills_wrapper .skills_block .skills_content h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.skills_section .skills_wrapper .skills_block .progress-block {
+  margin-bottom: 15px;
+}
+.skills_section .skills_wrapper .skills_block .progress-block span {
+  color: var(--bs-success-border-subtle);
+  font-size: 16px;
+  font-weight: 600;
 }
 .skills_section .skills_wrapper .our-technology {
   display: flex;
@@ -205,7 +349,7 @@
   right: 0;
   top: 0;
   border-radius: 50%;
-  border: 1px solid var(--white);
+  border: 1px solid var(--sky);
   animation: scale 2s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-1 {
@@ -228,7 +372,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-1 .techno-img {
@@ -254,7 +398,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-2 .techno-img {
@@ -280,7 +424,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-3 .techno-img {
@@ -306,7 +450,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-4 .techno-img {
@@ -332,7 +476,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-5 .techno-img {
@@ -358,7 +502,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-6 .techno-img {
@@ -384,7 +528,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-7 .techno-img {
@@ -410,7 +554,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-8 .techno-img {
@@ -436,7 +580,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-9 .techno-img {
@@ -462,7 +606,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--sky);
   animation: circle-animation 30s linear infinite;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .line-10 .techno-img {
@@ -493,6 +637,96 @@
 }
 
 /*SKILLS SECTION CSS END HEAR*/
+/*SERVICES SECTION CSS START HEAR*/
+/*SERVICES SECTION CSS END HEAR*/
+/*CONTACT SECTION CSS START HEAR*/
+.contact-section {
+  padding: 50px 0px;
+}
+.contact-section .contact-block {
+  padding: 40px 30px;
+  background-color: rgba(242, 242, 242, 0.1294117647);
+  border-radius: 10px;
+}
+.contact-section .contact-block .contact-left {
+  background-color: #03071C;
+  border-radius: 10px;
+  min-height: 600px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.contact-section .contact-block .contact-left::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(../../assets/image/contact-img1.png) no-repeat;
+  height: 180px;
+  width: 180px;
+}
+.contact-section .contact-block .contact-left::after {
+  content: "";
+  position: absolute;
+  bottom: 65px;
+  right: 65px;
+  background: url(../../assets/image/contact-img2.png) no-repeat;
+  height: 138px;
+  width: 138px;
+}
+.contact-section .contact-block .contact-left h2 {
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 0px;
+  background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-section .contact-block .contact-left .links-block {
+  position: relative;
+  z-index: 10;
+}
+.contact-section .contact-block .contact-left .links-block a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+.contact-section .contact-block .contact-left .links-block i {
+  color: #fff;
+  padding-top: 14px;
+}
+.contact-section .contact-block .contact-left .icon-block {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.contact-section .contact-block .contact-left .icon-block a {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sky);
+  transition: all 0.5s;
+}
+.contact-section .contact-block .contact-left .icon-block a i {
+  color: #fff;
+  transition: all 0.5s;
+}
+.contact-section .contact-block .contact-left .icon-block a:hover {
+  background-color: var(--white);
+}
+.contact-section .contact-block .contact-left .icon-block a:hover i {
+  color: var(--black);
+}
+
+/*CONTACT SECTION CSS END HEAR*/
 /*KEY FRAMES CSS START HEAR*/
 @keyframes doted-animation {
   0% {
@@ -530,11 +764,11 @@
 @keyframes scale {
   from {
     opacity: 1;
-    transform: scale3d(0.75, 0.75, 1);
+    transform: scale3d(1, 1, 1);
   }
   to {
     opacity: 0;
-    transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.5, 1.5, 1);
   }
 }
 @keyframes circle-animation {

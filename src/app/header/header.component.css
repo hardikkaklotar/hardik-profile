@@ -29,8 +29,11 @@ header .header-block .navbar-block .nav-link {
   display: inline-block;
   font-weight: 400;
   color: var(--primary);
+  transition: all 0.5s;
 }
 header .header-block .navbar-block .nav-link.active {
-  color: var(--green);
-  font-weight: 600;
+  color: var(--sky);
+}
+header .header-block .navbar-block .nav-link:hover {
+  color: var(--sky);
 }/*# sourceMappingURL=header.component.css.map */

@@ -30,7 +30,7 @@
                     width: 13px;
                     height: 13px;
                     border-radius: 100%;
-                    background-color: var(--green);
+                    background-color: var(--sky);
                     content: '';
                     position: absolute;
                     top: -6%;
@@ -42,7 +42,7 @@
                     width: 13px;
                     height: 13px;
                     border-radius: 100%;
-                    background-color: var(--green);
+                    background-color: var(--sky);
                     content: '';
                     position: absolute;
                     top: -6%;
@@ -108,7 +108,7 @@
                     width: 13px;
                     height: 13px;
                     border-radius: 100%;
-                    background-color: var(--green);
+                    background-color: var(--sky);
                     content: '';
                     position: absolute;
                     top: -4%;
@@ -120,7 +120,7 @@
                     width: 13px;
                     height: 13px;
                     border-radius: 100%;
-                    background-color: var(--green);
+                    background-color: var(--sky);
                     content: '';
                     position: absolute;
                     top: -4%;
@@ -161,7 +161,7 @@
                 h6{
                     font-size: 40px;
                     font-family: 'Ephesis', cursive !important;
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                 }
                 h2{
                     font-size: 30px;
@@ -188,9 +188,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../../assets/image/overview-image.webp);
-    // background-color:var(--primary);
-    min-height: 300px;
+    background-image: url(../../assets/image/doted-img.png);
+    min-height: 350px;
     position: relative;
     display: flex;
     align-items: center;
@@ -207,7 +206,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        backdrop-filter:blur(7px);
+        backdrop-filter:blur(2px);
 
     }
     .company-information-wrapper{
@@ -232,7 +231,7 @@
                 width: 13px;
                 height: 13px;
                 border-radius: 100%;
-                background-color: var(--green);
+                background-color: var(--sky);
                 position: absolute;
                 top: -4%;
                 left: 0%;
@@ -244,7 +243,7 @@
                 width: 13px;
                 height: 13px;
                 border-radius: 100%;
-                background-color: var(--green);
+                background-color: var(--sky);
                 position: absolute;
                 bottom: -4%;
                 right: -1%;
@@ -252,7 +251,7 @@
                 z-index: 99;
             }
             .content-box{
-                border-right: 2px solid rgb(40 153 0 / 58%);
+                border-right: 2px solid var(--light-sky);
                 @media screen and (max-width: 575px) {
                     border-right: 0px;
                 }
@@ -262,7 +261,7 @@
                 h2{
                     font-size: 40px;
                     font-weight: 600;
-                    color: #289900c4;
+                    color:var(--sky);
                     @media screen and (max-width: 991px) {
                         font-size:30px ;
                     }
@@ -298,7 +297,7 @@
                 h6{
                     font-size: 40px;
                     font-family: 'Ephesis', cursive !important;
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                 }
                 h2{
                     font-size: 30px;
@@ -356,7 +355,7 @@
                         right: 0;
                         top: 0;
                         border-radius: 50%;
-                        border: 1px solid var(--green);
+                        border: 1px solid var(--sky);
                         animation: scale 2s linear infinite;
                     }
                 }
@@ -381,7 +380,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -409,7 +408,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -437,7 +436,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -465,7 +464,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -493,7 +492,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -521,7 +520,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -549,7 +548,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -577,7 +576,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -605,7 +604,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -633,7 +632,7 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background-color: var(--green);
+                            background-color: var(--sky);
                             animation: circle-animation 30s linear infinite;
                         }
                     }
@@ -675,6 +674,105 @@
     }
 }
 /*SKILLS SECTION CSS END HEAR*/
+
+/*SERVICES SECTION CSS START HEAR*/
+
+/*SERVICES SECTION CSS END HEAR*/
+
+/*CONTACT SECTION CSS START HEAR*/
+.contact-section{
+    padding: 50px 0px;
+    .contact-block{
+        padding:40px 30px;
+        background-color:#f2f2f221;
+        border-radius: 10px;
+        .contact-left{
+            background-color:#03071C;
+            border-radius: 10px;
+            min-height: 600px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: url(../../assets/image/contact-img1.png) no-repeat;
+                height:180px;
+                width:180px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom:65px;
+                right:65px;
+                background: url(../../assets/image/contact-img2.png) no-repeat;
+                height:138px;
+                width:138px;
+            }
+            h2{
+                font-weight: 600;
+                font-size: 35px;
+                margin-bottom: 0px;
+                background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .links-block{
+                position: relative;
+                z-index: 10;
+                a{
+                    color:#fff;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                i{
+                    color:#fff;
+                    padding-top: 14px;
+                }
+            }
+            .icon-block{
+                display: flex;
+                align-items: center;
+                position: relative;
+                z-index: 10;
+                a{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--sky);
+                    transition: all 0.5s;
+                    i{
+                        color: #fff;
+                        transition: all 0.5s;
+                    }
+                    &:hover{
+                        background-color: var(--white);
+                        i{
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*CONTACT SECTION CSS END HEAR*/
+
+
+
+
+
+
+
 
 
 
