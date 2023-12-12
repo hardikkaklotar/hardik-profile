@@ -11,6 +11,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { OverviewComponent } from './overview/overview.component';
+import { DialogTemplateComponent } from './dialog-template/dialog-template.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { OverviewComponent } from './overview/overview.component';
     HeaderComponent,
     FooterComponent,
     OverviewComponent,
+    DialogTemplateComponent,
   ],
   imports: [
     BrowserModule,

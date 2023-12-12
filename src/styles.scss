@@ -54,8 +54,9 @@ a {
     width: 100% !important;
     background:transparent !important;
     color: var(--white);
-    border-bottom: 1px solid var(--black);
+    border-bottom: 2px solid #212332;
     max-height: 200px;
+    backdrop-filter: blur(5px);
    
     .mdc-text-field--filled:not(.mdc-text-field--disabled) {
         background: transparent !important;
@@ -79,10 +80,7 @@ a {
   
 }
   
-
-
 /* MAT CLASS CSS END HEAR */ 
-
 
 .title {
     text-align: center;
@@ -117,8 +115,11 @@ p{
     font-size: 14px;
     display: block;
     max-width: max-content;
+    transition: all 0.5s;
+    &:hover{
+        background-color: var(--sky);
+    }
 }
-
 
 /*KEY FRAMES */ 
 

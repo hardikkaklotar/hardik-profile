@@ -1,27 +1,13 @@
 <header>
-    
-        <div class="header-block">
-            <a draggable="false" class="logo" href="index.html">
-                HARDIK
+    <div class="header-block">
+        <a draggable="false" class="logo" href="index.html">
+            HARDIK
+        </a>
+        <div class="navbar-block gap-5">
+            <a *ngFor="let item of navigationItems">
+                <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}" (click)="routerActiveManage(item.id)">{{ item.label }}</a>
             </a>
-            <div class="navbar-block gap-5">
-                <a class="nav-link active" data-toggle="smooth-scroll" href="#home">
-                    Home
-                </a>
-                <a class="nav-link" data-toggle="smooth-scroll" href="#about">
-                    About
-                </a>
-                <a class="nav-link" data-toggle="smooth-scroll" href="#skills">
-                    Skills
-                </a>
-                <a class="nav-link" data-toggle="smooth-scroll" href="#services">
-                    Services
-                </a>
-                <a class="nav-link" data-toggle="smooth-scroll" href="#contact">
-                    Contact
-                </a>
-            </div>
-            <a href="#!" class="button-primary">Resume</a>
         </div>
-    
+        <a routerLink="#!" class="button-primary">Resume</a>
+    </div>
 </header>
