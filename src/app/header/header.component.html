@@ -3,11 +3,34 @@
         <a draggable="false" class="logo" href="index.html">
             HARDIK
         </a>
-        <div class="navbar-block gap-5">
+        <div class="navbar-block gap-3 gap-xl-5">
             <a *ngFor="let item of navigationItems">
-                <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}" (click)="routerActiveManage(item.id)">{{ item.label }}</a>
+                <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}"
+                    (click)="routerActiveManage(item.id)">{{ item.label }}</a>
             </a>
         </div>
-        <a routerLink="#!" class="button-primary">Resume</a>
+        <div class="d-flex align-items-center gap-3">
+            <a routerLink="#!" class="d-none d-sm-block button-primary">Resume</a>
+            <a data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2"
+                class="text-white d-md-none">
+                <i class="fa-solid fa-xl fa-bars"></i>
+            </a>
+        </div>
     </div>
 </header>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <a draggable="false" class="logo" href="index.html">
+            HARDIK
+        </a>
+        <a data-bs-dismiss="offcanvas" aria-label="Close" class="text-black">
+            <i class="fa-solid fa-xl fa-xmark"></i>
+        </a>
+    </div>
+    <div class="offcanvas-body">
+        <a *ngFor="let item of navigationItems">
+            <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}"
+                (click)="routerActiveManage(item.id)">{{ item.label }}</a>
+        </a>
+    </div>
+</div>

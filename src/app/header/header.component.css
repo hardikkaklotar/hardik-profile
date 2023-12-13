@@ -8,6 +8,16 @@ header {
   z-index: 999;
   box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
 }
+@media only screen and (max-width: 991px) {
+  header {
+    padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  header {
+    padding: 15px;
+  }
+}
 header .header-block {
   display: flex;
   align-items: center;
@@ -19,6 +29,11 @@ header .header-block .logo {
   margin-bottom: 0px;
   color: var(--white);
   font-family: "Ephesis", cursive !important;
+}
+@media only screen and (max-width: 575px) {
+  header .header-block .logo {
+    font-size: 20px;
+  }
 }
 header .header-block .navbar-block {
   display: flex;
@@ -37,4 +52,10 @@ header .header-block .navbar-block .nav-link.active {
 }
 header .header-block .navbar-block .nav-link:hover {
   color: var(--sky);
+}
+
+@media only screen and (max-width: 767px) {
+  header .header-block .navbar-block {
+    display: none;
+  }
 }/*# sourceMappingURL=header.component.css.map */
