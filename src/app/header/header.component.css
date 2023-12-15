@@ -54,6 +54,52 @@ header .header-block .navbar-block .nav-link:hover {
   color: var(--sky);
 }
 
+.offcanvas {
+  background-color: #020617 !important;
+}
+.offcanvas .navbar-header {
+  background-color: var(--light-sky);
+}
+.offcanvas .navbar-header .logo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: var(--black);
+  font-family: "Ephesis", cursive !important;
+}
+@media only screen and (max-width: 575px) {
+  .offcanvas .navbar-header .logo {
+    font-size: 20px;
+  }
+}
+.offcanvas .navbar-block {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.offcanvas .navbar-block .nav-link {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 400;
+  color: var(--primary);
+  transition: all 0.5s;
+}
+.offcanvas .navbar-block .nav-link.active {
+  color: var(--sky);
+}
+.offcanvas .navbar-block .nav-link:hover {
+  color: var(--sky);
+}
+
+.resume-model .resume-body img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
 @media only screen and (max-width: 767px) {
   header .header-block .navbar-block {
     display: none;

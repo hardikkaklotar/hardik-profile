@@ -10,16 +10,20 @@
             </a>
         </div>
         <div class="d-flex align-items-center gap-3">
-            <a routerLink="#!" class="d-none d-sm-block button-primary">Resume</a>
-            <a data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2"
+            <a routerLink="#!" class="d-none d-sm-block button-primary" data-bs-toggle="modal"
+                data-bs-target="#resumeModal">Resume</a>
+            <a data-bs-toggle="offcanvas" href="#responsiveheader" role="button" aria-controls="responsiveheader"
                 class="text-white d-md-none">
                 <i class="fa-solid fa-xl fa-bars"></i>
             </a>
         </div>
     </div>
 </header>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
+
+<!-- Header Modal -->
+<div class="offcanvas offcanvas-start d-md-none" data-bs-backdrop="offcanvas-start" tabindex="-1" id="responsiveheader"
+    aria-labelledby="offcanvas">
+    <div class="offcanvas-header navbar-header">
         <a draggable="false" class="logo" href="index.html">
             HARDIK
         </a>
@@ -27,10 +31,32 @@
             <i class="fa-solid fa-xl fa-xmark"></i>
         </a>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body navbar-block p-4 gap-3">
         <a *ngFor="let item of navigationItems">
-            <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}"
+            <a href="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas" [ngClass]="{'active' :item.active}"
                 (click)="routerActiveManage(item.id)">{{ item.label }}</a>
         </a>
+    </div>
+</div>
+
+<!-- Resume Modal -->
+<div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header resume-header">
+                <h1 class="modal-title fs-5 mb-0" id="resumeModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body resume-body">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet id accusantium perspiciatis
+                    aspernatur aperiam officia non vitae debitis fugit? Illum iure optio esse neque, doloremque
+                    quibusdam excepturi cum dolorem debitis.</p>
+                <img src="../../assets/image/development-skills.png" alt="resume">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="../../assets/image/development-skills.png" download="" class="button-primary">Download</a>
+            </div>
+        </div>
     </div>
 </div>

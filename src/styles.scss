@@ -105,6 +105,13 @@ p{
     line-height: 27px;
     color: var(--primary);
     margin-bottom: 0px;
+    @media screen and (max-width:991px) {
+        font-size:14px;
+    }
+    @media screen and (max-width:575px) {
+        font-size:13px;
+        line-height: 22px;
+    }
 }
 .button-primary{
     padding: 10px 30px;
@@ -121,7 +128,7 @@ p{
     }
     @media only screen and (max-width:575px) {
         font-size:12px;
-        padding: 6px 20px;
+        padding: 6px 15px;
     }
 }
 

@@ -20,12 +20,4 @@ export class HeaderComponent {
       element.active = element.id === id ? true : false;
     });
   }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    if (document.body.scrollTop > 20 ||     
-    document.documentElement.scrollTop > 20) {
-      // document.getElementById('about').classList.add('active');
-    }
-  }
 }
