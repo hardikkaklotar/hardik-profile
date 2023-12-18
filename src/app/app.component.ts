@@ -8,6 +8,7 @@ import * as Aos from 'aos';
 })
 export class AppComponent {
   title = 'hardik-resume';
+  
   ngOnInit() {
     Aos.init();
   }

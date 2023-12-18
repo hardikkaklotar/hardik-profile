@@ -43,10 +43,6 @@ a {
   --mdc-linear-progress-track-shape: 0;
 }
 
-.mdc-linear-progress__bar-inner {
-  border-color: rgba(87, 187, 246, 0.7215686275) !important;
-}
-
 .mat-mdc-progress-bar {
   --mdc-linear-progress-active-indicator-color:var(--sky) !important;
   --mdc-linear-progress-track-color: var(--primary) !important;

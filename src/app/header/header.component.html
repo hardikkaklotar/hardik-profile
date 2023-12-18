@@ -5,8 +5,10 @@
         </a>
         <div class="navbar-block gap-3 gap-xl-5">
             <a *ngFor="let item of navigationItems">
-                <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}"
-                    (click)="routerActiveManage(item.id)">{{ item.label }}</a>
+                <!-- <a href="{{ item.link }}" class="nav-link" [ngClass]="{'active' :item.active}"
+                    (click)="routerActiveManage(item.id)">{{ item.label }}</a> -->
+                <a routerLink="{{ item.link }}" class="nav-link" [routerLinkActiveOptions]="{exact: true}"
+                    routerLinkActive="active">{{ item.label }}</a>
             </a>
         </div>
         <div class="d-flex align-items-center gap-3">
@@ -33,14 +35,17 @@
     </div>
     <div class="offcanvas-body navbar-block p-4 gap-3">
         <a *ngFor="let item of navigationItems">
-            <a href="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas" [ngClass]="{'active' :item.active}"
-                (click)="routerActiveManage(item.id)">{{ item.label }}</a>
+            <!-- <a href="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas" [ngClass]="{'active' :item.active}"
+                (click)="routerActiveManage(item.id)">{{ item.label }}</a> -->
+            <a routerLink="{{ item.link }}" class="nav-link" [routerLinkActiveOptions]="{exact: true}"
+                routerLinkActive="active" data-bs-dismiss="offcanvas">{{ item.label }}</a>
         </a>
     </div>
 </div>
 
 <!-- Resume Modal -->
-<div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+<div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header resume-header">

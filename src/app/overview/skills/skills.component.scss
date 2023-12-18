@@ -1,0 +1,467 @@
+/*SKILLS SECTION CSS START HEAR*/
+.skills_section {
+    padding: 100px 0px 50px;
+
+    .skills_wrapper {
+
+        .skills_block {
+            padding: 80px 0px;
+
+            .skills_content {
+                color: var(--white);
+
+                h6 {
+                    font-size: 40px;
+                    font-family: 'Ephesis', cursive !important;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .progress-block {
+                margin-bottom: 15px;
+
+                span {
+                    color: var(--bs-success-border-subtle);
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+
+            .img-block {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+
+        .our-technology {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+
+            .our-techno {
+                display: inline-table;
+                position: relative;
+
+                .center-title {
+                    width: 100px;
+                    height: 100px;
+                    line-height: 100px;
+                    border-radius: 50%;
+                    background-color: var(--white);
+                    box-shadow: 0 0 10px var(--primary);
+                    border: 1px solid var(--primary);
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    z-index: 1;
+                    position: relative;
+                    align-items: center;
+
+                    h4 {
+                        margin-bottom: 0px;
+                        font-size: 20px;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        border-radius: 50%;
+                        border: 1px solid var(--sky);
+                        animation: scale 2s linear infinite;
+                    }
+                }
+
+                .line-1 {
+                    position: absolute;
+                    left: -125px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 350px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(30deg);
+
+                    .circle-1 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-30deg);
+                    }
+                }
+
+                .line-2 {
+                    position: absolute;
+                    left: -235px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 570px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(11deg);
+
+                    .circle-2 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-10deg);
+                    }
+                }
+
+                .line-3 {
+                    position: absolute;
+                    left: -175px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 450px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(-5deg);
+
+                    .circle-3 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(5deg);
+                    }
+                }
+
+                .line-4 {
+                    position: absolute;
+                    left: -75px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 250px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(-28deg);
+
+                    .circle-4 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(28deg);
+                    }
+                }
+
+                .line-5 {
+                    position: absolute;
+                    left: -30px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 160px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(90deg);
+
+                    .circle-5 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                .line-6 {
+                    position: absolute;
+                    right: -125px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 350px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(150deg);
+
+                    .circle-6 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-150deg);
+                    }
+                }
+
+                .line-7 {
+                    position: absolute;
+                    right: -235px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 570px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(165deg);
+
+                    .circle-7 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-165deg);
+                    }
+                }
+
+                .line-8 {
+                    position: absolute;
+                    right: -100px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 300px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(185deg);
+
+                    .circle-8 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-185deg);
+                    }
+                }
+
+                .line-9 {
+                    position: absolute;
+                    right: -45px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 190px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(215deg);
+
+                    .circle-9 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(-215deg);
+                    }
+                }
+
+                .line-10 {
+                    position: absolute;
+                    left: -50px;
+                    top: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    height: 1px;
+                    background-color: var(--white);
+                    width: 200px;
+                    transform-origin: right center;
+                    transform: translate(-50%) rotate(270deg);
+
+                    .circle-10 {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 50px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: var(--sky);
+                            animation: circle-animation 30s linear infinite;
+                        }
+                    }
+
+                    .techno-img {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        .our-technology {
+            padding: 250px 0px;
+
+            .our-techno {
+                .techno-img {
+                    position: absolute;
+                    left: -30px;
+                    top: -48px;
+                    height: 100px;
+                    width: 100px;
+                    line-height: unset;
+                    background-color: var(--black);
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px var(--white);
+                    padding: 10px;
+                    cursor: pointer;
+
+                    img {
+                        transition: all 0.5s;
+                        transform: scale(1);
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+}
+
+/*SKILLS SECTION CSS END HEAR*/
+
+
+// SKILLS KEY FRAMES
+@keyframes scale {
+    from {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(1.5, 1.5, 1);
+    }
+}
+
+@keyframes circle-animation {
+    0% {
+        left: 100%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/*KEY FRAMES CSS END HEAR*/

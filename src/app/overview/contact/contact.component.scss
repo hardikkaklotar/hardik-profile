@@ -1,0 +1,102 @@
+/*CONTACT SECTION CSS START HEAR*/
+.contact-section {
+    padding: 100px 0px 50px;
+
+    .contact-block {
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: rgb(92 185 242 / 28%) 0px 0px 27px, rgb(0 0 0 / 60%) 0px 6px 6px;
+
+        .contact-left {
+            background-color: #03071C;
+            border-radius: 10px;
+            min-height: 600px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -140px;
+                right: -119px;
+                height: 300px;
+                width: 300px;
+                background-color: #132b44;
+                border-radius: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                height: 150px;
+                width: 150px;
+                background-color: rgb(83 178 235 / 27%);
+                border-radius: 100%;
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 35px;
+                margin-bottom: 0px;
+                background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .links-block {
+                position: relative;
+                z-index: 10;
+
+                a {
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+
+                i {
+                    color: #fff;
+                    padding-top: 14px;
+                }
+            }
+
+            .icon-block {
+                display: flex;
+                align-items: center;
+                position: relative;
+                z-index: 10;
+
+                a {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--sky);
+                    transition: all 0.5s;
+
+                    i {
+                        color: #fff;
+                        transition: all 0.5s;
+                    }
+
+                    &:hover {
+                        background-color: var(--white);
+
+                        i {
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*CONTACT SECTION CSS END HEAR*/
