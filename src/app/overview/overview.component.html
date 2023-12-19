@@ -7,4 +7,7 @@
 <app-skills></app-skills>
 <app-services></app-services>
 <app-contact></app-contact>
+<a class="scroll-top" *ngIf="showBtn$ | async" (click)="gotoTop()">
+    <i class="fa-solid fa-2xl fa-angles-up"></i>
+</a>
 <!-- <router-outlet></router-outlet> -->

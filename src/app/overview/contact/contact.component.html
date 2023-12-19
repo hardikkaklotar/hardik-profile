@@ -52,7 +52,6 @@
                             <mat-label>Enter Your Email</mat-label>
                             <input matInput required type="email" placeholder="" formControlName="Email">
                         </mat-form-field>
-
                     </div>
                     <div class="col-12 mt-5">
                         <mat-form-field>
@@ -69,7 +68,11 @@
                         </mat-form-field>
                     </div>
                     <div class="col-12 mt-5 justify-content-end d-flex">
-                        <button class="button-primary" type="submit">
+                        <!-- <button class="button-primary" type="button" data-bs-toggle="modal"
+                            data-bs-target="#contact-model">
+                            Show Details 
+                        </button> -->
+                        <button class="button-primary ms-3" type="submit">
                             Send Message
                         </button>
                     </div>
@@ -79,3 +82,41 @@
     </div>
 </section>
 <!-- CONTACT SECTION END HEAR -->
+
+<!-- Modal -->
+<div class="modal fade contact-form-model" id="contact-model" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">Information</h2>
+                <a href="#!" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-xmark"></i></a>
+            </div>
+            <div class="modal-body form-details">
+                <div class="form-input-box gap-2">
+                    <h6>First Name :-</h6>
+                    <p id="firstName">{{ formValues.FirstName }}</p>
+                </div>
+                <div class="form-input-box gap-2">
+                    <h6>Last Name :-</h6>
+                    <p id="lastName">{{ formValues.LastName }}</p>
+                </div>
+                <div class="form-input-box gap-2">
+                    <h6>Email Address :-</h6>
+                    <p id="emailAddress">{{ formValues.Email }}</p>
+                </div>
+                <div class="form-input-box gap-2">
+                    <h6>Mobile Number :-</h6>
+                    <p id="mobileNumber">{{ formValues.Number }}</p>
+                </div>
+                <div class="form-input-box gap-2">
+                    <h6>Message :-</h6>
+                    <p id="message">{{ formValues.Message }}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="button-primary" data-bs-dismiss="modal" aria-label="Close">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

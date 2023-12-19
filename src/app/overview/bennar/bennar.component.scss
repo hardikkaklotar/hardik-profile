@@ -1,7 +1,7 @@
 /*BENNAR SECTION CSS START HEAR*/
 .bennar-section {
-    padding-top: 180px;
-    padding-bottom: 30px;
+    padding-top: 210px;
+    padding-bottom: 50px;
     align-items: center;
     display: grid;
     color: var(--primary);
@@ -36,7 +36,7 @@
 
             h2 {
                 font-size: 45px;
-
+                padding-bottom:15px;
                 @media screen and (max-width:991px) {
                     font-size: 30px;
                 }

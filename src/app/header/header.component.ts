@@ -1,31 +1,63 @@
-import { Component } from '@angular/core';
-
+import { Component, HostListener } from "@angular/core";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
-  // navigationItems = [
-  //   { id: 1, label: 'Home', link: '#home', active: true },
-  //   { id: 2, label: 'About', link: '#about', active: false },
-  //   { id: 3, label: 'Skills', link: '#skills', active: false },
-  //   { id: 4, label: 'Services', link: '#services', active: false },
-  //   { id: 5, label: 'Contact', link: '#contact', active: false }
-  // ];
-
   navigationItems = [
-    { id: 1, label: 'Home', link: '/', active: true },
-    { id: 2, label: 'About', link: '/about', active: false },
-    { id: 3, label: 'Skills', link: '/skills', active: false },
-    { id: 4, label: 'Services', link: '/services', active: false },
-    { id: 5, label: 'Contact', link: '/contact', active: false }
+    { id: 'home', label: 'Home', link: '/', active: true },
+    { id: 'about', label: 'About', link: '/about', active: false },
+    { id: 'skills', label: 'Skills', link: '/skills', active: false },
+    { id: 'services', label: 'Services', link: '/services', active: false },
+    { id: 'contact', label: 'Contact', link: '/contact', active: false }
   ];
+  isScrolled = false;
+  
+// only section scroll
+  scrollTo(section: string): void {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
-  // routerActiveManage(id: number){
-  //   this.navigationItems.forEach(element => {
-  //     element.active = element.id === id ? true : false;
-  //   });
-  // }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.updateActiveMenuItem();
+    this.isScrolled = window.scrollY > 50; // Adjust the scroll threshold as needed
+  }
+
+  private updateActiveMenuItem(): void {
+    // Iterate through menu items and set isActive based on scroll position
+    this.navigationItems.forEach(item => {
+      const sectionElement = document.getElementById(item.id);
+      if (sectionElement) {
+        const rect = sectionElement.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const threshold = viewportHeight * 0.2; // 80% of viewport height
+        
+        if (rect.top <= threshold && rect.bottom >= threshold) {
+          item.active = true;
+        } else {
+          item.active = false;
+        }
+      }
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup,Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -22,6 +23,8 @@ export class ContactComponent {
   number3: number = 0;
   number4: number = 0;
   observer: any;
+  formValues: any = {};
+  
   constructor(private formBuilder: FormBuilder) { }
 
   get f() { return this.contactForm.controls; }
@@ -32,9 +35,10 @@ export class ContactComponent {
       console.log('Enter Your Valid');
     } else {
       console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.contactForm.value, null, 4));
+      this.formValues = this.contactForm.value;
     }
-
   }
+  
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       FirstName: ['', Validators.required],
@@ -44,5 +48,4 @@ export class ContactComponent {
       Message: ['', Validators.required],
     })
   }
-
 }

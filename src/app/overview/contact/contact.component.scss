@@ -1,7 +1,7 @@
 /*CONTACT SECTION CSS START HEAR*/
 .contact-section {
     padding: 100px 0px 50px;
-
+    position: relative;
     .contact-block {
         padding: 40px 30px;
         border-radius: 10px;
@@ -99,4 +99,109 @@
         }
     }
 }
+
 /*CONTACT SECTION CSS END HEAR*/
+
+.contact-form-model {
+    .modal-content {
+        background-color: #03071C;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -140px;
+            left: -119px;
+            height: 300px;
+            width: 300px;
+            background-color: #132b44;
+            border-radius: 100%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(83 178 235 / 27%);
+            border-radius: 100%;
+        }
+
+        .modal-header {
+            padding: 20px;
+            position: relative;
+            z-index: 99;
+            border-bottom: 0px;
+            h2 {
+                font-weight: 600;
+                font-size: 30px !important;
+                margin-bottom: 0px;
+                background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            a {
+                border-radius: 100%;
+                border: 2px solid var(--light-sky);
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s;
+                &:hover {
+                    border-color: var(--sky);
+
+                    i {
+                        transform: rotate(360deg);
+                    }
+                }
+                i {
+                    font-size: 20px;
+                    color: var(--sky);
+                    transition: all 0.7s;
+                }
+            }
+        }
+        .modal-body {
+            min-height: 400px;
+        }
+        .modal-footer {
+            border-top: 0px;
+            padding: 20px;
+            position: relative;
+            z-index: 99;
+        }
+        .form-details {
+            .form-input-box {
+                padding: 10px 20px;
+                margin-bottom: 10px;
+                background: linear-gradient(to bottom right, #94a3b80f 47%, #38bdf833 70%);
+                border-radius: 10px 0px 10px 0px;
+                display: flex;
+                align-items: start;
+                h6 {
+                    font-size: 16px;
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    font-family: 'Montserrat', sans-serif !important;
+                    color: var(--primary);
+                    flex-shrink: 0;
+                    line-height: 25px;
+                }
+                p {
+                    margin-bottom: 0px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: var(--white);
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}

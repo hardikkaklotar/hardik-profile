@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     SkillsComponent,
     ServicesComponent,
     ContactComponent,
-    InformationComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),
