@@ -10,6 +10,7 @@
     --white: #ffffff;
 }
 body {
+    // background-color:var(--black) !important;
     background-color: #020617 !important;
     background: url(assets/image/Dot-Background.png) repeat;
     background-position: center;
@@ -79,6 +80,10 @@ a {
     }
   
 }
+.mat-mdc-dialog-container .mdc-dialog__surface{
+    background-color:#03071C !important;
+    border-radius: 10px !important;
+}
   
 /* MAT CLASS CSS END HEAR */ 
 
@@ -89,6 +94,16 @@ a {
         font-weight: 500;
         margin-bottom: 10px;
         font-size: 25px;
+        @media screen and (max-width:991px) {
+            font-size: 22px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width:575px) {
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
     }
     h2 {
         font-weight: 600;
@@ -97,6 +112,15 @@ a {
         background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media screen and (max-width:991px) {
+            font-size: 30px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 25px;
+        }
+        @media screen and (max-width:575px) {
+            font-size: 22px;
+        }
     }
 }
 p{

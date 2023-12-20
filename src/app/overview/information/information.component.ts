@@ -12,9 +12,6 @@ interface AnimatedProperties {
   styleUrls: ['./information.component.scss']
 })
 export class InformationComponent implements OnInit{
-    ngOnInit(): void {
-      throw new Error('Method not implemented.');
-    }
     @ViewChild('companyInformation', { static: true }) companyInformation!: ElementRef;
     submitted = false;
     number: number = 0;
@@ -69,5 +66,8 @@ export class InformationComponent implements OnInit{
     if (this.companyInformation && this.companyInformation.nativeElement) {
       this.observer.observe(this.companyInformation.nativeElement);
     }
+  }
+
+  ngOnInit(): void {
   }
 }

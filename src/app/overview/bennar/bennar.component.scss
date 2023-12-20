@@ -1,17 +1,15 @@
 /*BENNAR SECTION CSS START HEAR*/
 .bennar-section {
-    padding-top: 210px;
-    padding-bottom: 50px;
+    padding:210px 0px 50px;
     align-items: center;
     display: grid;
     color: var(--primary);
-
     @media screen and (max-width:767px) {
-        padding-top: 130px;
+        padding:130px 0px 40px;
     }
 
     @media screen and (max-width:575px) {
-        padding-top: 100px;
+        padding:100px 0px 0px;
     }
     .custom-container {
         width: 100%;

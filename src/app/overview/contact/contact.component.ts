@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
   socialLinks = [
@@ -24,8 +24,11 @@ export class ContactComponent {
   number4: number = 0;
   observer: any;
   formValues: any = {};
-  
-  constructor(private formBuilder: FormBuilder) { }
+
+  @ViewChild('myDialog', { static: true }) myDialog!: TemplateRef<any>;
+  dialogRef!: MatDialogRef<any>;
+
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {}
 
   get f() { return this.contactForm.controls; }
 
@@ -36,9 +39,13 @@ export class ContactComponent {
     } else {
       console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.contactForm.value, null, 4));
       this.formValues = this.contactForm.value;
+       // Open the dialog after form submission
+       this.dialogRef = this.dialog.open(this.myDialog);
+       this.dialogRef.afterClosed().subscribe(result => {
+       });
     }
   }
-  
+ 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       FirstName: ['', Validators.required],
@@ -48,4 +55,7 @@ export class ContactComponent {
       Message: ['', Validators.required],
     })
   }
+ 
+
+
 }

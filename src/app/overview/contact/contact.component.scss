@@ -1,12 +1,24 @@
 /*CONTACT SECTION CSS START HEAR*/
 .contact-section {
-    padding: 100px 0px 50px;
+    padding: 100px 0px 100px;
     position: relative;
+    @media screen and (max-width:1240px) {
+        padding: 60px 0px;
+    }
+    @media screen and (max-width:1024px) {
+        padding: 60px 20px 50px;
+    }
+    @media screen and (max-width:575px) {
+        padding:60px 0px 40px;
+    }
     .contact-block {
         padding: 40px 30px;
         border-radius: 10px;
         box-shadow: rgb(92 185 242 / 28%) 0px 0px 27px, rgb(0 0 0 / 60%) 0px 6px 6px;
-
+        @media screen and (max-width:575px) {
+            padding: 10px 0px;
+            margin: 0px;
+        }
         .contact-left {
             background-color: #03071C;
             border-radius: 10px;
@@ -17,7 +29,14 @@
             justify-content: space-between;
             position: relative;
             overflow: hidden;
-
+            @media screen and (max-width:767px) {
+                min-height: 500px;
+            }
+            @media screen and (max-width:575px) {
+                padding:15px;
+                min-height: 400px;
+                box-shadow:rgb(92 185 242 / 59%) 0px 0px 8px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -27,6 +46,10 @@
                 width: 300px;
                 background-color: #132b44;
                 border-radius: 100%;
+                @media screen and (max-width:575px) {
+                    height:260px;
+                    width:260px;
+                }
             }
 
             &::after {
@@ -38,6 +61,10 @@
                 width: 150px;
                 background-color: rgb(83 178 235 / 27%);
                 border-radius: 100%;
+                @media screen and (max-width:575px) {
+                    height:100px;
+                    width:100px;
+                }
             }
 
             h2 {
@@ -47,6 +74,12 @@
                 background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                @media screen and (max-width:767px) {
+                    font-size:27px
+                }
+                @media screen and (max-width:575px) {
+                    font-size:23px
+                }
             }
 
             .links-block {
@@ -58,6 +91,9 @@
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 28px;
+                    @media screen and (max-width:575px) {
+                        font-size:14px
+                    }
                 }
 
                 i {
@@ -103,6 +139,7 @@
 /*CONTACT SECTION CSS END HEAR*/
 
 .contact-form-model {
+    min-width: 600px;
     .modal-content {
         background-color: #03071C;
         border-radius: 10px;
@@ -145,7 +182,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            a {
+            .close-icon {
                 border-radius: 100%;
                 border: 2px solid var(--light-sky);
                 height: 30px;
@@ -154,6 +191,7 @@
                 align-items: center;
                 justify-content: center;
                 transition: all 0.5s;
+                background-color: transparent;
                 &:hover {
                     border-color: var(--sky);
 
@@ -168,9 +206,6 @@
                 }
             }
         }
-        .modal-body {
-            min-height: 400px;
-        }
         .modal-footer {
             border-top: 0px;
             padding: 20px;
@@ -178,6 +213,7 @@
             z-index: 99;
         }
         .form-details {
+            min-height: 400px;
             .form-input-box {
                 padding: 10px 20px;
                 margin-bottom: 10px;

@@ -2,10 +2,26 @@
 .skills_section {
     padding: 100px 0px 50px;
 
+    @media screen and (max-width:1240px) {
+        padding: 60px 0px 30px;
+    }
+
+    @media screen and (max-width:991px) {
+        padding: 60px 0px 0px;
+    }
+
     .skills_wrapper {
 
         .skills_block {
             padding: 80px 0px;
+
+            @media screen and (max-width:991px) {
+                padding: 60px 0px 40px;
+            }
+
+            @media screen and (max-width:767px) {
+                padding: 40px 0px 40px;
+            }
 
             .skills_content {
                 color: var(--white);
@@ -14,12 +30,31 @@
                     font-size: 40px;
                     font-family: 'Ephesis', cursive !important;
                     margin-bottom: 20px;
+
+                    @media screen and (max-width:575px) {
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                    }
                 }
 
                 h2 {
                     font-size: 30px;
                     font-weight: 500;
                     margin-bottom: 30px;
+
+                    @media screen and (max-width:991px) {
+                        font-size: 26px;
+                    }
+
+                    @media screen and (max-width:767px) {
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+
+                    @media screen and (max-width:575px) {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
                 }
             }
 
@@ -40,7 +75,6 @@
                 }
             }
         }
-
 
         .our-technology {
             display: flex;
@@ -430,9 +464,261 @@
 
 
         }
+
+        @media (min-width:991px) and (max-width:1240px) {
+            .our-technology {
+                padding: 250px 0px;
+                .our-techno {
+                    .line-2 {
+                        left: -191px;
+                        top: 48%;
+                        width: 448px;
+                        transform: translate(-50%) rotate(14deg);
+                    }
+                    .line-7{
+                        right: -191px;
+                        top: 48%;
+                        width: 448px;
+                    }
+                    .line-9 {
+                        right: -71px;
+                        width: 248px;
+                    }
+                }
+            }
+
+        }
+        @media (min-width:767px) and (max-width:991px) {
+            .our-technology {
+                padding:180px 0px;
+                .our-techno {
+                    .animation-line {
+                        .techno-img {
+                           top: -40px;
+                           width: 80px;
+                           height: 80px;
+                        }
+                    }
+                    .line-1{
+                        transform: translate(-50%) rotate(33deg);
+                    }
+                    .line-2 {
+                        left: -143px;
+                        top: 48%;
+                        width: 328px;
+                        transform: translate(-50%) rotate(13deg);
+                    }
+                    .line-3 {
+                        left:-100px;
+                        top: 50%;
+                        width: 376px;
+                    }
+                    .line-6{
+                        transform: translate(-50%) rotate(148deg);
+                    }
+                    .line-7{
+                        right: -143px;
+                        top: 48%;
+                        width: 328px;
+                    }
+                    .line-9 {
+                        right: -71px;
+                        width: 248px;
+                    }
+                }
+            }
+
+        }
+        @media screen and (max-width:767px){
+            .our-technology {
+                padding: 180px 0px;
+                .our-techno {
+                    .animation-line {
+                        .animation-circle {}
+                        .techno-img {
+                            left: -32px;
+                            top: -40px;
+                            height: 80px;
+                            width: 80px;
+                        }
+                    }
+                    .line-1{
+                        left: -48px;
+                        top: 40%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(44deg);
+                    }
+                    .line-2 {
+                        left: -65px;
+                        top: 41%;
+                        width: 190px;
+                        transform: translate(-51%) rotate(7deg);
+                    }
+
+                    .line-3 {
+                        left: -60px;
+                        top: 58%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(-21deg);
+                    }
+
+                    .line-4 {
+                        left: -54px;
+                        top: 63%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(-54deg);
+                    }
+                    .line-5{
+                        left: -44px;
+                        width: 190px;
+                    }
+                    .line-6{
+                        right: -48px;
+                        top: 40%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(132deg);
+                    
+                    }
+                    .line-7{
+                        right: -65px;
+                        top: 41%;
+                        width: 190px;
+                        transform: translate(-51%) rotate(168deg);
+                    }
+                    .line-8{
+                        right: -60px;
+                        top: 58%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(195deg);
+                    }
+                    .line-9 {
+                        right: -54px;
+                        top: 63%;
+                        width: 190px;
+                        transform: translate(-50%) rotate(230deg);
+                    }
+                    .line-10{
+                        left: -44px;
+                        width:190px;
+                    }
+                }
+            }
+
+        }
+        @media screen and (max-width:575px){
+            .our-technology {
+                padding:115px 0px;
+                .our-techno {
+                    .center-title{
+                        width: 85px;
+                        height: 85px;
+                        h4{
+                            font-size: 16px;
+                        }
+                    }
+                    .animation-line {
+                        .animation-circle {}
+                        .techno-img {
+                            left: -32px;
+                            top: -30px;
+                            height: 60px;
+                            width: 60px;
+                        }
+                    }
+                    .line-1{
+                        left: -29px;
+                        top: 19%;
+                        width: 100px;
+                        transform: translate(-50%) rotate(48deg);
+                    }
+                    .line-2 {
+                        left: -30px;
+                        top: 35%;
+                        width: 100px;
+                        transform: translate(-51%) rotate(7deg);
+                    }
+
+                    .line-3 {
+                        left: -30px;
+                        top: 55%;
+                        width: 100px;
+                        transform: translate(-50%) rotate(-28deg);
+                    }
+
+                    .line-4 {
+                        left: -24px;
+                        top: 77%;
+                        width: 100px;
+                        transform: translate(-50%) rotate(-59deg);
+                    }
+                    .line-5{
+                        left: -9px;
+                        width:100px;
+                        top: 15%;
+                    }
+                    .line-6{
+                        right: -29px;
+                        top: 19%;
+                        width: 100px;
+                        transform: translate(-50%) rotate(132deg);
+                    
+                    }
+                    .line-7{
+                        right: -30px;
+                        top: 35%;
+                        width:100px;
+                        transform: translate(-51%) rotate(168deg);
+                    }
+                    .line-8{
+                        right: -30px;
+                        top: 55%;
+                        width:100px;
+                        transform: translate(-50%) rotate(202deg);
+                    }
+                    .line-9 {
+                        right: -24px;
+                        top: 77%;
+                        width: 100px;
+                        transform: translate(-50%) rotate(235deg);
+                    }
+                    .line-10{
+                        left: -9px;
+                        width:100px;
+                        top: 80%;
+                        transform: translate(-50%) rotate(267deg);
+                    }
+                }
+            }
+
+        }
     }
 
 }
+
+
+// @media (min-width:992px) and (max-width: 1299px) {
+//         .our-technology {
+//             .our-techno {
+//                 .line-2 {
+//                     width: 300px !important;
+//                     left: -120px;
+//                     transform: translate(-50%) rotate(11deg);
+//                     .techno-img {
+//                         transform: rotate(-11deg);
+//                     }
+//                 } 
+//                 .line-7 {
+//                     width: 450px !important;
+//                     right: -170px;
+//                     transform: translate(-50%) rotate(-190deg);
+//                     .techno-img {
+//                         transform: rotate(-170deg);
+//                     }
+//                 }
+//             }
+//         }
+
+// }
 
 /*SKILLS SECTION CSS END HEAR*/
 

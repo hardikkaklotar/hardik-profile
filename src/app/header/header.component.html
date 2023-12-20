@@ -5,8 +5,8 @@
         </a>
         <div class="navbar-block gap-3 gap-xl-4">
             <a *ngFor="let item of navigationItems">
-                <a routerLink="{{ item.link }}" class="nav-link" [routerLinkActiveOptions]="{exact: true}"
-                (click)="scrollTo(item.id)"  routerLinkActive="active">{{ item.label }}</a>
+                <a routerLink="{{ item.link }}" class="nav-link"
+                (click)="scrollTo(item.id)" [ngClass]="{'active':item.active}">{{ item.label }}</a>
             </a>
         </div>
         <div class="d-flex align-items-center gap-3">
@@ -33,10 +33,8 @@
     </div>
     <div class="offcanvas-body navbar-block p-4 gap-3">
         <a *ngFor="let item of navigationItems">
-            <!-- <a href="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas" [ngClass]="{'active' :item.active}"
-                (click)="routerActiveManage(item.id)">{{ item.label }}</a> -->
-            <a routerLink="{{ item.link }}" class="nav-link" [routerLinkActiveOptions]="{exact: true}"
-                routerLinkActive="active" data-bs-dismiss="offcanvas">{{ item.label }}</a>
+            <a routerLink="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas"
+            (click)="scrollTo(item.id)" [ngClass]="{'active':item.active}">{{ item.label }}</a>
         </a>
     </div>
 </div>

@@ -18,6 +18,7 @@ import { SkillsComponent } from './overview/skills/skills.component';
 import { ServicesComponent } from './overview/services/services.component';
 import { ContactComponent } from './overview/contact/contact.component';
 import { InformationComponent } from './overview/information/information.component';
+import {MatDialogModule} from '@angular/material/dialog';
 /* Routing code  */ 
 import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

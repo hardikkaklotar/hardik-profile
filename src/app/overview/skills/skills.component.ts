@@ -18,11 +18,7 @@ interface AnimatedProperties {
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit{
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
+export class SkillsComponent implements OnInit {
   @ViewChild('skillsSection', { static: true }) skillsSection!: ElementRef;
   submitted = false;
   percentage: number = 0;
@@ -37,57 +33,60 @@ export class SkillsComponent implements OnInit{
   percentage10: number = 0;
   observer: any;
 
-   
-/*
-* this function is used for displaying the increasing counter company information
-*/
-handleSectionIntersection(entries: IntersectionObserverEntry[]) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      this.animateNumber(95, 'percentage', 32)
-      this.animateNumber(95, 'percentage2', 34)
-      this.animateNumber(90, 'percentage3', 36)
-      this.animateNumber(90, 'percentage4', 38)
-      this.animateNumber(85, 'percentage5', 40)
-      this.animateNumber(80, 'percentage6', 42)
-      this.animateNumber(60, 'percentage7', 44)
-      this.animateNumber(50, 'percentage8', 46)
-      this.animateNumber(80, 'percentage9', 48)
-      this.animateNumber(50, 'percentage10', 50)
-      this.observer.disconnect(); //disconnect after one time called
-    }
-  });
-}
 
-/*
-* this function is used for animate increasing counter
-*/
-animateNumber(targetNumber: number, propertyName: keyof AnimatedProperties, stepInterval: number) {
-  const step = targetNumber / 100;
-  let currentStep = 0;
-
-  const interval = setInterval(() => {
-    currentStep += step;
-    this[propertyName] = Math.floor(currentStep);
-
-    if (currentStep >= targetNumber) {
-      clearInterval(interval);
-    }
-  }, stepInterval);
-}
-
-
-ngAfterViewInit() {
-  const options = {
-    root: null,
-    threshold: 0.5, //0.5 used for your 50% content shows
-  };
-
-  this.observer = new IntersectionObserver(entries => this.handleSectionIntersection(entries), options);
-
-  // Start observing the target section
-  if (this.skillsSection && this.skillsSection.nativeElement) {
-    this.observer.observe(this.skillsSection.nativeElement);
+  /*
+  * this function is used for displaying the increasing counter company information
+  */
+  handleSectionIntersection(entries: IntersectionObserverEntry[]) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.animateNumber(95, 'percentage', 32)
+        this.animateNumber(95, 'percentage2', 34)
+        this.animateNumber(90, 'percentage3', 36)
+        this.animateNumber(90, 'percentage4', 38)
+        this.animateNumber(85, 'percentage5', 40)
+        this.animateNumber(80, 'percentage6', 42)
+        this.animateNumber(60, 'percentage7', 44)
+        this.animateNumber(50, 'percentage8', 46)
+        this.animateNumber(80, 'percentage9', 48)
+        this.animateNumber(50, 'percentage10', 50)
+        this.observer.disconnect(); //disconnect after one time called
+      }
+    });
   }
-}
+
+  /*
+  * this function is used for animate increasing counter
+  */
+  animateNumber(targetNumber: number, propertyName: keyof AnimatedProperties, stepInterval: number) {
+    const step = targetNumber / 100;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep += step;
+      this[propertyName] = Math.floor(currentStep);
+
+      if (currentStep >= targetNumber) {
+        clearInterval(interval);
+      }
+    }, stepInterval);
+  }
+
+
+  ngAfterViewInit() {
+    const options = {
+      root: null,
+      threshold: 0.5, //0.5 used for your 50% content shows
+    };
+
+    this.observer = new IntersectionObserver(entries => this.handleSectionIntersection(entries), options);
+
+    // Start observing the target section
+    if (this.skillsSection && this.skillsSection.nativeElement) {
+      this.observer.observe(this.skillsSection.nativeElement);
+    }
+  }
+
+  ngOnInit(): void {
+  }
 }
