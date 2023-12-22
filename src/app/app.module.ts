@@ -21,6 +21,7 @@ import { InformationComponent } from './overview/information/information.compone
 import {MatDialogModule} from '@angular/material/dialog';
 /* Routing code  */ 
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './overview/home/home.component';
 const appRoutes: Routes = [
   {path:'',component: BennarComponent,pathMatch: 'full'}, 
   {path: 'about', component: AboutComponent},
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     SkillsComponent,
     ServicesComponent,
     ContactComponent,
-    InformationComponent
+    InformationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),

@@ -2,8 +2,28 @@
 .skills_section {
   padding: 100px 0px 50px;
 }
+@media screen and (max-width: 1240px) {
+  .skills_section {
+    padding: 60px 0px 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .skills_section {
+    padding: 60px 0px 0px;
+  }
+}
 .skills_section .skills_wrapper .skills_block {
   padding: 80px 0px;
+}
+@media screen and (max-width: 991px) {
+  .skills_section .skills_wrapper .skills_block {
+    padding: 60px 0px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills_section .skills_wrapper .skills_block {
+    padding: 40px 0px 40px;
+  }
 }
 .skills_section .skills_wrapper .skills_block .skills_content {
   color: var(--white);
@@ -13,10 +33,33 @@
   font-family: "Ephesis", cursive !important;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 575px) {
+  .skills_section .skills_wrapper .skills_block .skills_content h6 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
 .skills_section .skills_wrapper .skills_block .skills_content h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+  .skills_section .skills_wrapper .skills_block .skills_content h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills_section .skills_wrapper .skills_block .skills_content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .skills_section .skills_wrapper .skills_block .skills_content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 .skills_section .skills_wrapper .skills_block .progress-block {
   margin-bottom: 15px;
@@ -353,6 +396,206 @@
 }
 .skills_section .skills_wrapper .our-technology .our-techno .techno-img:hover img {
   transform: scale(1.1);
+}
+@media (min-width: 991px) and (max-width: 1240px) {
+  .skills_section .skills_wrapper .our-technology {
+    padding: 250px 0px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-2 {
+    left: -191px;
+    top: 48%;
+    width: 448px;
+    transform: translate(-50%) rotate(14deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-7 {
+    right: -191px;
+    top: 48%;
+    width: 448px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-9 {
+    right: -71px;
+    width: 248px;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .skills_section .skills_wrapper .our-technology {
+    padding: 180px 0px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .animation-line .techno-img {
+    top: -40px;
+    width: 80px;
+    height: 80px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-1 {
+    transform: translate(-50%) rotate(33deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-2 {
+    left: -143px;
+    top: 48%;
+    width: 328px;
+    transform: translate(-50%) rotate(13deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-3 {
+    left: -100px;
+    top: 50%;
+    width: 376px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-6 {
+    transform: translate(-50%) rotate(148deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-7 {
+    right: -143px;
+    top: 48%;
+    width: 328px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-9 {
+    right: -71px;
+    width: 248px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills_section .skills_wrapper .our-technology {
+    padding: 180px 0px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .animation-line .techno-img {
+    left: -32px;
+    top: -40px;
+    height: 80px;
+    width: 80px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-1 {
+    left: -48px;
+    top: 40%;
+    width: 190px;
+    transform: translate(-50%) rotate(44deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-2 {
+    left: -65px;
+    top: 41%;
+    width: 190px;
+    transform: translate(-51%) rotate(7deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-3 {
+    left: -60px;
+    top: 58%;
+    width: 190px;
+    transform: translate(-50%) rotate(-21deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-4 {
+    left: -54px;
+    top: 63%;
+    width: 190px;
+    transform: translate(-50%) rotate(-54deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-5 {
+    left: -44px;
+    width: 190px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-6 {
+    right: -48px;
+    top: 40%;
+    width: 190px;
+    transform: translate(-50%) rotate(132deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-7 {
+    right: -65px;
+    top: 41%;
+    width: 190px;
+    transform: translate(-51%) rotate(168deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-8 {
+    right: -60px;
+    top: 58%;
+    width: 190px;
+    transform: translate(-50%) rotate(195deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-9 {
+    right: -54px;
+    top: 63%;
+    width: 190px;
+    transform: translate(-50%) rotate(230deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-10 {
+    left: -44px;
+    width: 190px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .skills_section .skills_wrapper .our-technology {
+    padding: 115px 0px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .center-title {
+    width: 85px;
+    height: 85px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .center-title h4 {
+    font-size: 16px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .animation-line .techno-img {
+    left: -32px;
+    top: -30px;
+    height: 60px;
+    width: 60px;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-1 {
+    left: -29px;
+    top: 19%;
+    width: 100px;
+    transform: translate(-50%) rotate(48deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-2 {
+    left: -30px;
+    top: 35%;
+    width: 100px;
+    transform: translate(-51%) rotate(7deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-3 {
+    left: -30px;
+    top: 55%;
+    width: 100px;
+    transform: translate(-50%) rotate(-28deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-4 {
+    left: -24px;
+    top: 77%;
+    width: 100px;
+    transform: translate(-50%) rotate(-59deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-5 {
+    left: -9px;
+    width: 100px;
+    top: 15%;
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-6 {
+    right: -29px;
+    top: 19%;
+    width: 100px;
+    transform: translate(-50%) rotate(132deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-7 {
+    right: -30px;
+    top: 35%;
+    width: 100px;
+    transform: translate(-51%) rotate(168deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-8 {
+    right: -30px;
+    top: 55%;
+    width: 100px;
+    transform: translate(-50%) rotate(202deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-9 {
+    right: -24px;
+    top: 77%;
+    width: 100px;
+    transform: translate(-50%) rotate(235deg);
+  }
+  .skills_section .skills_wrapper .our-technology .our-techno .line-10 {
+    left: -9px;
+    width: 100px;
+    top: 80%;
+    transform: translate(-50%) rotate(267deg);
+  }
 }
 
 /*SKILLS SECTION CSS END HEAR*/

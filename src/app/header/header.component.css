@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  padding: 15px 50px;
+  padding: 0px 50px;
   border-bottom: 1px solid var(--secondary);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -9,6 +9,11 @@ header {
   box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
 }
 @media only screen and (max-width: 991px) {
+  header {
+    padding: 0px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
   header {
     padding: 10px 20px;
   }
@@ -41,17 +46,42 @@ header .header-block .navbar-block {
   justify-content: space-between;
 }
 header .header-block .navbar-block .nav-link {
-  font-size: 16px;
+  padding: 30px 10px;
+  font-size: 17px;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--primary);
+  transition: all 0.5s;
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  header .header-block .navbar-block .nav-link {
+    padding: 25px 5px;
+  }
+}
+header .header-block .navbar-block .nav-link::after {
+  width: 0%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: var(--sky);
+  left: 0;
   transition: all 0.5s;
 }
 header .header-block .navbar-block .nav-link.active {
   color: var(--sky);
+  background: rgba(19, 43, 68, 0.431372549);
+}
+header .header-block .navbar-block .nav-link.active::after {
+  width: 100%;
 }
 header .header-block .navbar-block .nav-link:hover {
   color: var(--sky);
+  background: rgba(19, 43, 68, 0.431372549);
+}
+header .header-block .navbar-block .nav-link:hover::after {
+  width: 100%;
 }
 
 .offcanvas {

@@ -1,1 +1,33 @@
-/*# sourceMappingURL=footer.component.css.map */
+footer {
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  border-radius: 150px 150px 0px 0px;
+  padding: 40px;
+  box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+}
+footer .footer_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_block .logo {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: var(--white);
+  font-family: "Ephesis", cursive !important;
+}
+@media only screen and (max-width: 575px) {
+  footer .footer_block .logo {
+    font-size: 20px;
+  }
+}
+footer .footer_block p {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+footer .footer_block p a {
+  color: var(--sky);
+  font-weight: 500;
+}/*# sourceMappingURL=footer.component.css.map */

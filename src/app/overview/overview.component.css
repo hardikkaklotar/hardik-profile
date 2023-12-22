@@ -1,1 +1,20 @@
-/*# sourceMappingURL=overview.component.css.map */
+.scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  color: #fff;
+  background-color: rgba(19, 43, 68, 0.431372549);
+  width: 70px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: 999;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.scroll-top i {
+  margin-top: 18px;
+}/*# sourceMappingURL=overview.component.css.map */

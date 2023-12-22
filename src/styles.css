@@ -84,6 +84,11 @@ a {
   display: none;
 }
 
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #03071C !important;
+  border-radius: 10px !important;
+}
+
 /* MAT CLASS CSS END HEAR */
 .title {
   text-align: center;
@@ -94,6 +99,22 @@ a {
   margin-bottom: 10px;
   font-size: 25px;
 }
+@media screen and (max-width: 991px) {
+  .title h4 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .title h4 {
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+}
 .title h2 {
   font-weight: 600;
   font-size: 35px;
@@ -101,6 +122,21 @@ a {
   background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 991px) {
+  .title h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .title h2 {
+    font-size: 22px;
+  }
 }
 
 p {

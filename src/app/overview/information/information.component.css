@@ -1,6 +1,5 @@
 /*COMPANY INFORMATION SECTION CSS START */
 .company-information {
-  margin-bottom: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,14 +10,10 @@
   align-items: center;
   box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
 }
-@media screen and (max-width: 767px) {
-  .company-information {
-    min-height: 210px;
-  }
-}
 @media screen and (max-width: 575px) {
   .company-information {
     padding: 40px 0px;
+    background-position: left;
   }
 }
 .company-information::after {
@@ -38,6 +33,12 @@
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
 }
+@media screen and (max-width: 767px) {
+  .company-information .company-information-wrapper {
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+  }
+}
 .company-information .company-information-wrapper .company-information-block {
   padding: 30px;
   border-radius: 0px 40px;
@@ -47,6 +48,14 @@
 @media screen and (max-width: 767px) {
   .company-information .company-information-wrapper .company-information-block {
     padding: 10px;
+    border-radius: 0px;
+    border: 0px solid var(--primary);
+  }
+  .company-information .company-information-wrapper .company-information-block::after {
+    display: none;
+  }
+  .company-information .company-information-wrapper .company-information-block::before {
+    display: none;
   }
 }
 @media screen and (max-width: 575px) {
@@ -75,46 +84,91 @@
   background-color: var(--sky);
   position: absolute;
   bottom: -4%;
-  right: -1%;
-  transform: translate(-50%);
+  right: 0%;
+  transform: translate(50%);
   z-index: 99;
 }
-.company-information .company-information-wrapper .company-information-block .content-box {
+.company-information .company-information-wrapper .company-information-block .information-box {
   border-right: 2px solid var(--light-sky);
+  position: relative;
 }
-@media screen and (max-width: 575px) {
-  .company-information .company-information-wrapper .company-information-block .content-box {
-    border-right: 0px;
+.company-information .company-information-wrapper .company-information-block .information-box::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var(--sky);
+  position: absolute;
+  top: -4%;
+  left: 0%;
+  transform: translate(-50%);
+  z-index: 99;
+  display: none;
+}
+.company-information .company-information-wrapper .company-information-block .information-box::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var(--sky);
+  position: absolute;
+  bottom: -4%;
+  right: 0%;
+  transform: translate(50%);
+  z-index: 99;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .company-information .company-information-wrapper .company-information-block .information-box {
+    border-radius: 0px 50px 0px 50px;
+    border: 1px solid var(--light-sky) !important;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+  }
+  .company-information .company-information-wrapper .company-information-block .information-box::after {
+    display: block;
+  }
+  .company-information .company-information-wrapper .company-information-block .information-box::before {
+    display: block;
   }
 }
-.company-information .company-information-wrapper .company-information-block .content-box:last-child {
-  border-right: 0px;
+@media screen and (max-width: 575px) {
+  .company-information .company-information-wrapper .company-information-block .information-box {
+    padding: 15px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
 }
-.company-information .company-information-wrapper .company-information-block .content-box h2 {
+.company-information .company-information-wrapper .company-information-block .information-box h2 {
   font-size: 40px;
   font-weight: 600;
   color: var(--sky);
 }
 @media screen and (max-width: 991px) {
-  .company-information .company-information-wrapper .company-information-block .content-box h2 {
+  .company-information .company-information-wrapper .company-information-block .information-box h2 {
     font-size: 30px;
   }
 }
-.company-information .company-information-wrapper .company-information-block .content-box h6 {
+@media screen and (max-width: 575px) {
+  .company-information .company-information-wrapper .company-information-block .information-box h2 {
+    margin-bottom: 10px;
+  }
+}
+.company-information .company-information-wrapper .company-information-block .information-box h6 {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--white);
 }
 @media screen and (max-width: 991px) {
-  .company-information .company-information-wrapper .company-information-block .content-box h6 {
+  .company-information .company-information-wrapper .company-information-block .information-box h6 {
     font-size: 13px;
   }
 }
-@media screen and (max-width: 575px) {
-  .company-information .company-information-wrapper .company-information-block .content-box h6 {
-    color: #fff;
-    font-size: 11px;
+@media screen and (max-width: 767px) {
+  .company-information .company-information-wrapper .company-information-block .information-box h6 {
+    font-size: 14px;
   }
 }
 
