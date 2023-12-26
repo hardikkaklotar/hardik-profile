@@ -18,10 +18,10 @@ import { SkillsComponent } from './overview/skills/skills.component';
 import { ServicesComponent } from './overview/services/services.component';
 import { ContactComponent } from './overview/contact/contact.component';
 import { InformationComponent } from './overview/information/information.component';
+import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 /* Routing code  */ 
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './overview/home/home.component';
 const appRoutes: Routes = [
   {path:'',component: BennarComponent,pathMatch: 'full'}, 
   {path: 'about', component: AboutComponent},
@@ -43,7 +43,6 @@ const appRoutes: Routes = [
     ServicesComponent,
     ContactComponent,
     InformationComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),
@@ -54,7 +53,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

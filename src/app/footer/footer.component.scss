@@ -3,18 +3,23 @@ footer{
     // backdrop-filter:blur(10px);
     border-radius: 150px 150px 0px 0px;
     // clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 50%, 100% 100%, 0 100%, 5vw 50%);
-    padding: 40px;
+    padding:15px;
     box-shadow:rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    z-index: 998;
     .footer_block{
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo{
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 0px;
             color: var(--white);
-            font-family: 'Ephesis', cursive !important;
+            // font-family: 'Ephesis', cursive !important;
             @media only screen and (max-width:575px) {
                 font-size: 20px;
             }

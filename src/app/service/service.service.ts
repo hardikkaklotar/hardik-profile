@@ -1,14 +1,24 @@
-import { Injectable } from '@angular/core';
+import { HostListener, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  
-  item = 10;
   constructor() { }
 
-  clickandmove() {
-    this.item = Math.floor(Math.random() * 10);
+  isScrolled = false;
+  // only section scroll
+  scrollTo(section?: string): void {
+    if(section){
+      const element = document.getElementById(section);
+      if(element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+  this.isScrolled = window.scrollY > 50; // Adjust the scroll threshold as needed
+}
 }

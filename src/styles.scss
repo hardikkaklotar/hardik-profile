@@ -11,8 +11,8 @@
 }
 body {
     // background-color:var(--black) !important;
-    background-color: #020617 !important;
-    background: url(assets/image/Dot-Background.png) repeat;
+    background-color:var(--dark-black) !important;
+    // background: url(assets/image/Dot-Background.png) repeat;
     background-position: center;
     font-family: 'Montserrat', sans-serif !important;
     animation: background-scroll 60s linear infinite;

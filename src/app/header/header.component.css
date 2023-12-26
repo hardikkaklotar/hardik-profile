@@ -134,4 +134,26 @@ header .header-block .navbar-block .nav-link:hover::after {
   header .header-block .navbar-block {
     display: none;
   }
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.language-dropdown li {
+  cursor: pointer;
+}
+.language-dropdown .fa-globe {
+  color: var(--sky);
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.language-dropdown .fa-angle-down {
+  transition: all 0.5s;
+}
+.language-dropdown .button-primary:hover {
+  background-color: transparent !important;
+}
+.language-dropdown .dropdown-toggle.show .fa-angle-down {
+  margin-top: 0px !important;
+  transform: rotate(180deg);
 }/*# sourceMappingURL=header.component.css.map */

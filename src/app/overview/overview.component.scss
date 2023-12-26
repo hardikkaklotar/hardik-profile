@@ -1,7 +1,7 @@
 .scroll-top{
     position: fixed;
     right:40px;
-    bottom: 40px;
+    bottom: 70px;
     color: #fff;
     background-color:#132b446e;
     width: 70px;
@@ -12,6 +12,7 @@
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     z-index: 999;
     backdrop-filter: blur(10px);
+    cursor: pointer;
     i{
         margin-top:18px;
     }

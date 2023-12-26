@@ -375,7 +375,26 @@
   transform: rotate(90deg);
 }
 .skills_section .skills_wrapper .our-technology {
-  padding: 250px 0px;
+  padding: 300px 0px;
+  background: url(../../../assets/image/line-right.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: rgb(8, 25, 43) 31px -5px 62px 0px;
+}
+.skills_section .skills_wrapper .our-technology::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.skills_section .skills_wrapper .our-technology .our-techno {
+  position: relative;
+  z-index: 99;
 }
 .skills_section .skills_wrapper .our-technology .our-techno .techno-img {
   position: absolute;
