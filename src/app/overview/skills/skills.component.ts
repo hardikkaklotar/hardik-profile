@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/service/service.service';
+import { TranslateService } from 'src/app/service/translate.service';
 
 interface AnimatedProperties {
   percentage: number;
@@ -19,6 +22,23 @@ interface AnimatedProperties {
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+  skillsImage: string = '../../assets/image/skills.svg';
+  altText: string = 'img';
+
+  // technologies image
+  technologies = [
+    { name: 'Angular', url: '', imageSrc: '../../assets/image/Techno/angular.png' },
+    { name: 'jQuery', url: '', imageSrc: '../../assets/image/Techno/jquery.png' },
+    { name: 'sass', url: '', imageSrc: '../../assets/image/Techno/sass.webp' },
+    { name: 'javascript', url: '', imageSrc: '../../assets/image/Techno/javascript.png' },
+    { name: 'html', url: '', imageSrc: '../../assets/image/Techno/html-5.png' },
+    { name: 'typescript', url: '', imageSrc: '../../assets/image/Techno/typescript.png' },
+    { name: 'Hubspot', url: '', imageSrc: '../../assets/image/Techno/Hubspot.png' },
+    { name: 'bootstrap', url: '', imageSrc: '../../assets/image/Techno/bootstrap.png' },
+    { name: 'tailwind', url: '', imageSrc: '../../assets/image/Techno/tailwind.png' },
+    { name: 'css', url: '', imageSrc: '../../assets/image/Techno/css-3.png' }
+  ];
+
   @ViewChild('skillsSection', { static: true }) skillsSection!: ElementRef;
   submitted = false;
   percentage: number = 0;
@@ -33,7 +53,10 @@ export class SkillsComponent implements OnInit {
   percentage10: number = 0;
   observer: any;
 
-
+  constructor(private router: Router, public serviceService: ServiceService,
+    public translateService: TranslateService,
+  ) { }
+  
   /*
   * this function is used for displaying the increasing counter company information
   */

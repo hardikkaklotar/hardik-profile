@@ -3,41 +3,28 @@
     <div class="container-xl" #aboutSection>
         <div class="about_wrapper">
             <div class="title" data-aos="fade-up" data-aos-easing="linear">
-                <h4>ABOUT ME</h4>
-                <h2>LEARN MORE ABOUT ME</h2>
+                <h4>{{translateService.content.aboutMe}}</h4>
+                <h2>{{translateService.content.learnMoreAboutMe}}</h2>
             </div>
             <div class="row about_block align-items-center">
                 <div class="col-lg-6">
                     <div class="img-block" data-aos="fade-right">
-                        <img src="../../../assets/image/about-me.svg" alt="img" class="center-img">
-                        <img src="../../../assets/image/dot.svg" alt="img" class="doted-img">
+                        <img [src]="aboutMeImage" [alt]="altText" class="center-img" loading="lazy">
+                        <img [src]="dotImage" [alt]="altText" class="doted-img" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="content_block" data-aos="fade-left">
-                        <h6>I'm a Designer</h6>
-                        <h2>I Can Design Anything You Want</h2>
-                        <p>Experienced Web Designer With A Demonstrated History Of Working In The Information Technology
-                            And Services Industry.
-                            I Have Also Experience In Graphics Design Like Poster Design, Banner Design, Book Cover
-                            Page, Logo Design, Flyer Design, Business Visiting Card, Etc..
-
-                        </p>
-                        <p>
-                            I Am Working As A Freelance Web Design And Graphics Design, I Can Provide You With Efficient
-                            And Unique Web Design And Graphics Work For Your Unique Brand Keeping SEO In Mind.
-                            I Can Provide User Friendly Website Design Looking Simple, Uniq Ness And Attractive Design,
-                            User Can Easily Used And Understanding.
-                        </p>
-                        <!-- <a href="#!" class="button-primary" (click)="myfun()">Hire me</a> -->
-                        <a href="#!" class="button-primary">Hire me</a>
+                        <h6>{{translateService.content.im}} a {{translateService.content.designer}}</h6>
+                        <h2>{{translateService.content.aboutSmallTitle}}</h2>
+                        <p>{{translateService.content.aboutMeDescription}}</p>
+                        <p>{{translateService.content.aboutMeDescription2}}</p>
+                        <a routerLink="/contact" (click)="serviceService.scrollTo('contact')" class="button-primary">{{translateService.content.hireMe}}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <app-information></app-information>
-
 </section>
 <!-- ABOUT SECTION END HEAR -->
-

@@ -1,7 +1,7 @@
 <header>
     <div class="header-block">
         <a draggable="false" class="logo" href="index.html">
-            HARDIK
+            <img src="../../assets/image/logo.png" alt="logo">
         </a>
         <div class="navbar-block gap-3 gap-xl-4">
             <a *ngFor="let item of navigationItems">
@@ -10,16 +10,6 @@
             </a>
         </div>
         <div class="d-flex align-items-center gap-3">
-            <!-- <form class="language-block">
-                <mat-form-field>
-                    <mat-label>Language</mat-label>
-                    <mat-select>
-                      <mat-option *ngFor="let Language of Languages" [value]="Language.value">
-                        {{Language.viewValue}}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-            </form> -->
             <div class="dropdown language-dropdown">
                 <a class="button-primary d-flex align-items-center px-3 gap-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-globe"></i>
@@ -30,10 +20,6 @@
                     <li><a class="dropdown-item" (click)="translateService.setLanguage('english')">English</a></li>
                     <li><a class="dropdown-item" (click)="translateService.setLanguage('spanish')">Spanish</a></li>
                 </ul>
-                <!-- <ul class="dropdown-menu">
-                    <li *ngFor="let Language of Languages"><a class="dropdown-item" href="#">{{Language.viewValue}}</a>
-                    </li>
-                </ul> -->
             </div>
             <a routerLink="#!" class="d-none d-sm-block button-primary" data-bs-toggle="modal"
                 data-bs-target="#resumeModal">Resume</a>

@@ -150,5 +150,11 @@
         }
     }
 }
-
+.information-colum{
+    &:last-child{
+        .information-box{
+            border-right: 0px !important;
+        }
+    }
+}
 /*COMPANY INFORMATION SECTION CSS END */

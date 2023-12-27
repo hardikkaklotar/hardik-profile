@@ -4,9 +4,13 @@ import { HostListener, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServiceService {
+
+  logoImage: string = '../../../assets/image/logo.png';
+  
   constructor() { }
 
   isScrolled = false;
+  
   // only section scroll
   scrollTo(section?: string): void {
     if(section){

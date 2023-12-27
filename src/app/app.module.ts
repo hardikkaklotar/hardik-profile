@@ -54,7 +54,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,12 +12,24 @@ interface AnimatedProperties {
   styleUrls: ['./information.component.scss']
 })
 export class InformationComponent implements OnInit{
+
+  // informationBoxes = [
+  //   { number: 100, label: 'Happy Clients' },
+  //   { number2: 5000, label: 'Hours Of Support' },
+  //   { number3: 200, label: 'Projects Completed' },
+  //   { number4: 10, label: 'Years Of Experience' }
+  // ];
+
+  informationBoxes:any = {
+    number: { value: 0, label: 'Happy Clients' },
+    number2: { value: 0, label: 'Hours Of Support' },
+    number3: { value: 0, label: 'Projects Completed' },
+    number4: { value: 0, label: 'Years Of Experience' }
+  };
+  informatinBoxObject: any;
+
     @ViewChild('companyInformation', { static: true }) companyInformation!: ElementRef;
     submitted = false;
-    number: number = 0;
-    number2: number = 0;
-    number3: number = 0;
-    number4: number = 0;
     observer: any;
 
      
@@ -39,20 +51,18 @@ export class InformationComponent implements OnInit{
   /*
   * this function is used for animate increasing counter
   */
-  animateNumber(targetNumber: number, propertyName: keyof AnimatedProperties, stepInterval: number) {
-    const step = targetNumber / 100;
+  animateNumber(targetValue: number, property: string, delay: number): void {
+    const step = targetValue / 100;
     let currentStep = 0;
-
-    const interval = setInterval(() => {
+    const updateInterval = setInterval(() => {
       currentStep += step;
-      this[propertyName] = Math.floor(currentStep);
-
-      if (currentStep >= targetNumber) {
-        clearInterval(interval);
+      this.informationBoxes[property].value = Math.floor(currentStep);
+      if (currentStep >= targetValue) {
+        clearInterval(updateInterval);
       }
-    }, stepInterval);
+    }, delay);
   }
-
+  
 
   ngAfterViewInit() {
     const options = {
@@ -69,5 +79,6 @@ export class InformationComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.informatinBoxObject = Object.values(this.informationBoxes); //To Do: Need to change this and used into html file.
   }
 }

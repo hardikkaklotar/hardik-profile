@@ -22,13 +22,17 @@ header {
         justify-content: space-between;
 
         .logo {
-            font-size: 26px;
-            font-weight: 500;
-            margin-bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--white);
             font-family: 'Ephesis', cursive !important;
             @media only screen and (max-width:575px) {
                 font-size: 20px;
+            }
+            img{
+                width: 100px;
+                object-fit: contain;
             }
         }
 

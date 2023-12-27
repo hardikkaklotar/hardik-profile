@@ -1,6 +1,7 @@
 import { Component, TemplateRef, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { TranslateService } from 'src/app/service/translate.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +16,12 @@ export class ContactComponent {
     { icon: 'fa-linkedin-in', url: 'https://linkedin.com' },
     { icon: 'fa-whatsapp', url: 'https://whatsapp.com' }
   ];
+  
+  myInformation = [
+    { icon: 'fa-solid fa-lg fa-phone-volume', link: 'tel:+919714514703', text: '(+91) 971-451-4703' },
+    { icon: 'fa-solid fa-lg fa-envelope', link: 'mailto:hardikkaklotar61@gmail.com', text: 'hardikkaklotar61@gmail.com' },
+    { icon: 'fa-solid fa-lg fa-location-dot', text: '123 Main St, City, Country' }
+  ];
 
   contactForm!: FormGroup;
   submitted = false;
@@ -28,7 +35,8 @@ export class ContactComponent {
   @ViewChild('myDialog', { static: true }) myDialog!: TemplateRef<any>;
   dialogRef!: MatDialogRef<any>;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {}
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog,
+    public translateService: TranslateService,) {}
 
   get f() { return this.contactForm.controls; }
 
@@ -48,7 +56,7 @@ export class ContactComponent {
  
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
-      FirstName: ['', Validators.required],
+      FirstName: ['', Validators.required,Validators.minLength(5), Validators.maxLength(50)],
       LastName: ['', Validators.required],
       Email: ['', [Validators.required, Validators.email]],
       Number: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
