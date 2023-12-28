@@ -15,12 +15,11 @@ export class BennarComponent {
   constructor(private router: Router, public serviceService: ServiceService,
     public translateService: TranslateService,
   ) { }
-
   scrollToMove: ScrollToMoveItem[] = [
-    { id: 'about', label: 'About', link: '/about', active: true },
-    { id: 'skills', label: 'Skills', link: '/skills', active: false },
-    { id: 'services', label: 'Services', link: '/services', active: false },
-    { id: 'contact', label: 'Contact', link: '/contact', active: false }
+    { id: 'about', label: this.translateService.content.about, link: '/about', active: true},
+    { id: 'skills', label: this.translateService.content.skills, link: '/skills', active: false },
+    { id: 'services', label: this.translateService.content.services, link: '/services', active: false },
+    { id: 'contact', label: this.translateService.content.contact, link: '/contact', active: false }
   ];
 
 }

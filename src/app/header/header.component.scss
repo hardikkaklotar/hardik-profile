@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    padding:0px 50px;
+    padding: 0px 50px;
     border-bottom: 1px solid var(--secondary);
     backdrop-filter: blur(5px);
     position: fixed;
@@ -10,12 +10,15 @@ header {
     @media only screen and (max-width:991px) {
         padding: 0px 20px;
     }
+
     @media only screen and (max-width:767px) {
         padding: 10px 20px;
     }
+
     @media only screen and (max-width:575px) {
-        padding:15px;
+        padding: 15px;
     }
+
     .header-block {
         display: flex;
         align-items: center;
@@ -27,10 +30,12 @@ header {
             justify-content: center;
             color: var(--white);
             font-family: 'Ephesis', cursive !important;
+
             @media only screen and (max-width:575px) {
                 font-size: 20px;
             }
-            img{
+
+            img {
                 width: 100px;
                 object-fit: contain;
             }
@@ -49,23 +54,27 @@ header {
                 color: var(--primary);
                 transition: all 0.5s;
                 position: relative;
+
                 @media only screen and (max-width:991px) {
                     padding: 25px 5px;
                 }
-                &::after{
-                    width:0%;
+
+                &::after {
+                    width: 0%;
                     height: 2px;
                     content: '';
-                    position:absolute;
+                    position: absolute;
                     bottom: 0;
                     background-color: var(--sky);
                     left: 0;
                     transition: all 0.5s;
                 }
+
                 &.active {
                     color: var(--sky);
                     background: #132b446e;
-                    &::after{
+
+                    &::after {
                         width: 100%;
                     }
                 }
@@ -73,7 +82,8 @@ header {
                 &:hover {
                     color: var(--sky);
                     background: #132b446e;
-                    &::after{
+
+                    &::after {
                         width: 100%;
                     }
                 }
@@ -81,27 +91,31 @@ header {
         }
     }
 }
-.offcanvas{
-    background-color:#020617 !important;
-    
-    .navbar-header{
-        background-color:var(--light-sky);
+
+.offcanvas {
+    background-color: #020617 !important;
+
+    .navbar-header {
+        background-color: var(--light-sky);
+
         .logo {
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 0px;
             color: var(--black);
             font-family: 'Ephesis', cursive !important;
+
             @media only screen and (max-width:575px) {
                 font-size: 20px;
             }
         }
     }
-    
+
     .navbar-block {
         display: flex;
         align-items: start;
         flex-direction: column;
+
         .nav-link {
             font-size: 16px;
             display: inline-block;
@@ -121,17 +135,6 @@ header {
 
 }
 
-.resume-model{
-    .resume-body{
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-        }
-    }
-}
-
 @media only screen and (max-width:767px) {
     header {
         .header-block {
@@ -142,27 +145,56 @@ header {
     }
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
     display: none;
 }
-.language-dropdown{
-    li{
-        cursor: pointer;
+
+.language-dropdown {
+    ul {
+        background-color: var(--black);
+        border: 1px solid;
+        padding: 0px;
+        transform: translate(0px, 50px) !important;
+        overflow: hidden !important;
+
+        li {
+            cursor: pointer;
+            border-bottom: 1px solid;
+
+            &:last-child {
+                border-bottom: 0px solid;
+            }
+
+            a {
+                padding: 9px 15px;
+                color: var(--white);
+                font-size: 15px;
+
+                &:hover {
+                    background-color: var(--sky);
+                }
+            }
+        }
     }
-    .fa-globe{
+
+
+    .fa-globe {
         color: var(--sky);
         font-size: 20px;
         transition: all 0.5s;
     }
-    .fa-angle-down{
-        transition: all 0.5s;
+
+    .fa-angle-down {
+        transition: all 0.3s;
     }
-    .button-primary:hover{
-       background-color: transparent !important;
+
+    .button-primary-outline:hover {
+        background-color: transparent !important;
     }
-    .dropdown-toggle{
-        &.show{
-            .fa-angle-down{
+
+    .dropdown-toggle {
+        &.show {
+            .fa-angle-down {
                 margin-top: 0px !important;
                 transform: rotate(180deg);
             }

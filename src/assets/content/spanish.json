@@ -43,5 +43,10 @@
     "email": "Correo electrónico",
     "mobileNumber": "Número de teléfono móvil",
     "message": "Mensaje",
-    "sendMessage": "Enviar mensaje"
+    "sendMessage": "Enviar mensaje",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "resume": "Currículum",
+    "home": "Inicio"
 }

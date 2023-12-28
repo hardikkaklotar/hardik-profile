@@ -1,0 +1,59 @@
+.modal-body {
+  max-width: 700px;
+}
+.modal-body img {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-mdc-dialog-content {
+  padding: 10px 15px !important;
+  background-color: var(--white);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #111827;
+}
+.modal-header h3 {
+  font-size: 20px !important;
+  font-weight: 500;
+  color: var(--white);
+  text-align: start;
+  font-family: "Montserrat", sans-serif !important;
+}
+.modal-header .close-icon {
+  border-radius: 100%;
+  border: 2px solid var(--sky);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  background-color: transparent;
+}
+.modal-header .close-icon:hover i {
+  transform: rotate(360deg);
+}
+.modal-header .close-icon i {
+  font-size: 20px;
+  color: var(--sky);
+  transition: all 0.7s;
+}
+
+.modal-footer {
+  background-color: #111827;
+  padding: 10px 15px;
+}
+
+.mdc-dialog__title::before {
+  display: none;
+}
+
+.resume-model {
+  border-radius: 10px;
+}/*# sourceMappingURL=resume.component.css.map */

@@ -8,6 +8,7 @@
     --black: #000000;
     --dark-black: #040404;
     --white: #ffffff;
+    --track-color:rgb(255 255 255 / 10%);
 }
 body {
     // background-color:var(--black) !important;
@@ -29,6 +30,26 @@ h6 {
 a {
     text-decoration: none !important;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color:var(--sky);
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    background:var(--track-color);
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color:var(--sky);
+    border-radius: 10px;
+  }
 
 /* MAT CLASS CSS START HEAR */ 
 .appearance-none::-webkit-outer-spin-button,
@@ -147,6 +168,26 @@ p{
     display: block;
     max-width: max-content;
     transition: all 0.5s;
+    background-color: var(--sky);
+    &:hover{
+        background-color: var(--white);
+        color: var(--sky);
+    }
+    @media only screen and (max-width:575px) {
+        font-size:12px;
+        padding: 6px 15px;
+    }
+}
+.button-primary-outline{
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: var(--white);
+    border: 1px solid var(--sky);
+    background-color:transparent;
+    font-size: 14px;
+    display: block;
+    max-width: max-content;
+    transition: all 0.5s;
     &:hover{
         background-color: var(--sky);
     }
@@ -156,6 +197,62 @@ p{
     }
 }
 
+// <div class="ring-animation">
+// <div class="ring"></div>
+// <div class="ring"></div>
+// <div class="ring"></div>
+// </div>
+// .ring{
+//     position:absolute;
+//     height: 500px;
+//     width: 500px;
+//     border: 0px solid #272727;
+//     border-radius:50%;
+//   }
+  
+//   .ring:nth-child(1){
+//     border-bottom-width: 10px;
+//     border-color:var(--sky);
+//     animation: rotate1 1.5s linear infinite;
+//   }
+  
+//   .ring:nth-child(2){
+//     border-right-width: 10px;
+//     border-color: #00ffff;
+//     animation: rotate2 1.5s linear infinite;
+//   }
+  
+//   .ring:nth-child(3){
+//     border-top-width: 10px;
+//     border-color:var(--primary);
+//     animation: rotate3 1.5s linear infinite;
+//   }
+  
+  
+//   @keyframes rotate1{
+//     0%{
+//       transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+//     }
+//     100%{
+//       transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+//     }
+//   }
+//   @keyframes rotate2{
+//     0%{
+//       transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+//     }
+//     100%{
+//       transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+//     }
+//   }
+//   @keyframes rotate3{
+//     0%{
+//       transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+//     }
+//     100%{
+//       transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+//     }
+//   }
 /*KEY FRAMES */ 
 
 @keyframes background-scroll {

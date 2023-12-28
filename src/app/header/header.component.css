@@ -29,9 +29,9 @@ header .header-block {
   justify-content: space-between;
 }
 header .header-block .logo {
-  font-size: 26px;
-  font-weight: 500;
-  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
   font-family: "Ephesis", cursive !important;
 }
@@ -39,6 +39,11 @@ header .header-block .logo {
   header .header-block .logo {
     font-size: 20px;
   }
+}
+header .header-block .logo img {
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 header .header-block .navbar-block {
   display: flex;
@@ -121,15 +126,6 @@ header .header-block .navbar-block .nav-link:hover::after {
   color: var(--sky);
 }
 
-.resume-model .resume-body img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
-
 @media only screen and (max-width: 767px) {
   header .header-block .navbar-block {
     display: none;
@@ -139,8 +135,27 @@ header .header-block .navbar-block .nav-link:hover::after {
   display: none;
 }
 
-.language-dropdown li {
+.language-dropdown ul {
+  background-color: var(--black);
+  border: 1px solid;
+  padding: 0px;
+  transform: translate(0px, 50px) !important;
+  overflow: hidden !important;
+}
+.language-dropdown ul li {
   cursor: pointer;
+  border-bottom: 1px solid;
+}
+.language-dropdown ul li:last-child {
+  border-bottom: 0px solid;
+}
+.language-dropdown ul li a {
+  padding: 9px 15px;
+  color: var(--white);
+  font-size: 15px;
+}
+.language-dropdown ul li a:hover {
+  background-color: var(--sky);
 }
 .language-dropdown .fa-globe {
   color: var(--sky);
@@ -148,9 +163,9 @@ header .header-block .navbar-block .nav-link:hover::after {
   transition: all 0.5s;
 }
 .language-dropdown .fa-angle-down {
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
-.language-dropdown .button-primary:hover {
+.language-dropdown .button-primary-outline:hover {
   background-color: transparent !important;
 }
 .language-dropdown .dropdown-toggle.show .fa-angle-down {

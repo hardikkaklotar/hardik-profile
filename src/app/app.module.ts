@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 /* Routing code  */ 
 import { RouterModule, Routes } from '@angular/router';
+import { ResumeComponent } from './dialog-template/resume/resume.component';
 const appRoutes: Routes = [
   {path:'',component: BennarComponent,pathMatch: 'full'}, 
   {path: 'about', component: AboutComponent},
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
     ServicesComponent,
     ContactComponent,
     InformationComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),

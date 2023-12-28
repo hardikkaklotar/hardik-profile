@@ -7,6 +7,7 @@
   --black: #000000;
   --dark-black: #040404;
   --white: #ffffff;
+  --track-color:rgb(255 255 255 / 10%);
 }
 
 body {
@@ -27,6 +28,28 @@ h6 {
 
 a {
   text-decoration: none !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--sky);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--track-color);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--sky);
+  border-radius: 10px;
 }
 
 /* MAT CLASS CSS START HEAR */
@@ -168,12 +191,36 @@ p {
   max-width: -moz-max-content;
   max-width: max-content;
   transition: all 0.5s;
+  background-color: var(--sky);
 }
 .button-primary:hover {
-  background-color: var(--sky);
+  background-color: var(--white);
+  color: var(--sky);
 }
 @media only screen and (max-width: 575px) {
   .button-primary {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
+
+.button-primary-outline {
+  padding: 10px 30px;
+  border-radius: 12px;
+  color: var(--white);
+  border: 1px solid var(--sky);
+  background-color: transparent;
+  font-size: 14px;
+  display: block;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  transition: all 0.5s;
+}
+.button-primary-outline:hover {
+  background-color: var(--sky);
+}
+@media only screen and (max-width: 575px) {
+  .button-primary-outline {
     font-size: 12px;
     padding: 6px 15px;
   }

@@ -1,7 +1,7 @@
 footer{
     background-color:#00000080;
     border-radius: 150px 150px 0px 0px;
-    padding:5px;
+    padding:10px;
     box-shadow:rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
     position: fixed;
     bottom: 0px;
@@ -11,7 +11,7 @@ footer{
     .footer_block{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content:center;
         .logo{
             width: 80px;
             img{
@@ -21,6 +21,7 @@ footer{
             }
         }
         p{
+            text-align: center;
             font-size: 16px;
             color:var(--white);
             font-weight: 400;

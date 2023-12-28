@@ -1,6 +1,9 @@
 import { Component, HostListener } from "@angular/core";
-import { Router } from "@angular/router";
 import { TranslateService } from "../service/translate.service";
+import { MatDialog } from "@angular/material/dialog";
+import { ResumeComponent } from "../dialog-template/resume/resume.component";
+import { Router } from "@angular/router";
+import { ServiceService } from "../service/service.service";
 
 interface Language {
   value: string;
@@ -12,22 +15,20 @@ interface Language {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  
+
   navigationItems = [
-    { id: 'home', label: 'Home', link: '/', active: true },
-    { id: 'about', label: 'About', link: '/about', active: false },
-    { id: 'skills', label: 'Skills', link: '/skills', active: false },
-    { id: 'services', label: 'Services', link: '/services', active: false },
-    { id: 'contact', label: 'Contact', link: '/contact', active: false }
+    { id: 'home', label: this.translateService.content.home, link: '/', active: true },
+    { id: 'about', label: this.translateService.content.about, link: '/about', active: false },
+    { id: 'skills', label: this.translateService.content.skills, link: '/skills', active: false },
+    { id: 'services', label: this.translateService.content.services, link: '/services', active: false },
+    { id: 'contact', label: this.translateService.content.contact, link: '/contact', active: false }
   ];
 
-  Languages: Language[] = [
-    { value: 'english', viewValue: 'English' },
-    { value: 'spanish', viewValue: 'Spanish' },
-  ];
   isScrolled = false;
 
-  constructor(private router: Router, public translateService: TranslateService,) { }
+  constructor(private router: Router, public serviceService: ServiceService,
+    public translateService: TranslateService, public dialog: MatDialog
+  ) { }
 
   // only section scroll
   scrollTo(section: string): void {
@@ -60,4 +61,12 @@ export class HeaderComponent {
       }
     });
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ResumeComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
 }

@@ -77,11 +77,11 @@
   padding-bottom: 20px;
   margin-bottom: 0px;
 }
-.about_section .about_wrapper .about_block .content_block .button-primary {
+.about_section .about_wrapper .about_block .content_block .button-primary-outline {
   margin-top: 20px;
 }
 @media screen and (max-width: 991px) {
-  .about_section .about_wrapper .about_block .content_block .button-primary {
+  .about_section .about_wrapper .about_block .content_block .button-primary-outline {
     margin: 10px auto 0;
   }
 }

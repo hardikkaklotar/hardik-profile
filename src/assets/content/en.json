@@ -43,5 +43,11 @@
     "email": "Email",
     "mobileNumber": "Mobile Number",
     "message": "Message",
-    "sendMessage": "Send Message"
+    "sendMessage": "Send Message",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "resume": "Resume",
+    "home": "Home"
+  
   }

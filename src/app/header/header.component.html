@@ -11,18 +11,18 @@
         </div>
         <div class="d-flex align-items-center gap-3">
             <div class="dropdown language-dropdown">
-                <a class="button-primary d-flex align-items-center px-3 gap-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="button-primary-outline d-flex align-items-center px-3 gap-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-globe"></i>
-                    Language
+                    {{translateService.content.language}}
                     <i class="fa-solid mt-1 fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="translateService.setLanguage('english')">English</a></li>
-                    <li><a class="dropdown-item" (click)="translateService.setLanguage('spanish')">Spanish</a></li>
+                    <li><a class="dropdown-item" (click)="translateService.setLanguage('english')">{{translateService.content.english}}</a></li>
+                    <li><a class="dropdown-item" (click)="translateService.setLanguage('spanish')">{{translateService.content.spanish}}</a></li>
                 </ul>
             </div>
-            <a routerLink="#!" class="d-none d-sm-block button-primary" data-bs-toggle="modal"
-                data-bs-target="#resumeModal">Resume</a>
+            <a routerLink="#!" class="button-primary-outline" data-bs-toggle="modal"
+                data-bs-target="#resumeModal" mat-button (click)="openDialog()">{{translateService.content.resume}}</a>
             <a data-bs-toggle="offcanvas" href="#responsiveheader" role="button" aria-controls="responsiveheader"
                 class="text-white d-md-none">
                 <i class="fa-solid fa-xl fa-bars"></i>
@@ -51,7 +51,7 @@
 </div>
 
 <!-- Resume Modal -->
-<div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel"
+<!-- <div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -67,8 +67,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="../../assets/image/development-skills.png" download="" class="button-primary">Download</a>
+                <a href="../../assets/image/development-skills.png" download="" class="button-primary-outline">Download</a>
             </div>
         </div>
     </div>
-</div>
+</div> -->
