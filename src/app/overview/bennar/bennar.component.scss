@@ -1,6 +1,7 @@
 /*BENNAR SECTION CSS START HEAR*/
 .bennar-section {
     padding: 200px 0px 100px;
+    overflow: hidden;
     align-items: start;
     display: flex;
     justify-content: center;
@@ -20,7 +21,6 @@
     }
     .bennar-video{
         position: absolute;
-        right: 0;
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
@@ -327,7 +327,6 @@
                 }
             }
         }
-
         .img-block {
             position: relative;
 
@@ -343,7 +342,13 @@
             }
         }
     }
-
+    .container-lg{
+        position: relative;
+            z-index: 100;
+        p{
+            color: var(--white);
+        }
+    }
 }
 
 /*BENNAR SECTION CSS END HEAR*/
