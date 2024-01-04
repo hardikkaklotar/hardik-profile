@@ -27,43 +27,57 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-7">
-                <form class="row contact-right" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <form autocomplete="off" class="row form-validation" #userForm="ngForm">
                     <div class="col-lg-6">
                         <mat-form-field>
                             <mat-label>{{translateService.content.enterYour}} {{translateService.content.firstName}}</mat-label>
-                            <input matInput required formControlName="FirstName">
+                            <input #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" id="firstName" name="firstName" [(ngModel)]="userModel.firstName" required matInput>
                         </mat-form-field>
+                        <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">FirstName is Required</small>
                     </div>
                     <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
                         <mat-form-field>
                             <mat-label>{{translateService.content.enterYour}} {{translateService.content.lastName}}</mat-label>
-                            <input matInput required formControlName="LastName">
+                            <input #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" id="lastName" name="lastName" [(ngModel)]="userModel.lastName" required matInput>
                         </mat-form-field>
+                        <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">LastName is Required</small>
                     </div>
+
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.enterYour}} {{translateService.content.email}}</mat-label>
-                            <input matInput required type="email" formControlName="Email">
+                            <input type="email" #email="ngModel"required
+                            [class.is-invalid]="email.invalid && email.touched" class="form-control appearance-none" id="email" name="email"
+                            [(ngModel)]="userModel.email" matInput>
                         </mat-form-field>
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" *ngIf="email.errors['required']">Email is a required field!</small>
+                        </div>
                     </div>
+
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.mobileNumber}}</mat-label>
-                            <input matInput required class="appearance-none" type="number"
-                                formControlName="Number">
+                            <input type="number" #phone="ngModel" pattern="^\d{10}$" required
+                            [class.is-invalid]="phone.invalid && phone.touched" class="form-control appearance-none" id="phone" name="phone"
+                            [(ngModel)]="userModel.phone" matInput>
                         </mat-form-field>
+                        <div *ngIf="phone.errors && (phone.invalid && phone.touched)">
+                            <small class="text-danger" *ngIf="phone.errors['required']">Mobile Number is Required</small>
+                            <small class="text-danger" *ngIf="phone.errors['pattern']">Mobile Number must be 10 digits</small>
+                        </div>
                     </div>
+
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.message}}</mat-label>
-                            <textarea required matInput placeholder="Write Your Message Here"
-                                formControlName="Message"></textarea>
+                            <textarea #message="ngModel" [class.is-invalid]="message.invalid && message.touched" class="form-control" id="message" name="message" [(ngModel)]="userModel.message" required matInput placeholder="Write Your Message Here"></textarea>
                         </mat-form-field>
+                        <small class="text-danger" [class.d-none]="message.valid || message.untouched">Write Your Message Here is Required</small>
                     </div>
+
                     <div class="col-12 mt-4 mt-md-5 justify-content-end d-flex">
-                        <button mat-button class="button-primary-outline ms-3" type="submit">
-                            {{translateService.content.sendMessage}}
-                        </button>
+                        <button (click)="submitForm(userForm)" class="button-primary-outline ms-3" type="submit">{{translateService.content.sendMessage}}</button>
                     </div>
                 </form>
             </div>
@@ -72,7 +86,7 @@
 </section>
 <!-- CONTACT SECTION END HEAR -->
 
-<ng-template #myDialog>
+<!-- <ng-template #myDialog>
     <div class="contact-form-model">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -110,4 +124,4 @@
             </div>
         </div>
     </div>
-</ng-template>
+</ng-template> -->

@@ -26,6 +26,10 @@ h6 {
   font-family: "Philosopher", sans-serif !important;
 }
 
+small {
+  font-weight: 600 !important;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -82,9 +86,11 @@ a {
   max-height: 200px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
 }
 .mat-mdc-form-field .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background: transparent !important;
+  background: rgba(87, 187, 246, 0.0588235294) !important;
 }
 .mat-mdc-form-field input,
 .mat-mdc-form-field textarea {

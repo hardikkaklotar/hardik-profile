@@ -5,28 +5,34 @@
         </a>
         <div class="navbar-block gap-3 gap-xl-4">
             <a *ngFor="let item of navigationItems">
-                <a routerLink="{{ item.link }}" class="nav-link"
-                (click)="scrollTo(item.id)" [ngClass]="{'active':item.active}">{{ item.label }}</a>
+                <a routerLink="{{ item.link }}" class="nav-link" (click)="scrollTo(item.id)"
+                    [ngClass]="{'active':item.active}">{{ item.label }}</a>
             </a>
         </div>
         <div class="d-flex align-items-center gap-3">
             <div class="dropdown language-dropdown">
-                <a class="button-primary-outline d-flex align-items-center px-3 gap-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="button-primary-outline d-flex align-items-center px-3 gap-2 dropdown-toggle" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-globe"></i>
                     {{translateService.content.language}}
                     <i class="fa-solid mt-1 fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="translateService.setLanguage('english')">{{translateService.content.english}}</a></li>
-                    <li><a class="dropdown-item" (click)="translateService.setLanguage('spanish')">{{translateService.content.spanish}}</a></li>
+                    <li><a class="dropdown-item"
+                            (click)="translateService.setLanguage('english')">{{translateService.content.english}}</a>
+                    </li>
+                    <li><a class="dropdown-item"
+                            (click)="translateService.setLanguage('spanish')">{{translateService.content.spanish}}</a>
+                    </li>
                 </ul>
             </div>
-            <a routerLink="#!" class="button-primary-outline" data-bs-toggle="modal"
-                data-bs-target="#resumeModal" mat-button (click)="openDialog()">{{translateService.content.resume}}</a>
             <a data-bs-toggle="offcanvas" href="#responsiveheader" role="button" aria-controls="responsiveheader"
                 class="text-white d-md-none">
                 <i class="fa-solid fa-xl fa-bars"></i>
             </a>
+            <button type="button" class="button-primary-outline" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                {{translateService.content.resume}}
+            </button>
         </div>
     </div>
 </header>
@@ -44,31 +50,38 @@
     </div>
     <div class="offcanvas-body navbar-block p-4 gap-3">
         <a *ngFor="let item of navigationItems">
-            <a routerLink="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas"
-            (click)="scrollTo(item.id)" [ngClass]="{'active':item.active}">{{ item.label }}</a>
+            <a routerLink="{{ item.link }}" class="nav-link" data-bs-dismiss="offcanvas" (click)="scrollTo(item.id)"
+                [ngClass]="{'active':item.active}">{{ item.label }}</a>
         </a>
     </div>
 </div>
 
-<!-- Resume Modal -->
-<!-- <div class="modal fade resume-model" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel"
-    aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <div class="modal-header resume-header">
-                <h1 class="modal-title fs-5 mb-0" id="resumeModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-top">
+                <h3 class="fs-5 mb-0" id="resumeModalLabel">MY RESUME</h3>
+                <button class="close-icon" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-xmark"></i></button>
             </div>
-            <div class="modal-body resume-body">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet id accusantium perspiciatis
-                    aspernatur aperiam officia non vitae debitis fugit? Illum iure optio esse neque, doloremque
-                    quibusdam excepturi cum dolorem debitis.</p>
-                <img src="../../assets/image/development-skills.png" alt="resume">
+            <div class="modal-body">
+                <div class="modal-center row align-items-end">  
+                    <div class="col-6">
+                        <img src="../../../assets/image/profile-data.svg" alt="resume">
+                    </div>
+                    <div class="col-6">
+
+                        <img src="https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp"
+                            alt="resume">
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="../../assets/image/development-skills.png" download="" class="button-primary-outline">Download</a>
+                <button class="button-primary-outline" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                <a href="https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp"
+                    download="resume-example.webp" class="button-primary" (click)="closeResumeModal()">Download</a>
             </div>
         </div>
     </div>
-</div> -->
+</div>

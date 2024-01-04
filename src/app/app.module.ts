@@ -17,6 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule} from '@angular/router';
 import { ResumeComponent } from './dialog-template/resume/resume.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { ResumeComponent } from './dialog-template/resume/resume.component';
     DialogTemplateComponent,
     InformationComponent,
     ResumeComponent,
-    routingComponents
+    routingComponents,
   ],
   imports: [
     BrowserModule,RouterModule,
@@ -39,6 +40,7 @@ import { ResumeComponent } from './dialog-template/resume/resume.component';
     MatProgressBarModule,
     MatDialogModule,
     MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

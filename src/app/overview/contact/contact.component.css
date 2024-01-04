@@ -249,4 +249,23 @@
   font-weight: 400;
   color: var(--white);
   flex-grow: 1;
+}
+
+.form-control:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.form-control:focus.is-invalid:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+textarea::-moz-placeholder {
+  color: #fff !important;
+  font-size: 14px !important;
+}
+
+textarea::placeholder {
+  color: #fff !important;
+  font-size: 14px !important;
 }/*# sourceMappingURL=contact.component.css.map */
