@@ -16,7 +16,7 @@ header {
     }
 
     @media only screen and (max-width:575px) {
-        padding: 15px;
+        padding: 10px;
     }
 
     .header-block {
@@ -30,7 +30,7 @@ header {
             justify-content: center;
             color: var(--white);
             font-family: 'Ephesis', cursive !important;
-
+           
             @media only screen and (max-width:575px) {
                 font-size: 20px;
             }
@@ -38,6 +38,12 @@ header {
             img {
                 width: 100px;
                 object-fit: contain;
+                @media screen and (max-width:991px) {
+                    width: 70px;
+                }
+                @media only screen and (max-width:575px) {
+                    width: 50px;
+                }
             }
         }
 
@@ -200,60 +206,4 @@ header {
             }
         }
     }
-}
-
-
-
-
-.modal-body{
-    background-color: #fff;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-    max-width: 700px;
-}
-.modal-dialog-scrollable .modal-content{
-    background-color: #111827;
-
-}
-.modal-top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    background-color: #111827;
-    h3{
-        font-size:20px !important;
-        font-weight: 500;
-        color:var(--white);
-        text-align: start;
-        font-family: 'Montserrat', sans-serif !important;
-
-    }
-    .close-icon {
-        border-radius: 100%;
-        border: 2px solid var(--sky);
-        height: 30px;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s;
-        background-color: transparent;
-        &:hover {
-            i {
-                transform: rotate(360deg);
-            }
-        }
-        i {
-            font-size: 20px;
-            color: var(--sky);
-            transition: all 0.7s;
-        }
-    }
-}
-.modal-footer{
-    background-color: #111827;
-    padding: 10px 15px;
 }

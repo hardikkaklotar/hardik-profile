@@ -10,18 +10,20 @@
 }
 @media screen and (max-width: 1024px) {
   .contact-section {
-    padding: 60px 20px 50px;
+    padding: 60px 20px 100px;
   }
 }
 @media screen and (max-width: 575px) {
   .contact-section {
-    padding: 60px 0px 40px;
+    padding: 60px 0px 50px;
   }
 }
 .contact-section .contact-block {
   padding: 40px 30px;
   border-radius: 10px;
   box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (max-width: 575px) {
   .contact-section .contact-block {
@@ -39,6 +41,11 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .contact-section .contact-block .contact-left {
+    padding: 25px;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact-section .contact-block .contact-left {

@@ -1,6 +1,8 @@
 /*SKILLS SECTION CSS START HEAR*/
 .skills_section {
   padding: 100px 0px 50px;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (max-width: 1240px) {
   .skills_section {
@@ -68,6 +70,11 @@
   color: var(--bs-success-border-subtle);
   font-size: 16px;
   font-weight: 600;
+}
+@media screen and (max-width: 575px) {
+  .skills_section .skills_wrapper .skills_block .progress-block span {
+    font-size: 14px;
+  }
 }
 .skills_section .skills_wrapper .skills_block .img-block img {
   width: 100%;
@@ -440,7 +447,7 @@
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .skills_section .skills_wrapper .our-technology {
-    padding: 180px 0px;
+    padding: 200px 0px;
   }
   .skills_section .skills_wrapper .our-technology .our-techno .animation-line .techno-img {
     top: -40px;
@@ -476,7 +483,7 @@
 }
 @media screen and (max-width: 767px) {
   .skills_section .skills_wrapper .our-technology {
-    padding: 180px 0px;
+    padding: 200px 0px;
   }
   .skills_section .skills_wrapper .our-technology .our-techno .animation-line .techno-img {
     left: -32px;
@@ -543,7 +550,7 @@
 }
 @media screen and (max-width: 575px) {
   .skills_section .skills_wrapper .our-technology {
-    padding: 115px 0px;
+    padding: 150px 0px;
   }
   .skills_section .skills_wrapper .our-technology .our-techno .center-title {
     width: 85px;

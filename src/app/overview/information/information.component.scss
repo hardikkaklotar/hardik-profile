@@ -13,15 +13,6 @@
         padding: 40px 0px;
         background-position: left;
     }
-    &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(2px);
-    }
     .company-information-wrapper {
         position: relative;
         z-index: 10;

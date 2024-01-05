@@ -7,7 +7,6 @@
   justify-content: center;
   flex-direction: column;
   color: var(--primary);
-  height: 100%;
   position: relative;
   box-shadow: rgb(8, 25, 43) 0px 25px 52px -20px;
 }

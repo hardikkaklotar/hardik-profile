@@ -7,7 +7,7 @@ footer{
     bottom: 0px;
     width: 100%;
     backdrop-filter: blur(15px);
-    z-index: 998;
+    z-index:999;
     .footer_block{
         display: flex;
         align-items: center;
@@ -29,6 +29,9 @@ footer{
             a{
                 color: var(--sky);
                 font-weight: 500;
+            }
+            @media screen and (max-width:575px) {
+                font-size: 12px;
             }
         }
     }

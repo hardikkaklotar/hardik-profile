@@ -1,7 +1,7 @@
 <!-- CONTACT SECTION START HEAR -->
 <section class="contact-section" id="contact">
     <div class="container-lg">
-        <div class="title mb-3 mb-md-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom"
+        <div class="title z-3 position-relative mb-3 mb-md-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom"
             data-aos-easing="linear">
             <h4>{{translateService.content.contactCapital}}</h4>
             <h2>{{translateService.content.contactCapital}} {{translateService.content.me}}</h2>
@@ -76,8 +76,8 @@
                         <small class="text-danger" [class.d-none]="message.valid || message.untouched">Write Your Message Here is Required</small>
                     </div>
 
-                    <div class="col-12 mt-4 mt-md-5 justify-content-end d-flex">
-                        <button (click)="submitForm(userForm)" class="button-primary-outline ms-3" type="submit">{{translateService.content.sendMessage}}</button>
+                    <div class="col-12 mt-4 mt-md-5 justify-content-start justify-content-sm-end d-flex">
+                        <button (click)="submitForm(userForm)" class="button-primary-outline ms-sm-3" type="submit">{{translateService.content.sendMessage}}</button>
                     </div>
                 </form>
             </div>

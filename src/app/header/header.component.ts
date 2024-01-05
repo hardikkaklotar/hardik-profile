@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Renderer2 } from "@angular/core";
+import { Component, HostListener} from "@angular/core";
 import { TranslateService } from "../service/translate.service";
 import { MatDialog } from "@angular/material/dialog";
 import { ResumeComponent } from "../dialog-template/resume/resume.component";
@@ -27,8 +27,7 @@ export class HeaderComponent {
   isScrolled = false;
 
   constructor(private router: Router, public serviceService: ServiceService,
-    public translateService: TranslateService, public dialog: MatDialog,
-    private el: ElementRef, private renderer: Renderer2
+    public translateService: TranslateService, public dialog: MatDialog
   ) { }
 
   // only section scroll
@@ -70,17 +69,6 @@ export class HeaderComponent {
     });
   }
 
-  closeResumeModal() {
-    // close the Bootstrap modal and remove the overlay
-    const modalElement = this.el.nativeElement.querySelector('#exampleModal');
-    // Hide the modal
-    this.renderer.removeClass(modalElement, 'show');
-    this.renderer.addClass(modalElement, 'fade');
-    // Remove the modal backdrop
-    const backdropElement = document.querySelector('.modal-backdrop');
-    if (backdropElement) {
-      this.renderer.removeChild(document.body, backdropElement);
-    }
-  }
+
 
 }

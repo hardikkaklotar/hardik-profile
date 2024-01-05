@@ -30,9 +30,6 @@
                 class="text-white d-md-none">
                 <i class="fa-solid fa-xl fa-bars"></i>
             </a>
-            <button type="button" class="button-primary-outline" data-bs-toggle="modal" data-bs-target="#resumeModal">
-                {{translateService.content.resume}}
-            </button>
         </div>
     </div>
 </header>
@@ -56,32 +53,3 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-top">
-                <h3 class="fs-5 mb-0" id="resumeModalLabel">MY RESUME</h3>
-                <button class="close-icon" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fa fa-xmark"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-center row align-items-end">  
-                    <div class="col-6">
-                        <img src="../../../assets/image/profile-data.svg" alt="resume">
-                    </div>
-                    <div class="col-6">
-
-                        <img src="https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp"
-                            alt="resume">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="button-primary-outline" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                <a href="https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp"
-                    download="resume-example.webp" class="button-primary" (click)="closeResumeModal()">Download</a>
-            </div>
-        </div>
-    </div>
-</div>

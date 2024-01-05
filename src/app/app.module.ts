@@ -18,6 +18,12 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule} from '@angular/router';
 import { ResumeComponent } from './dialog-template/resume/resume.component';
 import { FormsModule } from '@angular/forms';
+
+/* PRIME IMPORT */
+import { ButtonModule } from 'primeng/button';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { ToastModule } from 'primeng/toast';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +46,13 @@ import { FormsModule } from '@angular/forms';
     MatProgressBarModule,
     MatDialogModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+
+    /* PRIME IMPORT */
+    ButtonModule,
+    SpeedDialModule,
+    ToastModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

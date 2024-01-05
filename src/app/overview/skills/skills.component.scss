@@ -1,7 +1,8 @@
 /*SKILLS SECTION CSS START HEAR*/
 .skills_section {
     padding: 100px 0px 50px;
-
+    position: relative;
+    z-index: 10;
     @media screen and (max-width:1240px) {
         padding: 60px 0px 30px;
     }
@@ -65,6 +66,9 @@
                     color: var(--bs-success-border-subtle);
                     font-size: 16px;
                     font-weight: 600;
+                    @media screen and (max-width:575px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -506,7 +510,7 @@
         }
         @media (min-width:767px) and (max-width:991px) {
             .our-technology {
-                padding:180px 0px;
+                padding:200px 0px;
                 .our-techno {
                     .animation-line {
                         .techno-img {
@@ -547,7 +551,7 @@
         }
         @media screen and (max-width:767px){
             .our-technology {
-                padding: 180px 0px;
+                padding: 200px 0px;
                 .our-techno {
                     .animation-line {
                         .animation-circle {}
@@ -623,7 +627,7 @@
         }
         @media screen and (max-width:575px){
             .our-technology {
-                padding:115px 0px;
+                padding:150px 0px;
                 .our-techno {
                     .center-title{
                         width: 85px;
