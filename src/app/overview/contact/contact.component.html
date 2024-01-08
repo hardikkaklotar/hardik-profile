@@ -30,24 +30,24 @@
                 <form autocomplete="off" class="row form-validation" #userForm="ngForm">
                     <div class="col-lg-6">
                         <mat-form-field>
-                            <mat-label>{{translateService.content.enterYour}} {{translateService.content.firstName}}</mat-label>
-                            <input #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" id="firstName" name="firstName" [(ngModel)]="userModel.firstName" required matInput>
+                            <mat-label>{{translateService.content.firstName}}</mat-label>
+                            <input #firstName="ngModel" placeholder="{{translateService.content.enterYour}} {{translateService.content.firstName}}" [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" id="firstName" name="firstName" [(ngModel)]="userModel.firstName" required matInput>
                         </mat-form-field>
                         <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">FirstName is Required</small>
                     </div>
                     <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
                         <mat-form-field>
-                            <mat-label>{{translateService.content.enterYour}} {{translateService.content.lastName}}</mat-label>
-                            <input #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" id="lastName" name="lastName" [(ngModel)]="userModel.lastName" required matInput>
+                            <mat-label>{{translateService.content.lastName}}</mat-label>
+                            <input #lastName="ngModel" placeholder="{{translateService.content.enterYour}} {{translateService.content.lastName}}" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" id="lastName" name="lastName" [(ngModel)]="userModel.lastName" required matInput>
                         </mat-form-field>
                         <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">LastName is Required</small>
                     </div>
 
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
-                            <mat-label>{{translateService.content.enterYour}} {{translateService.content.email}}</mat-label>
+                            <mat-label>{{translateService.content.email}}</mat-label>
                             <input type="email" #email="ngModel"required
-                            [class.is-invalid]="email.invalid && email.touched" class="form-control appearance-none" id="email" name="email"
+                            [class.is-invalid]="email.invalid && email.touched" placeholder="{{translateService.content.enterYour}} {{translateService.content.email}}" class="form-control appearance-none" id="email" name="email"
                             [(ngModel)]="userModel.email" matInput>
                         </mat-form-field>
                         <div *ngIf="email.errors && (email.invalid && email.touched)">
@@ -59,7 +59,7 @@
                         <mat-form-field>
                             <mat-label>{{translateService.content.mobileNumber}}</mat-label>
                             <input type="number" #phone="ngModel" pattern="^\d{10}$" required
-                            [class.is-invalid]="phone.invalid && phone.touched" class="form-control appearance-none" id="phone" name="phone"
+                            [class.is-invalid]="phone.invalid && phone.touched" placeholder="{{translateService.content.enterYour}} {{translateService.content.mobileNumber}}" class="form-control appearance-none" id="phone" name="phone"
                             [(ngModel)]="userModel.phone" matInput>
                         </mat-form-field>
                         <div *ngIf="phone.errors && (phone.invalid && phone.touched)">

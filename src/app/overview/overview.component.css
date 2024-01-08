@@ -1,55 +1,3 @@
-.modal-body {
-  background-color: #fff;
-  max-width: 700px;
-}
-.modal-body img {
-  width: 100%;
-  height: 100%;
-}
-
-.modal-dialog-scrollable .modal-content {
-  background-color: #111827;
-}
-
-.modal-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 15px;
-  background-color: #111827;
-}
-.modal-top h3 {
-  font-size: 20px !important;
-  font-weight: 500;
-  color: var(--white);
-  text-align: start;
-  font-family: "Montserrat", sans-serif !important;
-}
-.modal-top .close-icon {
-  border-radius: 100%;
-  border: 2px solid var(--sky);
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s;
-  background-color: transparent;
-}
-.modal-top .close-icon:hover i {
-  transform: rotate(360deg);
-}
-.modal-top .close-icon i {
-  font-size: 20px;
-  color: var(--sky);
-  transition: all 0.7s;
-}
-
-.modal-footer {
-  background-color: #111827;
-  padding: 10px 15px;
-}
-
 .button-content {
   position: fixed;
   right: 40px;
@@ -147,4 +95,56 @@
 }
 :host ::ng-deep .menuitems .p-speeddial-list li:last-child a {
   background-color: var(--sky) !important;
+}
+:host ::ng-deep .p-button {
+  position: relative;
+  z-index: 999;
+}
+:host ::ng-deep .p-dialog .p-dialog-header {
+  background: #1a2734 !important;
+  padding: 15px 20px !important;
+  cursor: auto !important;
+}
+:host ::ng-deep .p-dialog .p-dialog-header .p-dialog-header-icon {
+  border-radius: 100%;
+  border: 2px solid var(--sky);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  background-color: transparent;
+  color: var(--sky);
+}
+:host ::ng-deep .p-dialog .p-dialog-header .p-dialog-header-icon:hover {
+  transform: rotate(360deg);
+  background-color: var(--sky) !important;
+  color: var(--white) !important;
+}
+:host ::ng-deep .p-dialog .p-dialog-footer {
+  background: #1a2734 !important;
+  padding: 15px 20px !important;
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-top h3 {
+  margin-bottom: 0px;
+  font-size: 20px !important;
+  font-weight: 500;
+  color: var(--white);
+  text-align: start;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.modal-center {
+  background-color: #fff;
+}
+.modal-center img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=overview.component.css.map */

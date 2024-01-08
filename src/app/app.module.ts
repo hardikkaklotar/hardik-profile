@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ToastModule } from 'primeng/toast';
     ButtonModule,
     SpeedDialModule,
     ToastModule,
+    DialogModule
     
   ],
   providers: [],

@@ -10,6 +10,11 @@ import { fromEvent, debounceTime, map } from 'rxjs';
 })
 
 export class OverviewComponent implements OnInit {
+  visible: boolean = false;
+
+  showDialog() {
+    this.visible = true;
+  }
 
   @ViewChild('myModal')
   myModal!: ElementRef;
@@ -17,22 +22,21 @@ export class OverviewComponent implements OnInit {
   leftTooltipItems!: MenuItem[];
 
   constructor(private messageService: MessageService, private el: ElementRef, private renderer: Renderer2) { }
-
-  closeResumeModal() {
-    // close the Bootstrap modal and remove the overlay
-    const modalElement = this.el.nativeElement.querySelector('#exampleModal');
-    // Hide the modal
-    this.renderer.removeClass(modalElement, 'show');
-    this.renderer.addClass(modalElement, 'fade');
-    // Remove the modal backdrop
-    const backdropElement = document.querySelector('.modal-backdrop');
-    if (backdropElement) {
-      this.renderer.removeChild(document.body, backdropElement);
-    }
+  closeAndDownload(): void {
+    // Close the modal
+    this.visible = false;
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
+    // Download the image
+    const imageUrl = 'https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp';
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = 'resume-image.webp';
+    link.click();
   }
-  /*
-* CLICK BUTTON AND PAGE SCROLL ON TOP
-*/
+
+
+  // CLICK BUTTON AND PAGE SCROLL ON TOP
+
   showBtn$ = fromEvent(document, 'scroll').pipe(
     debounceTime(50),
     map(() => window.scrollY > 500),
@@ -45,9 +49,7 @@ export class OverviewComponent implements OnInit {
     });
   }
 
-  openModal() {
-    alert('working')
-  }
+
 
   ngOnInit() {
     this.leftTooltipItems = [
@@ -112,8 +114,8 @@ export class OverviewComponent implements OnInit {
           tooltipLabel: 'Resume download',
           tooltipPosition: 'left'
         },
-        command:()=>{
-          this.openModal();
+        command: () => {
+          this.showDialog();
         }
       },
     ];

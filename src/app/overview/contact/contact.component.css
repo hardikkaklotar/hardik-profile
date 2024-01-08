@@ -275,4 +275,14 @@ textarea::-moz-placeholder {
 textarea::placeholder {
   color: #fff !important;
   font-size: 14px !important;
+}
+
+input::-moz-placeholder {
+  color: #fff !important;
+  font-size: 14px !important;
+}
+
+input::placeholder {
+  color: #fff !important;
+  font-size: 14px !important;
 }/*# sourceMappingURL=contact.component.css.map */
