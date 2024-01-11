@@ -88,6 +88,7 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-brands fa-instagram',
+        url: 'https://www.instagram.com/hardik_.kaklotar/'
         // command: () => {
         //     this.messageService.add({ severity: 'error', summary: 'Instagram', detail: 'Instagram' });
         // }
@@ -106,7 +107,7 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-brands fa-whatsapp',
-        // url: 'http://angular.io'
+        url: 'https://wa.me/9714514703'
       },
       {
         icon: 'pi pi-download',

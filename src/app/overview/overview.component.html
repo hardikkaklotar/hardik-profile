@@ -4,7 +4,7 @@
     <app-skills></app-skills>
     <app-services></app-services>
     <app-contact></app-contact>
-
+    <app-footer></app-footer>
     <div class="star-layer" id="stars"></div>
     <div class="star-layer" id="stars2"></div>
     <div class="star-layer" id="stars3"></div>
@@ -13,9 +13,9 @@
         <a class="scroll-top" *ngIf="showBtn$ | async" (click)="gotoTop()">
             <i class="fa-solid fa-xl fa-arrow-up"></i>
         </a>
-        <div class="menuitems">
+       <div class="menuitems">
             <p-speedDial [model]="leftTooltipItems" className="speeddial-right" direction="up"></p-speedDial>
-        </div>
+        </div> 
     </div>
     <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#resumeModal"></button> -->
 </section>

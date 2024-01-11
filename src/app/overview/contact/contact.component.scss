@@ -1,15 +1,15 @@
 /*CONTACT SECTION CSS START HEAR*/
 .contact-section {
-    padding: 100px 0px 100px;
+    padding: 100px 0px 50px;
     position: relative;
     @media screen and (max-width:1240px) {
         padding: 60px 0px;
     }
     @media screen and (max-width:1024px) {
-        padding: 60px 20px 100px;
+        padding: 60px 20px 50px;
     }
     @media screen and (max-width:575px) {
-        padding:60px 0px 50px;
+        padding:60px 0px 20px;
     }
     .contact-block {
         padding: 40px 30px;
@@ -56,7 +56,6 @@
                     width:260px;
                 }
             }
-
             &::after {
                 content: "";
                 position: absolute;
@@ -71,7 +70,6 @@
                     width:100px;
                 }
             }
-
             h2 {
                 font-weight: 600;
                 font-size: 35px;
@@ -86,7 +84,6 @@
                     font-size:23px
                 }
             }
-
             .links-block {
                 position: relative;
                 z-index: 10;
@@ -100,7 +97,6 @@
                         font-size:14px
                     }
                 }
-
                 i {
                     color: #fff;
                     padding-top: 14px;
@@ -112,7 +108,6 @@
                 align-items: center;
                 position: relative;
                 z-index: 10;
-
                 a {
                     width: 35px;
                     height: 35px;
@@ -140,7 +135,6 @@
         }
     }
 }
-
 /*CONTACT SECTION CSS END HEAR*/
 
 .contact-form-model {

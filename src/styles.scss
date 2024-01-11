@@ -13,6 +13,8 @@
     --dark-black: #040404;
     --white: #ffffff;
     --track-color:rgb(255 255 255 / 10%);
+    --gradient-border:linear-gradient(90deg,rgba(0,67,238,.55),rgba(0,102,255,0) 60%,rgba(0,255,240,.45));
+    --gradient-background:linear-gradient(90deg,rgb(0 67 238 / 21%),rgb(0 102 255 / 0%) 60%,rgb(0 255 240 / 22%));
 }
 body {
     // background-color:var(--black) !important;
@@ -121,6 +123,10 @@ a {
 }
   
 /* MAT CLASS CSS END HEAR */ 
+.p-component-overlay {
+  backdrop-filter: blur(4px) !important;
+  background-color: transparent !important;
+}
 
 .title {
     text-align: center;
@@ -217,6 +223,13 @@ p{
         padding: 6px 15px;
     }
 }
+.gradient-border{
+  background: var(--gradient-border);
+  height: 2px;
+  display: block;
+  width: 100%;
+}
+
 
   // Function to generate multiple box-shadow values for stars
   @function multiple-box-shadow($number_of_stars) {
