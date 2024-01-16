@@ -2,11 +2,11 @@ header {
   width: 100%;
   padding: 0px 50px;
   border-bottom: 1px solid var(--secondary);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: var(--gradient-background);
   position: fixed;
   z-index: 999;
-  box-shadow: rgba(92, 185, 242, 0.28) 0px 0px 27px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
 }
 @media only screen and (max-width: 991px) {
   header {
@@ -103,7 +103,7 @@ header .header-block .navbar-block .nav-link:hover::after {
   background-color: #020617 !important;
 }
 .offcanvas .navbar-header {
-  background-color: var(--light-sky);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1882352941);
 }
 .offcanvas .navbar-header .logo {
   font-size: 26px;
@@ -126,11 +126,12 @@ header .header-block .navbar-block .nav-link:hover::after {
   font-size: 16px;
   display: inline-block;
   font-weight: 400;
-  color: var(--primary);
+  color: var(--white);
   transition: all 0.5s;
 }
 .offcanvas .navbar-block .nav-link.active {
   color: var(--sky);
+  font-weight: 500;
 }
 .offcanvas .navbar-block .nav-link:hover {
   color: var(--sky);

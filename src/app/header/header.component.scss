@@ -102,8 +102,7 @@ header {
     background-color: #020617 !important;
 
     .navbar-header {
-        background-color: var(--light-sky);
-
+        border-bottom: 1px solid #ffffff30;
         .logo {
             font-size: 26px;
             font-weight: 700;
@@ -126,11 +125,12 @@ header {
             font-size: 16px;
             display: inline-block;
             font-weight: 400;
-            color: var(--primary);
+            color: var(--white);
             transition: all 0.5s;
 
             &.active {
                 color: var(--sky);
+                font-weight: 500;
             }
 
             &:hover {

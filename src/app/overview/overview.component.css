@@ -12,6 +12,11 @@
     bottom: 55px;
   }
 }
+@media screen and (max-height: 600px) {
+  .button-content {
+    bottom: 15px;
+  }
+}
 .button-content .scroll-top {
   color: #fff;
   background-color: rgba(19, 43, 68, 0.431372549);
@@ -34,6 +39,13 @@
   }
   .button-content .scroll-top i {
     font-size: 16px !important;
+  }
+}
+@media screen and (max-height: 600px) {
+  .button-content .scroll-top {
+    position: absolute;
+    right: 60px;
+    z-index: 9999;
   }
 }
 
@@ -125,6 +137,16 @@
 :host ::ng-deep .p-dialog .p-dialog-footer {
   background: #1a2734 !important;
   padding: 15px 20px !important;
+}
+
+@media screen and (max-height: 600px) {
+  :host ::ng-deep .p-speeddial-direction-up {
+    align-items: end !important;
+  }
+  :host ::ng-deep .p-speeddial-direction-up .p-speeddial-list {
+    flex-direction: row !important;
+    gap: 5px;
+  }
 }
 
 .modal-top {

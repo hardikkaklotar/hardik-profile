@@ -1,6 +1,6 @@
 /*CONTACT SECTION CSS START HEAR*/
 .contact-section {
-  padding: 100px 0px 100px;
+  padding: 100px 0px 50px;
   position: relative;
 }
 @media screen and (max-width: 1240px) {
@@ -10,12 +10,12 @@
 }
 @media screen and (max-width: 1024px) {
   .contact-section {
-    padding: 60px 20px 100px;
+    padding: 60px 20px 50px;
   }
 }
 @media screen and (max-width: 575px) {
   .contact-section {
-    padding: 60px 0px 50px;
+    padding: 60px 0px 20px;
   }
 }
 .contact-section .contact-block {

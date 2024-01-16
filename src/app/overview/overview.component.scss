@@ -18,6 +18,9 @@
         right: 15px;
         bottom: 55px;
     }
+    @media screen and (max-height:600px) {
+        bottom: 15px;
+    }
 
     .scroll-top {
         color: #fff;
