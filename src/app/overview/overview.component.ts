@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { fromEvent, debounceTime, map } from 'rxjs';
@@ -48,8 +48,6 @@ export class OverviewComponent implements OnInit {
       behavior: 'smooth',
     });
   }
-
-
 
   ngOnInit() {
     this.leftTooltipItems = [
@@ -121,4 +119,11 @@ export class OverviewComponent implements OnInit {
       },
     ];
   }
+
+  // Prevent the default action of the mousedown event
+  @HostListener('document:mousedown', ['$event'])
+  onMouseDown(event: MouseEvent) {
+    event.preventDefault();
+  }
+
 }
