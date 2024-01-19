@@ -11,7 +11,6 @@ import { TranslateService } from 'src/app/service/translate.service';
   styleUrls: ['./bennar.component.scss']
 })
 export class BennarComponent {
-  bennarVideo: string = '../../../assets/video/bennar-video.mp4';
   constructor(private router: Router, public serviceService: ServiceService,
     public translateService: TranslateService,
   ) { }
