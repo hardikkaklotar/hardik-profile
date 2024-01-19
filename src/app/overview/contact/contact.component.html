@@ -1,8 +1,10 @@
 <!-- CONTACT SECTION START HEAR -->
 <section class="contact-section" id="contact">
+    <p-toast></p-toast>
+
     <div class="container-lg">
-        <div class="title z-3 position-relative mb-3 mb-md-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom"
-            data-aos-easing="linear">
+        <div class="title z-3 position-relative mb-3 mb-md-5" data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom" data-aos-easing="linear">
             <h4>{{translateService.content.contactCapital}}</h4>
             <h2>{{translateService.content.contactCapital}} {{translateService.content.me}}</h2>
         </div>
@@ -27,57 +29,73 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-7">
-                <form autocomplete="off" class="row form-validation" #userForm="ngForm">
+                <form autocomplete="off" class="row form-validation" [formGroup]="userForm" action="javascript:void(0)"
+                    (submit)="send()">
                     <div class="col-lg-6">
                         <mat-form-field>
                             <mat-label>{{translateService.content.firstName}}</mat-label>
-                            <input #firstName="ngModel" placeholder="{{translateService.content.enterYour}} {{translateService.content.firstName}}" [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" id="firstName" name="firstName" [(ngModel)]="userModel.firstName" required matInput>
+                            <input formControlName="firstName"
+                                placeholder="{{translateService.content.enterYour}} {{translateService.content.firstName}}"
+                                class="form-control" id="firstName" name="firstName" matInput>
                         </mat-form-field>
-                        <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">FirstName is Required</small>
+                        <div *ngIf="userForm.controls['firstName'].invalid && userForm.controls['firstName'].touched">
+                            <small class="text-danger" *ngIf="userForm.get('firstName')?.hasError('required')">First
+                                Name is Required</small>
+                        </div>
                     </div>
                     <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
                         <mat-form-field>
                             <mat-label>{{translateService.content.lastName}}</mat-label>
-                            <input #lastName="ngModel" placeholder="{{translateService.content.enterYour}} {{translateService.content.lastName}}" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" id="lastName" name="lastName" [(ngModel)]="userModel.lastName" required matInput>
+                            <input formControlName="lastName"
+                                placeholder="{{translateService.content.enterYour}} {{translateService.content.lastName}}"
+                                class="form-control" id="lastName" name="lastName" matInput>
                         </mat-form-field>
-                        <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">LastName is Required</small>
+                        <div *ngIf="userForm.controls['lastName'].invalid && userForm.controls['lastName'].touched">
+                            <small class="text-danger" *ngIf="userForm.get('lastName')?.hasError('required')">Last Name
+                                is Required</small>
+                        </div>
                     </div>
-
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.email}}</mat-label>
-                            <input type="email" #email="ngModel"required
-                            [class.is-invalid]="email.invalid && email.touched" placeholder="{{translateService.content.enterYour}} {{translateService.content.email}}" class="form-control appearance-none" id="email" name="email"
-                            [(ngModel)]="userModel.email" matInput>
+                            <input type="email" formControlName="email"
+                                placeholder="{{translateService.content.enterYour}} {{translateService.content.email}}"
+                                class="form-control appearance-none" id="email" name="email" matInput required>
                         </mat-form-field>
-                        <div *ngIf="email.errors && (email.invalid && email.touched)">
-                            <small class="text-danger" *ngIf="email.errors['required']">Email is a required field!</small>
+                        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
+                            <small class="text-danger" *ngIf="userForm.get('email')?.hasError('required')">Email is a
+                                required field!</small>
+                            <small class="text-danger" *ngIf="userForm.get('email')?.hasError('email')">Invalid email
+                                format!</small>
                         </div>
                     </div>
-
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.mobileNumber}}</mat-label>
-                            <input type="number" #phone="ngModel" pattern="^\d{10}$" required
-                            [class.is-invalid]="phone.invalid && phone.touched" placeholder="{{translateService.content.enterYour}} {{translateService.content.mobileNumber}}" class="form-control appearance-none" id="phone" name="phone"
-                            [(ngModel)]="userModel.phone" matInput>
+                            <input type="number" formControlName="phone" pattern="^\d{10}$"
+                                placeholder="{{translateService.content.enterYour}} {{translateService.content.mobileNumber}}"
+                                class="form-control appearance-none" id="phone" name="phone" matInput>
                         </mat-form-field>
-                        <div *ngIf="phone.errors && (phone.invalid && phone.touched)">
-                            <small class="text-danger" *ngIf="phone.errors['required']">Mobile Number is Required</small>
-                            <small class="text-danger" *ngIf="phone.errors['pattern']">Mobile Number must be 10 digits</small>
+                        <div *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched">
+                            <small class="text-danger" *ngIf="userForm.get('phone')?.hasError('required')">Mobile Number
+                                is Required</small>
+                            <small class="text-danger" *ngIf="userForm.get('phone')?.hasError('pattern')">Mobile Number
+                                must be 10 digits</small>
                         </div>
                     </div>
-
                     <div class="col-12 mt-4 mt-md-5">
                         <mat-form-field>
                             <mat-label>{{translateService.content.message}}</mat-label>
-                            <textarea #message="ngModel" [class.is-invalid]="message.invalid && message.touched" class="form-control" id="message" name="message" [(ngModel)]="userModel.message" required matInput placeholder="Write Your Message Here"></textarea>
+                            <textarea formControlName="message" class="form-control" id="message" name="message"
+                                matInput placeholder="Write Your Message Here"></textarea>
                         </mat-form-field>
-                        <small class="text-danger" [class.d-none]="message.valid || message.untouched">Write Your Message Here is Required</small>
+                        <div *ngIf="userForm.controls['message'].invalid && userForm.controls['message'].touched">
+                            <small class="text-danger">Write Your Message Here is Required</small>
+                        </div>
                     </div>
-
                     <div class="col-12 mt-4 mt-md-5 justify-content-start justify-content-sm-end d-flex">
-                        <button (click)="submitForm(userForm)" class="button-primary-outline ms-sm-3" type="submit">{{translateService.content.sendMessage}}</button>
+                        <button class="button-primary-outline ms-sm-3"
+                            type="submit">{{translateService.content.sendMessage}}</button>
                     </div>
                 </form>
             </div>
@@ -85,43 +103,3 @@
     </div>
 </section>
 <!-- CONTACT SECTION END HEAR -->
-
-<!-- <ng-template #myDialog>
-    <div class="contact-form-model">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Information</h2>
-                    <button class="close-icon" mat-button matDialogClose><i class="fa fa-xmark"></i></button>
-                </div>
-                <mat-dialog-content>
-                    <div class="form-details">
-                        <div class="form-input-box gap-2">
-                            <h6>First Name :-</h6>
-                            <p id="firstName">{{ formValues.FirstName }}</p>
-                        </div>
-                        <div class="form-input-box gap-2">
-                            <h6>Last Name :-</h6>
-                            <p id="lastName">{{ formValues.LastName }}</p>
-                        </div>
-                        <div class="form-input-box gap-2">
-                            <h6>Email Address :-</h6>
-                            <p id="emailAddress">{{ formValues.Email }}</p>
-                        </div>
-                        <div class="form-input-box gap-2">
-                            <h6>Mobile Number :-</h6>
-                            <p id="mobileNumber">{{ formValues.Number }}</p>
-                        </div>
-                        <div class="form-input-box gap-2">
-                            <h6>Message :-</h6>
-                            <p id="message">{{ formValues.Message }}</p>
-                        </div>
-                    </div>
-                </mat-dialog-content>
-                <div class="modal-footer">
-                    <button type="button" class="button-primary-outline" mat-button matDialogClose>Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</ng-template> -->
