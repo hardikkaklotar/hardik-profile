@@ -69,6 +69,7 @@ export class ContactComponent implements OnInit {
                     this.userForm.get(key)?.setErrors(null);
                 });
                 this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Form Submitted' });
+                window.location.reload();
             } catch (error) {
                 this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Failed to submit form. Please try again.' });
             }

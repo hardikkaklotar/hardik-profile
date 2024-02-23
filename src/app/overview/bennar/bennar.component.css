@@ -21,12 +21,6 @@
     box-shadow: rgb(8, 25, 43) 0px 17px 67px 15px !important;
   }
 }
-.bennar-section .bennar-video {
-  position: absolute;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
 .bennar-section .overlay {
   position: absolute;
   width: 100%;

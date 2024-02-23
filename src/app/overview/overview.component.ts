@@ -27,7 +27,7 @@ export class OverviewComponent implements OnInit {
     this.visible = false;
     this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
     // Download the image
-    const imageUrl = 'https://cdn-blog.novoresume.com/articles/resume-examples/resume-example.webp';
+    const imageUrl = '../../assets/image/Resume.jpg';
     const link = document.createElement('a');
     link.href = imageUrl;
     link.download = 'resume-image.webp';
@@ -58,9 +58,7 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-solid fa-phone-volume',
-        // command: () => {
-        //     this.messageService.add({ severity: 'success', summary: 'Twitter', detail: 'Twitter' });
-        // }
+        routerLink: 'tel:+9714514703',
       },
       {
         tooltipOptions: {
@@ -68,7 +66,6 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-brands fa-facebook-f',
-        // url: 'http://angular.io'
       },
       {
         tooltipOptions: {
@@ -76,9 +73,6 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-brands fa-linkedin-in',
-        // command: () => {
-        //     this.messageService.add({ severity: 'info', summary: 'linkedin', detail: 'linkedin' });
-        // }
       },
       {
         tooltipOptions: {
@@ -97,7 +91,6 @@ export class OverviewComponent implements OnInit {
           tooltipPosition: 'left'
         },
         icon: 'fa-brands fa-skype',
-        // url: 'http://angular.io'
       },
       {
         tooltipOptions: {
