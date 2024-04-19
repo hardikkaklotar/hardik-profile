@@ -5,386 +5,375 @@
 @import "primeicons/primeicons.css";
 
 :root {
-    --primary:#94a3b8;
-    --secondary:#22222240;
-    --sky:#38bdf8;
-    --light-sky:#bae6fd;
-    --black: #000000;
-    --dark-black: #040404;
-    --white: #ffffff;
-    --track-color:rgb(255 255 255 / 10%);
-    --gradient-border:linear-gradient(90deg,rgba(0,67,238,.55),rgba(0,102,255,0) 60%,rgba(0,255,240,.45));
-    --gradient-background:linear-gradient(90deg,rgb(0 67 238 / 21%),rgb(0 102 255 / 0%) 60%,rgb(0 255 240 / 22%));
+  --primary: #94a3b8;
+  --secondary: #22222240;
+  --sky: #38bdf8;
+  --light-sky: #bae6fd;
+  --black: #000000;
+  --dark-black: #040404;
+  --white: #ffffff;
+  --track-color: rgb(255 255 255 / 10%);
+  --gradient-border: linear-gradient(90deg, rgba(0, 67, 238, .55), rgba(0, 102, 255, 0) 60%, rgba(0, 255, 240, .45));
+  --gradient-background: linear-gradient(90deg, rgb(0 67 238 / 21%), rgb(0 102 255 / 0%) 60%, rgb(0 255 240 / 22%));
 }
+
 body {
-    // background-color:var(--black) !important;
-    background-color:var(--dark-black) !important;
-    // background: url(assets/image/Dot-Background.png) repeat;
-    background-position: center;
-    font-family: 'Montserrat', sans-serif !important;
-    animation: background-scroll 60s linear infinite;
+  background-color: var(--dark-black) !important;
+  background-position: center;
+  font-family: 'Montserrat', sans-serif !important;
+  animation: background-scroll 60s linear infinite;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Philosopher', sans-serif !important;
-    // font-family: 'Ephesis', cursive !important;
+  font-family: 'Philosopher', sans-serif !important;
+  // font-family: 'Ephesis', cursive !important;
 }
-small{
-    font-weight: 600 !important;
+
+small {
+  font-weight: 600 !important;
 }
+
 a {
-    text-decoration: none !important;
-    &:focus-visible{
-      outline: unset !important;
-    }
+  text-decoration: none !important;
+
+  &:focus-visible {
+    outline: unset !important;
+  }
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color:var(--sky);
-  }
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 5px;
-  }
-  *::-webkit-scrollbar-track {
-    background:var(--track-color);
-    border-radius: 10px;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--sky);
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color:var(--sky);
-    border-radius: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
 
-/* MAT CLASS CSS START HEAR */ 
+*::-webkit-scrollbar-track {
+  background: var(--track-color);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--sky);
+  border-radius: 10px;
+}
+
+/* MAT CLASS CSS START HEAR */
 .appearance-none::-webkit-outer-spin-button,
 .appearance-none::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 .mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-height: 7px !important;
-    --mdc-linear-progress-track-height: 7px !important;
-    --mdc-linear-progress-track-shape: 0;
+  --mdc-linear-progress-active-indicator-height: 7px !important;
+  --mdc-linear-progress-track-height: 7px !important;
+  --mdc-linear-progress-track-shape: 0;
 }
-// .mdc-linear-progress__bar-inner{
-//     border-color:#57bbf6b8 !important;
-// }
+
 .mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-color:var(--sky) !important;
-    --mdc-linear-progress-track-color: var(--primary) !important;
+  --mdc-linear-progress-active-indicator-color: var(--sky) !important;
+  --mdc-linear-progress-track-color: var(--primary) !important;
 }
-.mdc-linear-progress__buffer{
-    background-color: var(--light-sky);
+
+.mdc-linear-progress__buffer {
+  background-color: var(--light-sky);
 }
+
 .mat-mdc-form-field {
-    width: 100% !important;
-    background:transparent !important;
+  width: 100% !important;
+  background: transparent !important;
+  color: var(--white);
+  border-bottom: 2px solid #212332;
+  max-height: 200px;
+  backdrop-filter: blur(5px);
+  border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background: #57bbf60f !important;
+  }
+
+  input,
+  textarea {
+    font-size: 15px !important;
+    color: var(--white) !important;
+
+    @media screen and (max-width:575px) {
+      font-size: 13px !important;
+    }
+  }
+
+  mat-label {
     color: var(--white);
-    border-bottom: 2px solid #212332;
-    max-height: 200px;
-    backdrop-filter: blur(5px);
-    border-radius: 8px 8px 0px 0px;
-    overflow: hidden;
-    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-        background: #57bbf60f !important;
+    font-size: 15px !important;
+
+    @media screen and (max-width:575px) {
+      font-size: 13px !important;
     }
-    input,
-    textarea {
-        font-size: 15px !important;
-        color: var(--white) !important;
-        @media screen and (max-width:575px){
-          font-size: 13px !important;
-        }
-    }
-    mat-label{
-        color: var(--white);
-        font-size: 15px !important;
-        @media screen and (max-width:575px){
-          font-size: 13px !important;
-        }
-    }
-    input::placeholder,
-    textarea::placeholder {
-        font-size: 15px !important;
-    }
-    .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-    }
-  
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 15px !important;
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+
 }
-.mat-mdc-dialog-container .mdc-dialog__surface{
-    background-color:#03071C !important;
-    border-radius: 10px !important;
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #03071C !important;
+  border-radius: 10px !important;
 }
-  
-/* MAT CLASS CSS END HEAR */ 
+
+/* MAT CLASS CSS END HEAR */
 .p-component-overlay {
   backdrop-filter: blur(4px) !important;
   background-color: transparent !important;
 }
 
 .title {
-    text-align: center;
-    h4 {
-        color: var(--white);
-        font-weight: 500;
-        margin-bottom: 10px;
-        font-size: 25px;
-        @media screen and (max-width:991px) {
-            font-size: 22px;
-        }
-        @media screen and (max-width:767px) {
-            font-size: 20px;
-        }
-        @media screen and (max-width:575px) {
-            font-size: 18px;
-            margin-bottom: 0px;
-        }
-    }
-    h2 {
-        font-weight: 600;
-        font-size: 35px;
-        margin-bottom: 0px;
-        background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        @media screen and (max-width:991px) {
-            font-size: 30px;
-        }
-        @media screen and (max-width:767px) {
-            font-size: 25px;
-        }
-        @media screen and (max-width:575px) {
-            font-size: 22px;
-        }
-    }
-}
-p{
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 27px;
-    color: var(--primary);
-    margin-bottom: 0px;
+  text-align: center;
+
+  h4 {
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 25px;
+
     @media screen and (max-width:991px) {
-        font-size:14px;
+      font-size: 22px;
     }
+
+    @media screen and (max-width:767px) {
+      font-size: 20px;
+    }
+
     @media screen and (max-width:575px) {
-        font-size:13px;
-        line-height: 22px;
+      font-size: 18px;
+      margin-bottom: 0px;
     }
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 0px;
+    background: linear-gradient(to bottom right, var(--primary) 47%, var(--sky) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media screen and (max-width:991px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width:767px) {
+      font-size: 25px;
+    }
+
+    @media screen and (max-width:575px) {
+      font-size: 22px;
+    }
+  }
 }
-.button-primary{
-    padding: 10px 30px;
-    border-radius: 12px;
-    color: var(--white);
-    border: 1px solid var(--sky);
-    background-color:transparent;
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--primary);
+  margin-bottom: 0px;
+
+  @media screen and (max-width:991px) {
     font-size: 14px;
-    display: block;
-    max-width: max-content;
+  }
+
+  @media screen and (max-width:575px) {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+.button-primary {
+  padding: 10px 30px;
+  border-radius: 12px;
+  color: var(--white);
+  border: 1px solid var(--sky);
+  background-color: transparent;
+  font-size: 14px;
+  display: block;
+  max-width: max-content;
+  transition: all 0.5s;
+  background-color: var(--sky);
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--sky);
+  }
+
+  @media only screen and (max-width:575px) {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
+
+.button-primary-outline {
+  padding: 10px 30px;
+  border-radius: 12px;
+  color: var(--white);
+  border: 1px solid var(--sky);
+  background-color: transparent;
+  font-size: 14px;
+  display: block;
+  max-width: max-content;
+  transition: all 0.5s;
+
+  i {
+    color: var(--sky);
     transition: all 0.5s;
+  }
+
+  &:hover {
     background-color: var(--sky);
-    &:hover{
-        background-color: var(--white);
-        color: var(--sky);
+
+    i {
+      color: var(--white);
     }
-    @media only screen and (max-width:575px) {
-        font-size:12px;
-        padding: 6px 15px;
-    }
+  }
+
+  @media only screen and (max-width:575px) {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
 }
-.button-primary-outline{
-    padding: 10px 30px;
-    border-radius: 12px;
-    color: var(--white);
-    border: 1px solid var(--sky);
-    background-color:transparent;
-    font-size: 14px;
-    display: block;
-    max-width: max-content;
-    transition: all 0.5s;
-    i{
-      color:var(--sky);
-      transition: all 0.5s;
-    }
-    &:hover{
-        background-color: var(--sky);
-        i{
-          color:var(--white);
-        }
-    }
-    @media only screen and (max-width:575px) {
-        font-size:12px;
-        padding: 6px 15px;
-    }
-}
-.gradient-border{
+
+.gradient-border {
   background: var(--gradient-border);
   height: 2px;
   display: block;
   width: 100%;
 }
-.p-dialog{
-  .p-dialog-content{
-      padding: 30px !important;
-      @media screen and (max-width:575px) {
-        padding:0px 15px !important;
 
-      }
+.p-dialog {
+  .p-dialog-content {
+    padding: 30px !important;
+
+    @media screen and (max-width:575px) {
+      padding: 0px 15px !important;
+
+    }
   }
 }
 
-  // Function to generate multiple box-shadow values for stars
-  @function multiple-box-shadow($number_of_stars) {
-    $value: "#{random(7000)}px #{random(7000)}px #FFF"; // Initial shadow
-    @for $i from 2 through $number_of_stars {
-      $value: "#{$value}, #{random(7000)}px #{random(7000)}px #FFF"; // Add more shadows
-    }
-    @return unquote($value); // Return the concatenated value
+// Function to generate multiple box-shadow values for stars
+@function multiple-box-shadow($number_of_stars) {
+  $value: "#{random(7000)}px #{random(7000)}px #FFF"; // Initial shadow
+
+  @for $i from 2 through $number_of_stars {
+    $value: "#{$value}, #{random(7000)}px #{random(7000)}px #FFF"; // Add more shadows
   }
-  // Generate different sets of box-shadow values for stars of varying sizes
-  $shadows-small: multiple-box-shadow(1400); // Small stars
-  $shadows-medium: multiple-box-shadow(800); // Medium stars
-  $shadows-big: multiple-box-shadow(300); // Big stars
-  
-  .star-layers {
-    height: 100vh;
-    position: relative;
-  
-    // Styling for each star layer
-    .star-layer {
+
+  @return unquote($value); // Return the concatenated value
+}
+
+// Generate different sets of box-shadow values for stars of varying sizes
+$shadows-small: multiple-box-shadow(1400); // Small stars
+$shadows-medium: multiple-box-shadow(800); // Medium stars
+$shadows-big: multiple-box-shadow(300); // Big stars
+
+.star-layers {
+  height: 100vh;
+  position: relative;
+
+  // Styling for each star layer
+  .star-layer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+
+    &::after {
+      content: " ";
       position: absolute;
+      top: 0px;
       width: 1px;
       height: 1px;
-      top: 0;
-      bottom: 0;
       background: transparent;
-  
-      &::after {
-        content: " ";
-        position: absolute;
-        top:0px;
-        width: 1px;
-        height: 1px;
-        background: transparent;
-      }
-    }
-    // Apply styles to each star layer with different sizes
-    #stars {
-      box-shadow: $shadows-small; // Apply small star shadows
-      animation: animStar 50s linear infinite;
-      &::after {
-        box-shadow: $shadows-small; // Apply small star shadows to pseudo-element
-      }
-    }
-    #stars2 {
-      width: 2px;
-      height: 2px;
-      box-shadow: $shadows-medium; // Apply medium star shadows
-      animation: animStar 100s linear infinite;
-      &::after {
-        width: 2px;
-        height: 2px;
-        box-shadow: $shadows-medium; // Apply medium star shadows to pseudo-element
-      }
-    }
-    #stars3 {
-      width: 3px;
-      height: 3px;
-      box-shadow: $shadows-big; // Apply big star shadows
-      animation: animStar 150s linear infinite;
-      &::after {
-        width: 3px;
-        height: 3px;
-        box-shadow: $shadows-big; // Apply big star shadows to pseudo-element
-      }
     }
   }
 
-  
-/*KEY FRAMES */ 
+  // Apply styles to each star layer with different sizes
+  #stars {
+    box-shadow: $shadows-small; // Apply small star shadows
+    animation: animStar 50s linear infinite;
+
+    &::after {
+      box-shadow: $shadows-small; // Apply small star shadows to pseudo-element
+    }
+  }
+
+  #stars2 {
+    width: 2px;
+    height: 2px;
+    box-shadow: $shadows-medium; // Apply medium star shadows
+    animation: animStar 100s linear infinite;
+
+    &::after {
+      width: 2px;
+      height: 2px;
+      box-shadow: $shadows-medium; // Apply medium star shadows to pseudo-element
+    }
+  }
+
+  #stars3 {
+    width: 3px;
+    height: 3px;
+    box-shadow: $shadows-big; // Apply big star shadows
+    animation: animStar 150s linear infinite;
+
+    &::after {
+      width: 3px;
+      height: 3px;
+      box-shadow: $shadows-big; // Apply big star shadows to pseudo-element
+    }
+  }
+}
+
+
+/*KEY FRAMES */
 
 @keyframes background-scroll {
-    0%{
-        background-position-x: 0;
-    }100%{
-        background-position-x: 1000px;
-    }
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
 }
 
 // Define a keyframe animation for stars
 @keyframes animStar {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
+  from {
+    transform: translateY(0px);
   }
 
-
-
-  // <div class="ring-animation">
-// <div class="ring"></div>
-// <div class="ring"></div>
-// <div class="ring"></div>
-// </div>
-// .ring{
-//     position:absolute;
-//     height: 500px;
-//     width: 500px;
-//     border: 0px solid #272727;
-//     border-radius:50%;
-//   }
-  
-//   .ring:nth-child(1){
-//     border-bottom-width: 10px;
-//     border-color:var(--sky);
-//     animation: rotate1 1.5s linear infinite;
-//   }
-  
-//   .ring:nth-child(2){
-//     border-right-width: 10px;
-//     border-color: #00ffff;
-//     animation: rotate2 1.5s linear infinite;
-//   }
-  
-//   .ring:nth-child(3){
-//     border-top-width: 10px;
-//     border-color:var(--primary);
-//     animation: rotate3 1.5s linear infinite;
-//   }
-  
-  
-//   @keyframes rotate1{
-//     0%{
-//       transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
-//     }
-//     100%{
-//       transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
-//     }
-//   }
-//   @keyframes rotate2{
-//     0%{
-//       transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
-//     }
-//     100%{
-//       transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
-//     }
-//   }
-//   @keyframes rotate3{
-//     0%{
-//       transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
-//     }
-//     100%{
-//       transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
-//     }
-//   }
+  to {
+    transform: translateY(-2000px);
+  }
+}

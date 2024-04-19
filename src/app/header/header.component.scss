@@ -38,6 +38,7 @@ header {
             img {
                 width: 100px;
                 object-fit: contain;
+                height: 100%;
                 @media screen and (max-width:991px) {
                     width: 70px;
                 }

@@ -5,7 +5,7 @@ import { HostListener, Injectable } from '@angular/core';
 })
 export class ServiceService {
 
-  logoImage: string = '../../../assets/image/logo.png';
+  logoImage: string = '../../../assets/image/logo.webp';
   
   constructor() { }
 

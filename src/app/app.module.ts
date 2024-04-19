@@ -11,12 +11,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { OverviewComponent } from './overview/overview.component';
-import { DialogTemplateComponent } from './dialog-template/dialog-template.component';
 import { InformationComponent } from './overview/information/information.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule} from '@angular/router';
-import { ResumeComponent } from './dialog-template/resume/resume.component';
 import { FormsModule } from '@angular/forms';
 
 /* PRIME IMPORT */
@@ -31,9 +29,7 @@ import { DialogModule } from 'primeng/dialog';
     HeaderComponent,
     FooterComponent,
     OverviewComponent,
-    DialogTemplateComponent,
     InformationComponent,
-    ResumeComponent,
     routingComponents,
   ],
   imports: [

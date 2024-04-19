@@ -1,7 +1,6 @@
 import { Component, HostListener} from "@angular/core";
 import { TranslateService } from "../service/translate.service";
 import { MatDialog } from "@angular/material/dialog";
-import { ResumeComponent } from "../dialog-template/resume/resume.component";
 import { Router } from "@angular/router";
 import { ServiceService } from "../service/service.service";
 
@@ -62,12 +61,6 @@ export class HeaderComponent {
     });
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(ResumeComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
 
 
 
