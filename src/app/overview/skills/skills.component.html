@@ -7,81 +7,18 @@
                     <h4>{{translateService.content.skillsCapital}}</h4>
                     <h2>{{translateService.content.moreAboutMySkills}}</h2>
                 </div>
-                <div class="row skills_block">
+                <div class="row flex-column-reverse flex-lg-row skills_block">
                     <div class="col-lg-6 mb-3 mb-lg-0" id="counter">
                         <div class="skills_content" data-aos="fade-right">
                             <h6>{{translateService.content.designIsLife}}</h6>
                             <h2>{{translateService.content.developSkillsRegularly}}</h2>
                             <p>{{translateService.content.skillsDescription}}</p>
-                            <div class="progress-block">
+                            <div class="progress-block" *ngFor="let skill of skills">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>HTML</span>
-                                    <span>{{percentage}}%</span>
+                                    <span>{{ skill.name }}</span>
+                                    <span>{{ skill.percentage }}%</span>
                                 </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>CSS</span>
-                                    <span>{{percentage2}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage2}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>SCSS</span>
-                                    <span>{{percentage3}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage3}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>Tailwind CSS</span>
-                                    <span>{{percentage4}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage4}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>Bootstrap</span>
-                                    <span>{{percentage5}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage5}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>jquery</span>
-                                    <span>{{percentage6}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage6}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>Javascript</span>
-                                    <span>{{percentage7}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage7}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>Angular</span>
-                                    <span>{{percentage8}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage8}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>Hubspot</span>
-                                    <span>{{percentage9}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage9}}"></mat-progress-bar>
-                            </div>
-                            <div class="progress-block">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span>laravel</span>
-                                    <span>{{percentage10}}%</span>
-                                </div>
-                                <mat-progress-bar mode="determinate" value="{{percentage10}}"></mat-progress-bar>
+                                <mat-progress-bar mode="determinate" [value]="skill.percentage"></mat-progress-bar>
                             </div>
                         </div>
                     </div>

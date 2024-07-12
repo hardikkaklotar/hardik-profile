@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
         } else {
             emailjs.init('quGx09KTSLnH8HrZ3');
             try {
-                let response = await emailjs.send("service_8isz2p4", "template_fc7fcbn", {
+                let response = await emailjs.send("service_nb4718u", "template_fc7fcbn", {
                     firstName: this.userForm.value.firstName,
                     to_name: this.userForm.value.to_name,
                     lastName: this.userForm.value.lastName,

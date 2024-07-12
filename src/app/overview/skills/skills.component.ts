@@ -1,20 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service/service.service';
 import { TranslateService } from 'src/app/service/translate.service';
-
-interface AnimatedProperties {
-  percentage: number;
-  percentage2: number;
-  percentage3: number;
-  percentage4: number;
-  percentage5: number;
-  percentage6: number;
-  percentage7: number;
-  percentage8: number;
-  percentage9: number;
-  percentage10: number;
-}
 
 @Component({
   selector: 'app-skills',
@@ -24,6 +11,7 @@ interface AnimatedProperties {
 export class SkillsComponent implements OnInit {
   skillsImage: string = '../../assets/image/skills.svg';
   altText: string = 'img';
+  observer: any;
 
   // technologies image
   technologies = [
@@ -39,19 +27,18 @@ export class SkillsComponent implements OnInit {
     { name: 'css', url: '', imageSrc: '../../assets/image/Techno/css-3.png' }
   ];
 
-  @ViewChild('skillsSection', { static: true }) skillsSection!: ElementRef;
-  submitted = false;
-  percentage: number = 0;
-  percentage2: number = 0;
-  percentage3: number = 0;
-  percentage4: number = 0;
-  percentage5: number = 0;
-  percentage6: number = 0;
-  percentage7: number = 0;
-  percentage8: number = 0;
-  percentage9: number = 0;
-  percentage10: number = 0;
-  observer: any;
+  skills = [
+    { name: 'HTML', percentage: 0 },
+    { name: 'CSS', percentage: 0 },
+    { name: 'SCSS', percentage: 0 },
+    { name: 'Tailwind CSS', percentage: 0 },
+    { name: 'Bootstrap', percentage: 0 },
+    { name: 'jQuery', percentage: 0 },
+    { name: 'Javascript', percentage: 0 },
+    { name: 'Angular', percentage: 0 },
+    { name: 'Hubspot', percentage: 0 },
+    { name: 'Laravel', percentage: 0 }
+  ];
 
   constructor(private router: Router, public serviceService: ServiceService,
     public translateService: TranslateService,
@@ -63,53 +50,47 @@ export class SkillsComponent implements OnInit {
   handleSectionIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        this.animateNumber(95, 'percentage', 32)
-        this.animateNumber(95, 'percentage2', 34)
-        this.animateNumber(90, 'percentage3', 36)
-        this.animateNumber(90, 'percentage4', 38)
-        this.animateNumber(85, 'percentage5', 40)
-        this.animateNumber(80, 'percentage6', 42)
-        this.animateNumber(60, 'percentage7', 44)
-        this.animateNumber(50, 'percentage8', 46)
-        this.animateNumber(80, 'percentage9', 48)
-        this.animateNumber(50, 'percentage10', 50)
-        this.observer.disconnect(); //disconnect after one time called
+        this.animateNumber(95, 0, 32);
+        this.animateNumber(95, 1, 34);
+        this.animateNumber(90, 2, 36);
+        this.animateNumber(90, 3, 38);
+        this.animateNumber(85, 4, 40);
+        this.animateNumber(80, 5, 42);
+        this.animateNumber(60, 6, 44);
+        this.animateNumber(50, 7, 46);
+        this.animateNumber(80, 8, 48);
+        this.animateNumber(50, 9, 50);
+        this.observer.disconnect();
       }
     });
   }
 
-  /*
-  * this function is used for animate increasing counter
-  */
-  animateNumber(targetNumber: number, propertyName: keyof AnimatedProperties, stepInterval: number) {
+  animateNumber(targetNumber: number, skillIndex: number, stepInterval: number) {
     const step = targetNumber / 100;
     let currentStep = 0;
 
     const interval = setInterval(() => {
       currentStep += step;
-      this[propertyName] = Math.floor(currentStep);
+      this.skills[skillIndex].percentage = Math.floor(currentStep);
 
       if (currentStep >= targetNumber) {
         clearInterval(interval);
+        this.skills[skillIndex].percentage = targetNumber; // Ensure final percentage is exactly targetNumber
       }
     }, stepInterval);
   }
 
-
   ngAfterViewInit() {
-    const options = {
-      root: null,
-      threshold: 0.5, //0.5 used for your 50% content shows
-    };
-
-    this.observer = new IntersectionObserver(entries => this.handleSectionIntersection(entries), options);
-
-    // Start observing the target section
-    if (this.skillsSection && this.skillsSection.nativeElement) {
-      this.observer.observe(this.skillsSection.nativeElement);
+    this.observer = new IntersectionObserver(this.handleSectionIntersection.bind(this), {
+      threshold: 0.1
+    });
+    const skillsContent = document.querySelector('.skills_content');
+    if (skillsContent) {
+      this.observer.observe(skillsContent);
     }
   }
 
   ngOnInit(): void {
   }
+
 }
