@@ -22,6 +22,7 @@ import { ButtonModule } from 'primeng/button';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
 import { DialogModule } from 'primeng/dialog';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DialogModule } from 'primeng/dialog';
     OverviewComponent,
     InformationComponent,
     routingComponents,
+    GameComponent,
   ],
   imports: [
     BrowserModule,RouterModule,

@@ -279,15 +279,15 @@ p {
 }
 
 // Function to generate multiple box-shadow values for stars
-@function multiple-box-shadow($number_of_stars) {
-  $value: "#{random(7000)}px #{random(7000)}px #FFF"; // Initial shadow
+// @function multiple-box-shadow($number_of_stars) {
+//   $value: "#{random(7000)}px #{random(7000)}px #FFF"; // Initial shadow
 
-  @for $i from 2 through $number_of_stars {
-    $value: "#{$value}, #{random(7000)}px #{random(7000)}px #FFF"; // Add more shadows
-  }
+//   @for $i from 2 through $number_of_stars {
+//     $value: "#{$value}, #{random(7000)}px #{random(7000)}px #FFF"; // Add more shadows
+//   }
 
-  @return unquote($value); // Return the concatenated value
-}
+//   @return unquote($value); // Return the concatenated value
+// }
 
 // Generate different sets of box-shadow values for stars of varying sizes
 $shadows-small: multiple-box-shadow(1400); // Small stars

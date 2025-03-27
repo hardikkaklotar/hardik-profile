@@ -1,0 +1,43 @@
+<div class="game fixed-height d-flex justify-content-center align-items-center">
+    <div class="card max-w-max mx-auto p-3">
+        <!-- Bomb Selection Block -->
+        <div *ngIf="!gameStarted || showBombSelection" class="row align-items-center">
+            <div class="col-8">
+                <h2 class="flex-shrink-0 mb-0">Select Bomb Count:</h2>
+            </div>
+            <div class="col-4">
+                <mat-form-field>
+                    <mat-select class="text-white" [(ngModel)]="bombCount" (selectionChange)="updateBombs()">
+                        <mat-option *ngFor="let count of bombOptions" [value]="count">
+                            {{ count }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <!-- Game Grid -->
+        <div *ngIf="gameStarted && !showBombSelection">
+            <button class="button-primary-outline" (click)="resetBombCount()">
+                Reset Bomb Count
+            </button>
+            <div class="grid my-3">
+                <div *ngFor="let box of grid; let i = index" class="box border" (click)="handleClick(i)">
+                    <span *ngIf="box.icon">{{ box.icon }}</span>
+                </div>
+            </div>
+        </div>
+
+        <button  *ngIf="!gameStarted" class="btn btn-primary mt-3" (click)="startGame()">
+            Start Game
+        </button>
+
+        <div *ngIf="gameStarted">
+            <p *ngIf="gameOver" class="text-danger">Game Over! You clicked a bomb.</p>
+            <button class="btn btn-primary mt-3" (click)="startGame()">
+                Restart Game
+            </button>
+        </div>
+    
+    </div>
+</div>

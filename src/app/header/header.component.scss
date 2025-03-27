@@ -27,7 +27,7 @@ header {
         .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: start;
             color: var(--white);
             font-family: 'Ephesis', cursive !important;
            
@@ -36,14 +36,11 @@ header {
             }
 
             img {
-                width: 100px;
+                width: 250px;
                 object-fit: contain;
                 height: 100%;
                 @media screen and (max-width:991px) {
-                    width: 70px;
-                }
-                @media only screen and (max-width:575px) {
-                    width: 50px;
+                    width: 150px;
                 }
             }
         }
